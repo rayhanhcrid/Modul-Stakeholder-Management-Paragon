@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Modul Stakeholder Management · Paragon Corp | HCR.ID</title>
+<title>Connect &amp; Align · Modul Stakeholder Management Paragon Corp | HCR.ID</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -139,7 +139,7 @@ main{padding:1.5rem 0 3rem}
 .ag-ctrl input[type=time]{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:.35rem .5rem}
 .tl{position:relative;padding-left:1.6rem}
 .tl::before{content:"";position:absolute;left:.55rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
-.ses{position:relative;margin-bottom:.75rem}
+.ses{position:relative;margin-bottom:.75rem;scroll-margin-top:70px}
 .ses::before{content:"";position:absolute;left:-1.33rem;top:1.15rem;width:14px;height:14px;border-radius:50%;background:var(--card);border:3px solid var(--blue)}
 .ses.done::before{background:var(--green);border-color:var(--green)}
 .ses.brk::before{border-color:var(--line);width:10px;height:10px;left:-1.2rem;top:.85rem}
@@ -160,6 +160,41 @@ main{padding:1.5rem 0 3rem}
 .ck{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.88rem;cursor:pointer}
 .ck input{width:18px;height:18px;accent-color:var(--green)}
 
+/* Rundown */
+.rs{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:0 0 1rem}
+.rsc{text-align:left;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:.85rem .9rem;cursor:pointer;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.rsc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}
+.rsc:hover{border-color:var(--blue)}
+.rsc .no{font-size:.72rem;font-weight:800;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+.rsc .kw{display:block;font-size:1.3rem;font-weight:800;color:var(--blue);line-height:1.2;margin:.15rem 0 .2rem}
+.rsc p{font-size:.84rem;margin:0 0 .5rem;font-weight:600}
+.rsc.done::before{background:var(--green)}
+.rsc.done .kw{color:var(--green)}
+.rd{display:grid;grid-template-columns:118px 1fr auto;gap:.3rem .8rem;align-items:start;padding:.6rem 0;border-bottom:1px dashed var(--line)}
+.rd:last-of-type{border-bottom:0}
+.rd .tm b{display:block;font-size:.84rem;color:var(--blue);font-variant-numeric:tabular-nums}
+.rd .tm small{font-size:.72rem;color:var(--mute);font-weight:700}
+.rd .ac{font-size:.92rem}
+.tb{border:1px solid var(--line);background:var(--card);border-radius:9px;padding:.25rem .5rem;font-size:.74rem;font-weight:800;color:var(--mute);cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}
+.tb:hover{border-color:var(--blue);color:var(--blue)}
+.objline{background:var(--blueSoft);border-radius:12px;padding:.7rem .9rem;margin:.6rem 0 .4rem;font-size:.92rem}
+.outp{background:var(--greenSoft);border-radius:12px;padding:.7rem .9rem;margin:.8rem 0;font-size:.92rem}
+/* Core skill */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:.8rem}
+.pillars div{border-radius:14px;padding:.9rem;background:var(--bg2);border:1px solid var(--line)}
+.pillars div b{display:block;font-size:.95rem;margin-top:.45rem}
+.pillars div small{color:var(--mute);font-size:.8rem;font-weight:600;display:block;margin-top:.15rem}
+.pillars .ic2{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:var(--blue);color:#fff}
+.pillars .ic2 svg{width:20px;height:20px}
+.cs{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:.7rem}
+.cs div{border-radius:14px;padding:.85rem .95rem;background:var(--orangeSoft);border:1px solid color-mix(in srgb,var(--orange) 35%,var(--line));font-size:.9rem;font-weight:600}
+.cs div .n2{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:7px;background:var(--orange);color:#1b1205;font-size:.75rem;font-weight:800;margin-bottom:.4rem}
+.xchips{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem}
+.xchips span{font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.obj2{display:grid;gap:.55rem;margin-top:.7rem}
+.obj2 > div{display:grid;grid-template-columns:34px 1fr auto;gap:.8rem;align-items:center;background:var(--bg2);border-radius:12px;padding:.7rem .85rem;font-size:.92rem;font-weight:600}
+.obj2 .nn{width:30px;height:30px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.obj2 a{text-decoration:none}
 /* Matrix */
 .mxwrap{display:grid;grid-template-columns:28px 1fr;grid-template-rows:1fr 28px;gap:.4rem}
 .yl{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
@@ -218,7 +253,9 @@ input[type=range]{width:100%;accent-color:var(--blue)}
 .empty{color:var(--mute);font-size:.9rem;text-align:center;padding:1rem;border:1px dashed var(--line);border-radius:12px}
 
 /* Cases */
-.ctabs{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1rem}
+.ctabs{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-bottom:1rem}
+.ctab{flex-direction:column;align-items:flex-start!important}
+.ctab .lt{width:38px;height:38px;flex:0 0 auto!important}
 .ctab{text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:.8rem .9rem;cursor:pointer;display:flex;gap:.7rem;align-items:center}
 .ctab .lt{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;font-weight:800;background:var(--graySoft);color:var(--gray);font-size:1.05rem}
 .ctab b{font-size:.9rem;line-height:1.3}
@@ -305,6 +342,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .grid3,.kpi,.deb{grid-template-columns:1fr}
   .bld{grid-template-columns:1fr}
   .ctabs{grid-template-columns:1fr}
+  .ctab{flex-direction:row;align-items:center!important}
+  .rs,.pillars{grid-template-columns:repeat(2,1fr)}
+  .cs{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   body{font-size:15px}
@@ -318,6 +358,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .ag-top{grid-template-columns:1fr;justify-items:start}
   .ses .t{min-width:0}
   .ses .hd{flex-wrap:wrap;gap:.3rem .8rem}
+  .rd{grid-template-columns:1fr auto}.rd .ac{grid-column:1/-1;grid-row:2}
+  .obj2 > div{grid-template-columns:30px 1fr}.obj2 > div > a{grid-column:2}
 }
 @media print{
   nav.tabs,.tools,.hero .cta,#timer,#toast,.noprint{display:none!important}
@@ -344,18 +386,18 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow"><i></i>Modul Pelatihan · 1 Hari</span>
-    <h1>Stakeholder Management untuk <span>Paragon Corp</span></h1>
-    <p class="lead">Memetakan, melibatkan, dan mengelola hubungan dengan para pemangku kepentingan di balik brand-brand Paragon, dengan kerangka K+R=H sebagai jangkar.</p>
-    <div class="brands"><span>Wardah</span><span>Kahf</span><span>Emina</span><span>Make Over</span><span>& brand Paragon lainnya</span></div>
+    <span class="eyebrow"><i></i>Modul Stakeholder Management · Paragon</span>
+    <h1>Connect &amp; Align: <span>The Art of Getting on the Same Page</span></h1>
+    <p class="lead">4 sesi × 2 jam, disampaikan oleh HCR.ID. Membangun relasi, memengaruhi tanpa otoritas, menyelaraskan kepentingan, dan menciptakan kolaborasi.</p>
+    <div class="brands"><span>Membangun relasi</span><span>Memengaruhi tanpa otoritas</span><span>Menyelaraskan kepentingan</span><span>Menciptakan kolaborasi</span></div>
     <div class="stats">
-      <div class="stat"><b>6</b><small>Sesi inti</small></div>
-      <div class="stat"><b>±7 jam</b><small>1 hari / 2 × ½ hari</small></div>
-      <div class="stat"><b>3</b><small>Studi kasus</small></div>
+      <div class="stat"><b>4</b><small>Sesi</small></div>
+      <div class="stat"><b>2 jam</b><small>per sesi · total 8 jam</small></div>
+      <div class="stat"><b>5</b><small>Studi kasus</small></div>
       <div class="stat"><b>30·60·90</b><small>Rencana aksi</small></div>
     </div>
     <div class="cta">
-      <a class="btn pri" href="#agenda">Lihat agenda sesi →</a>
+      <a class="btn pri" href="#agenda">Lihat rundown 4 sesi →</a>
       <a class="btn ghost" href="#peta">Coba peta stakeholder</a>
     </div>
   </div>
@@ -364,7 +406,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <nav class="tabs" aria-label="Bagian modul">
   <div class="wrap" role="tablist" id="nav">
     <button role="tab" data-t="ringkasan"><span class="num">1</span>Ringkasan</button>
-    <button role="tab" data-t="agenda"><span class="num">2</span>Agenda & Sesi</button>
+    <button role="tab" data-t="agenda"><span class="num">2</span>Rundown 4 Sesi</button>
     <button role="tab" data-t="peta"><span class="num">3</span>Peta Stakeholder</button>
     <button role="tab" data-t="kasus"><span class="num">4</span>Studi Kasus</button>
     <button role="tab" data-t="kuis"><span class="num">5</span>Kuis</button>
@@ -397,6 +439,30 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   </div>
 
   <div class="card">
+    <span class="kicker">Definisi core skill Parapreneur</span>
+    <h2>Stakeholder Management</h2>
+    <p>Kemampuan membangun <b>keterlibatan</b>, menyelaraskan <b>kepentingan</b>, dan <b>memengaruhi</b> pemangku kepentingan untuk mendapatkan dukungan serta mengelola <b>ekspektasi</b> demi keberhasilan bersama.</p>
+    <p class="mute">Yang dicari dalam praktik kerja saat ini bukan kemampuan "mengelola orang lain", melainkan kemampuan:</p>
+    <div class="pillars">
+      <div><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Membangun relasi</b><small>Connect</small></div>
+      <div><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><b>Memengaruhi tanpa otoritas</b><small>Influence</small></div>
+      <div><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><b>Menyelaraskan kepentingan</b><small>Align</small></div>
+      <div><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg></span><b>Menciptakan kolaborasi</b><small>Collaborate</small></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="kicker">Input Paragon</span>
+    <h2>Current state</h2>
+    <p class="mute" style="margin:0">Tantangan yang dirasakan tim saat ini, dan menjadi titik berangkat kelas.</p>
+    <div class="cs">
+      <div><span class="n2">1</span><br>Interaksi dengan internal stakeholder belum smooth dan rutin terjadi.</div>
+      <div><span class="n2">2</span><br>Terkadang ada perbedaan ekspektasi dengan user.</div>
+      <div><span class="n2">3</span><br>Sulitnya mengelola pihak eksternal yang beragam:<div class="xchips"><span>Tuan toko</span><span>Account</span><span>Buyer</span><span>Creator</span><span>Platform</span><span>Agency</span><span>New brands partner</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="sec-head" style="margin-bottom:.3rem">
       <div><span class="kicker">Simulasi singkat</span><h2>Coba K+R=H</h2><p>Pilih satu kejadian, lalu bandingkan dua respons. Lihat bagaimana hasilnya berubah.</p></div>
     </div>
@@ -407,20 +473,20 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   </div>
 
   <div class="card">
-    <span class="kicker">Setelah sesi, peserta mampu</span>
-    <h2>Tujuan pembelajaran</h2>
-    <div class="obj">
-      <div>Mengidentifikasi stakeholder internal dan eksternal pada konteks bisnis Paragon.</div>
-      <div>Menganalisis power, interest, dan sikap tiap stakeholder.</div>
-      <div>Menyusun strategi engagement dan rencana komunikasi yang realistis.</div>
-      <div>Merespons stakeholder sulit dan situasi krisis dengan tenang dan terstruktur.</div>
-      <div>Menyusun rencana aksi 30-60-90 hari untuk tim masing-masing.</div>
+    <span class="kicker">Setelah kelas, peserta mampu</span>
+    <h2>Objective kelas</h2>
+    <div class="obj2">
+      <div><span class="nn">1</span><span>Memahami prinsip dasar stakeholder management dan pentingnya mengelola hubungan internal dan eksternal secara aktif.</span><a href="#agenda" class="pill">Sesi 1</a></div>
+      <div><span class="nn">2</span><span>Mengidentifikasi tipe, kebutuhan, dan kepentingan stakeholder, lalu menyesuaikan pendekatan komunikasi dan kolaborasi berdasarkan karakternya.</span><a href="#agenda" class="pill">Sesi 2</a></div>
+      <div><span class="nn">3</span><span>Menyelaraskan ekspektasi antara diri sendiri, user internal, dan pihak eksternal.</span><a href="#agenda" class="pill">Sesi 3</a></div>
+      <div><span class="nn">4</span><span>Membangun pola interaksi rutin yang efektif dengan stakeholder internal (user, cross function) dan eksternal (toko, account, buyer, creator, platform, agency, partner).</span><a href="#agenda" class="pill">Sesi 3</a></div>
+      <div><span class="nn">5</span><span>Mengelola perbedaan kepentingan, konflik, dan gap ekspektasi dengan pendekatan kolaboratif dan solutif.</span><a href="#agenda" class="pill">Sesi 4</a></div>
     </div>
   </div>
 
   <div class="grid3">
     <div class="card info"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h3>Peserta</h3><p class="mute" style="font-size:.9rem">Manajer, supervisor, dan talenta kunci lintas fungsi: brand, sales, R&D, QA/regulatory, supply chain, HR, corporate communication.</p></div></div>
-    <div class="card info"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h3>Durasi</h3><p class="mute" style="font-size:.9rem">1 hari (±7 jam termasuk jeda) atau 2 sesi setengah hari.</p></div></div>
+    <div class="card info"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h3>Durasi</h3><p class="mute" style="font-size:.9rem">4 sesi × 2 jam (total 8 jam).</p></div></div>
     <div class="card info"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3>Metode</h3><p class="mute" style="font-size:.9rem">Diskusi, pemetaan kelompok, studi kasus, simulasi role-play, kuis, dan rencana aksi.</p></div></div>
   </div>
 
@@ -436,25 +502,26 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
         <b id="pct">0%</b>
       </div>
       <div>
-        <span class="kicker">Alur hari pelatihan</span>
-        <h2>Agenda & sesi</h2>
-        <p class="mute" style="margin:0" id="agSum">6 sesi inti. Centang sesi yang sudah selesai untuk melacak progres.</p>
+        <span class="kicker">Alur kelas</span>
+        <h2>Rundown 4 sesi</h2>
+        <p class="mute" style="margin:0" id="agSum">4 sesi × 120 menit. Centang sesi yang sudah selesai untuk melacak progres.</p>
         <div class="ag-ctrl noprint">
-          <label for="startT">Mulai pukul</label><input type="time" id="startT" value="08:30">
+          <label for="startT">Jam mulai tiap sesi</label><input type="time" id="startT" value="08:30">
           <button class="btn out sm" id="expAll">Buka semua</button>
           <button class="btn out sm" id="colAll">Tutup semua</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="rs" id="rs"></div>
   <div class="tl" id="tl"></div>
-  <p class="mute" style="font-size:.82rem;margin-top:.4rem">Jeda (coffee break dan ishoma) bersifat usulan. Ubah jam mulai di atas, jadwal ikut menyesuaikan otomatis.</p>
+  <p class="mute" style="font-size:.82rem;margin-top:.4rem">Ubah jam mulai di atas, jam tiap aktivitas ikut menyesuaikan. Tombol timer di tiap baris menjalankan hitung mundur sesuai durasi aktivitas.</p>
 </section>
 
 <!-- 3 PETA -->
 <section class="tab" id="peta" role="tabpanel">
   <div class="sec-head">
-    <div><span class="kicker">Ilustratif</span><h2>Peta Power-Interest</h2><p>Ketuk stakeholder untuk melihat strategi pendekatannya. Gunakan filter untuk melihat internal atau eksternal saja.</p></div>
+    <div><span class="kicker">Ilustratif</span><h2>Peta Power-Interest</h2><p>Ketuk stakeholder untuk melihat strategi pendekatannya. Penempatan bersifat ilustratif; peserta menyesuaikannya dengan konteks kerja masing-masing.</p></div>
     <div class="seg noprint" id="mxFilter" style="margin:0">
       <button aria-pressed="true" data-f="all">Semua</button><button aria-pressed="false" data-f="int">Internal</button><button aria-pressed="false" data-f="ext">Eksternal</button>
     </div>
@@ -485,7 +552,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
     </div>
     <div class="bld">
       <form id="sForm" class="noprint" autocomplete="off">
-        <div class="fld"><label for="sName">Nama stakeholder</label><input class="in" id="sName" maxlength="40" placeholder="mis. Tim QA, Distributor Jatim" required></div>
+        <div class="fld"><label for="sName">Nama stakeholder</label><input class="in" id="sName" maxlength="40" placeholder="mis. Buyer MT, Tim Supply Chain" required></div>
         <div class="fld"><label for="sPow">Power <output id="oPow">5</output></label><input type="range" id="sPow" min="1" max="10" value="5"></div>
         <div class="fld"><label for="sInt">Interest <output id="oInt">5</output></label><input type="range" id="sInt" min="1" max="10" value="5"></div>
         <div class="fld"><label for="sAtt">Sikap</label><select class="in" id="sAtt"><option value="p">Pendukung</option><option value="n" selected>Netral</option><option value="r">Resisten</option></select></div>
@@ -508,7 +575,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <!-- 4 KASUS -->
 <section class="tab" id="kasus" role="tabpanel">
   <div class="sec-head">
-    <div><span class="kicker">Fiktif, ilustratif</span><h2>Tiga studi kasus</h2><p>Pilih kasus, diskusikan pertanyaan bersama kelompok, lalu buka respons ideal sebagai pembanding.</p></div>
+    <div><span class="kicker">Fiktif, ilustratif</span><h2>Lima studi kasus</h2><p>Dipakai untuk role-play di Sesi 4. Pilih kasus, diskusikan pertanyaan bersama kelompok, lalu buka respons ideal atau fokus pembelajaran sebagai pembanding.</p></div>
   </div>
   <div class="ctabs" role="tablist" id="ctabs"></div>
   <div class="card" id="cbody"></div>
@@ -527,7 +594,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 
 <!-- 5 KUIS -->
 <section class="tab" id="kuis" role="tabpanel">
-  <div class="sec-head"><div><span class="kicker">Cek pemahaman</span><h2>Kuis singkat</h2><p>6 pertanyaan untuk mengunci konsep kunci. Cocok dipakai sebagai penutup sesi 4 atau 5.</p></div></div>
+  <div class="sec-head"><div><span class="kicker">Cek pemahaman</span><h2>Kuis singkat</h2><p>6 pertanyaan untuk mengunci konsep kunci. Cocok sebagai recap di awal sesi berikutnya atau penutup Sesi 4.</p></div></div>
   <div class="card" id="quiz" style="max-width:760px"></div>
 </section>
 
@@ -593,7 +660,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 "use strict";
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
-var KEY="hcr-paragon-sm-v2";
+var KEY="hcr-paragon-sm-v3";
 var store={};try{store=JSON.parse(window.localStorage.getItem(KEY)||"{}")||{}}catch(e){store={}}
 function save(){try{window.localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
 function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on")},1800)}
@@ -619,15 +686,15 @@ show(curHash(),false);
 
 /* K+R=H simulator */
 var KRH=[
+ {n:"Gap ekspektasi user",k:"User internal meminta materi dalam 2 hari dengan standar tinggi, padahal brief belum jelas.",
+  bad:["Respons reaktif","Langsung mengiyakan tanpa klarifikasi, lalu mengerjakan sambil menebak maunya user.","Hasil meleset, revisi berulang, dan kedua pihak sama-sama kecewa."],
+  good:["Respons terstruktur","Klarifikasi tujuan, lalu sepakati prioritas, tenggat, dan kriteria selesai sejak awal.","Ekspektasi selaras, pekerjaan tepat sasaran, dan kepercayaan user tumbuh."]},
+ {n:"Konten creator meleset",k:"Konten creator masuk H-1 jadwal tayang dan tidak sesuai arahan brand.",
+  bad:["Respons reaktif","Menegur keras lewat chat dan mengancam memutus kerja sama.","Hubungan rusak, revisi dikerjakan asal jadi, dan jadwal tayang tetap terancam."],
+  good:["Respons terstruktur","Beri umpan balik spesifik dan tegas, cari opsi perbaikan cepat, sepakati checkpoint untuk proyek berikutnya.","Konten terselamatkan, hubungan terjaga, dan pola kerja ke depan lebih jelas."]},
  {n:"Isu viral produk",k:"Video konsumen yang mengklaim produk menyebabkan iritasi menyebar cepat di media sosial.",
   bad:["Respons reaktif","Membalas defensif di kolom komentar dan menghapus komentar kritis.","Isu membesar, media ikut mengangkat, dan kepercayaan konsumen turun."],
-  good:["Respons terstruktur","Akui, hubungi konsumen secara personal, cek fakta bersama QA, keluarkan satu pernyataan singkat.","Konsumen merasa didengar, isu mereda, dan brand terlihat bertanggung jawab."]},
- {n:"Distributor protes",k:"Distributor di beberapa wilayah protes karena promo nasional berjalan sementara stok belum tiba.",
-  bad:["Respons reaktif","Tim sales dan marketing saling menyalahkan, distributor tidak diberi kabar.","Distributor kecewa, penjualan hilang, hubungan jangka panjang merenggang."],
-  good:["Respons terstruktur","Akui masalah, beri jadwal pemenuhan stok yang jelas, bentuk kalender peluncuran bersama.","Kepercayaan pulih dan koordinasi lintas fungsi jadi lebih rapi ke depannya."]},
- {n:"Jelang audit",k:"Dua minggu sebelum audit sertifikasi, ditemukan dokumen pemasok bahan baku yang belum lengkap.",
-  bad:["Respons reaktif","Menunda laporan ke manajemen dan berharap auditor tidak menemukannya.","Temuan audit lebih berat dan kredibilitas tim dipertanyakan."],
-  good:["Respons terstruktur","Laporkan dini, koordinasikan QA, procurement, dan supplier, susun rencana perbaikan bertanggal.","Risiko terkendali dan auditor melihat sistem yang transparan."]}];
+  good:["Respons terstruktur","Akui, hubungi konsumen secara personal, cek fakta bersama QA, keluarkan satu pernyataan singkat.","Konsumen merasa didengar, isu mereda, dan brand terlihat bertanggung jawab."]}];
 var kIdx=0,kSel=null;
 function renderKRH(){
   $("#krhSeg").innerHTML=KRH.map(function(k,i){return '<button aria-pressed="'+(i===kIdx)+'" data-i="'+i+'">'+k.n+'</button>'}).join("");
@@ -651,31 +718,38 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-time
 
 /* Agenda */
 var S=[
- {t:"Pembukaan & fondasi K+R=H",d:30,c:["Aktivitas pemanasan: ceritakan satu kejadian dengan stakeholder yang menantang.","Kenalkan K+R=H dan prinsip: kendalikan respons, bukan kejadian.","Diskusi: mengapa stakeholder management krusial bagi brand kecantikan?"]},
- {t:"Ekosistem stakeholder Paragon",d:45,c:["<b>Internal:</b> manajemen, brand/marketing, R&D, produksi, QA, sales, supply chain, HR, finance.","<b>Eksternal:</b> regulator, lembaga sertifikasi, retailer, marketplace, distributor, supplier, beauty advisor, konsumen, komunitas, KOL, media, investor, masyarakat sekitar.","Latihan kelompok: brainstorm semua stakeholder satu brand pilihan."]},
- {brk:"Coffee break",d:15},
- {t:"Analisis power, interest, dan sikap",d:60,c:["Pemetaan matriks Power-Interest.","Menandai sikap: pendukung, netral, resisten.","Memahami kepentingan, kekhawatiran, dan gaya komunikasi tiap stakeholder.","Latihan: peta stakeholder untuk satu peluncuran produk (pakai fitur <a href=\"#peta\">Peta Stakeholder</a>)."]},
- {brk:"Ishoma",d:60},
- {t:"Strategi engagement & komunikasi",d:60,c:["Strategi per kuadran: manage closely, keep satisfied, keep informed, monitor.","Rencana komunikasi: siapa, pesan, kanal, frekuensi, PIC.","Dasar mendengar aktif dan negosiasi kepentingan.","Simulasi: percakapan dengan distributor yang kecewa."]},
- {t:"Stakeholder sulit & manajemen krisis",d:60,c:["Tipe stakeholder sulit dan cara meresponsnya.","Prinsip komunikasi krisis: cepat, jujur, empatik, satu suara.","Role-play <a href=\"#kasus\">studi kasus</a>, lalu tutup dengan <a href=\"#kuis\">kuis singkat</a>."]},
- {brk:"Coffee break",d:15},
- {t:"Rencana aksi 30-60-90 hari & penutup",d:45,c:["Setiap peserta menyusun <a href=\"#aksi\">rencana aksi</a> untuk tim masing-masing.","Berbagi komitmen dalam kelompok kecil.","Refleksi akhir dan umpan balik."]}];
+ {kw:"Connect",t:"Fondasi Stakeholder Management",ob:"Objective 1",od:"Memahami prinsip dasar dan pentingnya mengelola hubungan internal dan eksternal secara aktif.",
+  r:[[0,15,"Pembukaan, perkenalan, dan harapan peserta"],[15,35,"K+R=H dan definisi core skill: membangun relasi, memengaruhi tanpa otoritas, menyelaraskan kepentingan, menciptakan kolaborasi"],[35,60,"Diskusi current state: interaksi internal belum smooth, beda ekspektasi dengan user, kompleksitas pihak eksternal"],[60,95,"Konsep Why-What-How stakeholder management; stakeholder internal vs eksternal"],[95,115,"Latihan: daftar semua stakeholder dalam pekerjaan saya"],[115,120,"Rangkuman dan jembatan ke sesi 2"]],
+  out:"Daftar awal stakeholder tiap peserta."},
+ {kw:"Understand",t:"Tipe, Kebutuhan & Kepentingan",ob:"Objective 2",od:"Mengidentifikasi tipe, kebutuhan, dan kepentingan stakeholder, lalu menyesuaikan pendekatan komunikasi dan kolaborasi.",
+  r:[[0,10,"Recap dan check-in"],[10,35,"Pemetaan Power-Interest dan penandaan sikap (pendukung, netral, resisten). Lihat <a href=\"#peta\">Peta Stakeholder</a>"],[35,65,"Mengenali kepentingan: tuan toko, account, buyer, creator, platform, agency, new brands partner (apa yang mereka butuhkan dan khawatirkan)"],[65,95,"Menyesuaikan gaya komunikasi dan kolaborasi berdasarkan karakter stakeholder"],[95,115,"Praktik: peta stakeholder nyata dari pekerjaan peserta (pakai latihan <a href=\"#peta\">Buat peta stakeholder Anda</a>)"],[115,120,"Rangkuman"]],
+  out:"Peta stakeholder dan strategi pendekatan untuk 3 stakeholder prioritas."},
+ {kw:"Align",t:"Ekspektasi & Pola Interaksi Rutin",ob:"Objective 3 & 4",od:"Menyelaraskan ekspektasi diri, user internal, dan pihak eksternal; membangun pola interaksi rutin yang efektif.",
+  r:[[0,10,"Recap dan check-in"],[10,40,"Expectation alignment: apa yang diharapkan, apa yang bisa diberikan, apa yang disepakati"],[40,70,"Pola interaksi internal (user dan cross function): ritme sinkronisasi, jalur eskalasi, pembagian peran"],[70,100,"Pola interaksi eksternal: kick-off, brief jelas, checkpoint, pelaporan, review"],[100,115,"Praktik: rancang pola interaksi untuk satu stakeholder nyata"],[115,120,"Rangkuman"]],
+  out:"Kesepakatan ekspektasi dan rencana komunikasi satu stakeholder."},
+ {kw:"Resolve",t:"Konflik, Gap Ekspektasi & Komitmen",ob:"Objective 5",od:"Mengelola perbedaan kepentingan, konflik, dan gap ekspektasi dengan pendekatan kolaboratif dan solutif.",
+  r:[[0,10,"Recap dan check-in"],[10,35,"Memengaruhi tanpa otoritas; membedakan posisi dan kepentingan"],[35,55,"Alur kolaboratif: dengarkan, validasi, gali kepentingan, tawarkan opsi, sepakati"],[55,90,"Role-play <a href=\"#kasus\">studi kasus</a>"],[90,110,"<a href=\"#aksi\">Rencana aksi 30-60-90 hari</a>"],[110,120,"Komitmen, evaluasi, dan penutup"]],
+  out:"Rencana aksi 30-60-90 hari dan komitmen pribadi."}];
 store.ag=store.ag||{};store.agOpen=store.agOpen||{0:1};
 function hm(min){min=((min%1440)+1440)%1440;var h=Math.floor(min/60),m=min%60;return (h<10?"0":"")+h+"."+(m<10?"0":"")+m}
-function renderAg(){var st=($("#startT").value||"08:30").split(":"),cur=(+st[0])*60+(+st[1]),n=0,html="";
-  S.forEach(function(s,i){var a=cur,b=cur+s.d;cur=b;
-    if(s.brk){html+='<div class="ses brk"><div class="hd"><span class="t">'+hm(a)+' - '+hm(b)+'</span><span class="ti">'+s.brk+' · '+s.d+' menit</span></div></div>';return}
-    n++;var done=!!store.ag[i],open=!!store.agOpen[i];
-    html+='<div class="ses'+(done?" done":"")+(open?" open":"")+'" data-i="'+i+'"><button class="hd" aria-expanded="'+open+'"><span class="t">'+hm(a)+' - '+hm(b)+'</span><span class="ti">Sesi '+n+'. '+s.t+'<small>'+s.d+' menit'+(done?' · selesai':'')+'</small></span><span class="chev">'+ICON.chev+'</span></button><div class="bd"><ul>'+s.c.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul><div class="row"><label class="ck"><input type="checkbox" data-ck="'+i+'"'+(done?" checked":"")+'> Tandai sesi ini selesai</label><button class="btn out sm noprint" data-timer="'+s.d+'" data-label="Sesi '+n+': '+esc(s.t)+'">'+ICON.clock+' Timer '+s.d+' menit</button></div></div></div>'});
+function renderAg(){var st=($("#startT").value||"08:30").split(":"),base=(+st[0])*60+(+st[1]),html="";
+  $("#rs").innerHTML=S.map(function(s,i){var done=!!store.ag[i];return '<button class="rsc'+(done?" done":"")+'" data-go="'+i+'"><span class="no">Sesi '+(i+1)+(done?' · selesai':'')+'</span><span class="kw">'+s.kw+'</span><p>'+s.t+'</p><span class="pill">'+s.ob+'</span> <span class="pill gy">120 menit</span></button>'}).join("");
+  S.forEach(function(s,i){var done=!!store.ag[i],open=!!store.agOpen[i];
+    html+='<div class="ses'+(done?" done":"")+(open?" open":"")+'" data-i="'+i+'" id="ses'+i+'"><button class="hd" aria-expanded="'+open+'"><span class="t">'+hm(base)+' - '+hm(base+120)+'</span><span class="ti">Sesi '+(i+1)+' · '+s.kw+': '+s.t+'<small>120 menit · '+s.ob+(done?' · selesai':'')+'</small></span><span class="chev">'+ICON.chev+'</span></button><div class="bd">'+
+     '<div class="objline"><span class="pill">'+s.ob+'</span> '+s.od+'</div>'+
+     s.r.map(function(r){var d=r[1]-r[0];return '<div class="rd"><div class="tm"><b>'+hm(base+r[0])+' - '+hm(base+r[1])+'</b><small>menit '+r[0]+'-'+r[1]+' · '+d+'\'</small></div><div class="ac">'+r[2]+'</div><button class="tb noprint" data-timer="'+d+'" data-label="Sesi '+(i+1)+': '+esc(r[2].replace(/<[^>]+>/g,"")).slice(0,60)+'" aria-label="Timer '+d+' menit">'+ICON.clock+d+'\'</button></div>'}).join("")+
+     '<div class="outp"><b>Output:</b> '+s.out+'</div>'+
+     '<div class="row"><label class="ck"><input type="checkbox" data-ck="'+i+'"'+(done?" checked":"")+'> Tandai sesi ini selesai</label><button class="btn out sm noprint" data-timer="120" data-label="Sesi '+(i+1)+' · '+s.kw+'">'+ICON.clock+' Timer sesi 120 menit</button></div></div></div>'});
   $("#tl").innerHTML=html;
-  var tot=S.filter(function(s){return !s.brk}).length,dn=S.filter(function(s,i){return !s.brk&&store.ag[i]}).length,p=Math.round(dn/tot*100);
+  var dn=S.filter(function(s,i){return store.ag[i]}).length,p=Math.round(dn/S.length*100);
   $("#pct").textContent=p+"%";$("#ringFg").style.strokeDashoffset=251.3*(1-p/100);
-  var startMin=(+st[0])*60+(+st[1]);$("#agSum").textContent=tot+" sesi inti, "+hm(startMin)+" sampai "+hm(cur)+". "+dn+" dari "+tot+" sesi selesai.";}
-$("#tl").addEventListener("click",function(e){var b=e.target.closest(".ses:not(.brk) > .hd");if(!b)return;var s=b.parentNode,i=s.dataset.i;s.classList.toggle("open");var o=s.classList.contains("open");b.setAttribute("aria-expanded",o);if(o)store.agOpen[i]=1;else delete store.agOpen[i];save()});
+  $("#agSum").textContent="4 sesi × 120 menit (total 8 jam), tiap sesi "+hm(base)+" sampai "+hm(base+120)+". "+dn+" dari 4 sesi selesai.";}
+$("#rs").addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b)return;var i=b.dataset.go;store.agOpen[i]=1;save();renderAg();var el=$("#ses"+i);if(el)try{el.scrollIntoView({behavior:"smooth",block:"start"})}catch(x){}});
+$("#tl").addEventListener("click",function(e){var b=e.target.closest(".ses > .hd");if(!b)return;var s=b.parentNode,i=s.dataset.i;s.classList.toggle("open");var o=s.classList.contains("open");b.setAttribute("aria-expanded",o);if(o)store.agOpen[i]=1;else delete store.agOpen[i];save()});
 $("#tl").addEventListener("change",function(e){var c=e.target;if(c.dataset.ck==null)return;if(c.checked)store.ag[c.dataset.ck]=1;else delete store.ag[c.dataset.ck];save();renderAg();if(c.checked)toast("Sesi ditandai selesai")});
 $("#startT").value=store.start||"08:30";
 $("#startT").addEventListener("input",function(){store.start=this.value;save();renderAg()});
-$("#expAll").onclick=function(){S.forEach(function(s,i){if(!s.brk)store.agOpen[i]=1});save();renderAg()};
+$("#expAll").onclick=function(){S.forEach(function(s,i){store.agOpen[i]=1});save();renderAg()};
 $("#colAll").onclick=function(){store.agOpen={};save();renderAg()};
 renderAg();
 
@@ -683,11 +757,15 @@ renderAg();
 var Q=[
  {k:"ks",n:"Keep Satisfied",s:"Power tinggi · Interest lebih rendah",a:"Puaskan",it:[
   ["Investor & mitra finansial","ext","Pastikan laporan kinerja akurat dan tepat waktu. Jangan membebani dengan detail operasional."],
-  ["Media besar","ext","Jaga hubungan lewat kehumasan yang transparan dan responsif, terutama saat isu muncul."]]},
+  ["Media besar","ext","Jaga hubungan lewat kehumasan yang transparan dan responsif, terutama saat isu muncul."],
+  ["Partner new brands","ext","Bangun kepercayaan sejak onboarding. Jelaskan proses, ekspektasi, dan batas kewenangan, lalu beri update yang terukur."]]},
  {k:"mc",n:"Manage Closely",s:"Power tinggi · Interest tinggi",a:"Libatkan erat",it:[
   ["Manajemen & BOD","int","Libatkan intensif sejak tahap perencanaan. Beri ringkasan eksekutif berkala, minta arahan, dan hindari kejutan."],
   ["BPOM & lembaga halal","ext","Bangun hubungan formal yang konsisten. Patuhi persyaratan, siapkan dokumen lebih awal, dan komunikasikan perubahan secara proaktif."],
-  ["Retailer & marketplace besar","ext","Perlakukan sebagai mitra strategis. Rencana bisnis bersama, kalender promo terkoordinasi, dan pertemuan rutin."]]},
+  ["Retailer & marketplace besar","ext","Perlakukan sebagai mitra strategis. Rencana bisnis bersama, kalender promo terkoordinasi, dan pertemuan rutin."],
+  ["User internal & cross function","int","Sepakati ekspektasi dan prioritas di awal. Tetapkan ritme sinkronisasi rutin, jalur eskalasi, dan pembagian peran yang jelas."],
+  ["Account & buyer","ext","Pahami target dan tekanan mereka. Siapkan data, usulan yang menguntungkan kedua pihak, dan komunikasi yang konsisten."],
+  ["Platform","ext","Kenali aturan, kalender, dan prioritas platform. Jaga satu jalur komunikasi dan penuhi tenggat program."]]},
  {k:"mo",n:"Monitor",s:"Power lebih rendah · Interest lebih rendah",a:"Pantau",it:[
   ["Pesaing & asosiasi industri","ext","Pantau tren dan kebijakan. Terlibat selektif di forum industri."],
   ["Masyarakat umum","ext","Pantau persepsi lewat riset dan media. Aktif melalui program tanggung jawab sosial yang relevan."]]},
@@ -695,7 +773,9 @@ var Q=[
   ["Konsumen & komunitas","ext","Dengarkan lewat kanal layanan dan media sosial. Respons cepat, empatik, dan konsisten dengan nilai brand."],
   ["Beauty advisor & tenaga lapangan","int","Beri pelatihan produk, informasi program, dan jalur umpan balik. Mereka wajah brand di depan konsumen."],
   ["Supplier bahan baku","ext","Komunikasikan standar mutu dan rencana kebutuhan. Bangun kemitraan jangka panjang, bukan transaksional."],
-  ["KOL & kreator konten","ext","Beri informasi produk yang benar dan pedoman komunikasi. Pilih yang selaras dengan nilai brand."]]}];
+  ["KOL & kreator konten","ext","Beri informasi produk yang benar dan pedoman komunikasi. Pilih yang selaras dengan nilai brand."],
+  ["Tuan toko","ext","Hadir secara rutin, dengarkan kendala lapangan, dan beri informasi program serta dukungan yang mudah dipahami."],
+  ["Agency","ext","Beri brief tertulis yang jelas, tentukan checkpoint dan kriteria hasil, serta beri umpan balik cepat dan spesifik."]]}];
 var mxF="all";
 $("#mx").innerHTML=Q.map(function(q,qi){return '<div class="q '+q.k+'"><span class="act">'+q.a+'</span><h3>'+q.n+'</h3><em>'+q.s+'</em>'+q.it.map(function(s,si){return '<button class="chip '+s[1]+'" data-q="'+qi+'" data-s="'+si+'" data-ty="'+s[1]+'" aria-pressed="false"><i></i>'+s[0]+'</button>'}).join("")+'</div>'}).join("");
 $("#mx").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;$$("#mx .chip").forEach(function(x){x.setAttribute("aria-pressed","false")});c.setAttribute("aria-pressed","true");
@@ -712,7 +792,7 @@ store.sh=store.sh||[];
 function pos(v){return 5+(v-1)/9*90}
 function renderPlot(){var pl=$("#plot");$$(".dot",pl).forEach(function(d){d.remove()});
   store.sh.forEach(function(s){var d=document.createElement("div");d.className="dot";d.style.left=pos(s.i)+"%";d.style.bottom=pos(s.p)+"%";d.innerHTML='<i style="background:'+ATT[s.a][1]+'"></i><span>'+esc(s.n)+'</span>';pl.appendChild(d)});
-  var pv=document.createElement("div");pv.className="dot preview";pv.style.left=pos(+$("#sPow").value&&+$("#sInt").value)+"%";pv.style.bottom=pos(+$("#sPow").value)+"%";pv.innerHTML='<i style="background:'+ATT[$("#sAtt").value][1]+';opacity:.55"></i><span>'+esc($("#sName").value||"Pratinjau")+'</span>';pl.appendChild(pv);
+  var pv=document.createElement("div");pv.className="dot preview";pv.style.left=pos(+$("#sInt").value)+"%";pv.style.bottom=pos(+$("#sPow").value)+"%";pv.innerHTML='<i style="background:'+ATT[$("#sAtt").value][1]+';opacity:.55"></i><span>'+esc($("#sName").value||"Pratinjau")+'</span>';pl.appendChild(pv);
   var L=$("#slist");
   if(!store.sh.length){L.innerHTML='<div class="empty">Belum ada stakeholder. Tambahkan lewat formulir, atau tekan <b>Isi contoh</b>.</div>';return}
   var order=["Manage Closely","Keep Satisfied","Keep Informed","Monitor"];
@@ -723,7 +803,7 @@ function upPrev(){$("#oPow").textContent=$("#sPow").value;$("#oInt").textContent
 $("#sForm").onsubmit=function(e){e.preventDefault();var n=$("#sName").value.trim();if(!n){$("#sName").focus();return}
   store.sh.push({n:n,p:+$("#sPow").value,i:+$("#sInt").value,a:$("#sAtt").value,t:$("#sTyp").value});save();$("#sName").value="";upPrev();toast(n+" ditambahkan");$("#sName").focus()};
 $("#slist").onclick=function(e){var b=e.target.closest("[data-del]");if(!b)return;store.sh.splice(+b.dataset.del,1);save();renderPlot()};
-$("#bSample").onclick=function(){store.sh=[{n:"Head of Brand",p:9,i:8,a:"p",t:"int"},{n:"Tim QA & Regulatory",p:8,i:7,a:"n",t:"int"},{n:"Distributor regional",p:6,i:9,a:"r",t:"ext"},{n:"Tim Finance",p:7,i:3,a:"n",t:"int"},{n:"Beauty advisor",p:3,i:8,a:"p",t:"int"},{n:"Komunitas pengguna",p:4,i:7,a:"n",t:"ext"},{n:"Agensi kreatif",p:2,i:4,a:"n",t:"ext"}];save();renderPlot();toast("Contoh dimuat")};
+$("#bSample").onclick=function(){store.sh=[{n:"Brand Manager (user)",p:9,i:9,a:"p",t:"int"},{n:"Tim Supply Chain",p:7,i:6,a:"n",t:"int"},{n:"Buyer modern trade",p:8,i:7,a:"r",t:"ext"},{n:"Platform marketplace",p:8,i:4,a:"n",t:"ext"},{n:"Tuan toko",p:3,i:8,a:"p",t:"ext"},{n:"Agency kreatif",p:4,i:7,a:"n",t:"ext"},{n:"Creator mikro",p:2,i:5,a:"n",t:"ext"}];save();renderPlot();toast("Contoh dimuat")};
 $("#bClear").onclick=function(){if(!store.sh.length)return;if(confirmInline(this,"Yakin kosongkan?")){store.sh=[];save();renderPlot()}};
 $("#bCopy").onclick=function(){if(!store.sh.length){toast("Daftar masih kosong");return}copy(store.sh.map(function(s){var q=quad(s.p,s.i);return s.n+"\t"+q+"\tPower "+s.p+"\tInterest "+s.i+"\t"+ATT[s.a][0]+"\t"+STRAT[q]}).join("\n"))};
 function confirmInline(btn,msg){if(btn.dataset.arm){delete btn.dataset.arm;btn.textContent=btn.dataset.txt;return true}btn.dataset.txt=btn.textContent;btn.dataset.arm=1;btn.textContent=msg;setTimeout(function(){if(btn.dataset.arm){delete btn.dataset.arm;btn.textContent=btn.dataset.txt}},3000);return false}
@@ -739,7 +819,13 @@ var C=[
   rt:"Fokus pembelajaran",r:null,f:"Stakeholder internal sering terabaikan, padahal dampaknya langsung ke eksekusi."},
  {l:"C",n:"Audit dan pembaruan sertifikasi",k:"Menjelang audit regulator atau lembaga sertifikasi, ditemukan dokumen pemasok bahan baku yang belum lengkap.",
   q:["Siapa yang harus dilibatkan: supplier, QA, R&D, procurement, legal?","Bagaimana menyeimbangkan transparansi dan manajemen risiko?","Apa rencana perbaikan dan komunikasi ke manajemen?"],
-  rt:"Fokus pembelajaran",r:null,f:"Hubungan baik yang dibangun jauh hari sebelum audit adalah modal terbesar saat tekanan datang."}];
+  rt:"Fokus pembelajaran",r:null,f:"Hubungan baik yang dibangun jauh hari sebelum audit adalah modal terbesar saat tekanan datang."},
+ {l:"D",n:"Gap ekspektasi dengan user internal",k:"Tim user meminta materi dengan tenggat sangat singkat dan standar tinggi. Tim pendukung merasa brief berubah-ubah, sementara user merasa permintaannya tidak diprioritaskan.",
+  q:["Apa ekspektasi tersirat di masing-masing pihak?","Bagaimana menyepakati prioritas, tenggat, dan kriteria selesai di awal?","Pola interaksi rutin apa yang mencegah kejadian berulang?"],
+  rt:"Fokus pembelajaran",r:null,f:"Sebagian besar konflik internal lahir dari ekspektasi yang tidak pernah diucapkan."},
+ {l:"E",n:"Hasil creator atau agency tidak sesuai harapan",k:"Konten dari creator atau agency masuk mendekati tenggat dan tidak sesuai arahan brand, padahal jadwal tayang sudah dipublikasikan.",
+  q:["Apakah brief, checkpoint, dan kriteria persetujuan sudah jelas sejak awal?","Bagaimana memberi umpan balik yang tegas tetapi menjaga hubungan?","Apa kesepakatan baru agar pola ini tidak terulang?"],
+  rt:"Fokus pembelajaran",r:null,f:"Memengaruhi tanpa otoritas, yaitu menjaga kolaborasi saat kita tidak memegang kendali penuh."}];
 var cI=0;store.cq=store.cq||{};store.deb=store.deb||{};
 function renderCases(){
   $("#ctabs").innerHTML=C.map(function(c,i){return '<button class="ctab" role="tab" aria-selected="'+(i===cI)+'" data-i="'+i+'"><span class="lt">'+c.l+'</span><b>'+c.n+'</b></button>'}).join("");
@@ -758,12 +844,12 @@ renderCases();
 
 /* Quiz */
 var QZ=[
- {q:"BPOM dan lembaga halal paling tepat ditempatkan di kuadran mana?",o:["Monitor","Keep Informed","Manage Closely","Keep Satisfied"],a:2,e:"Power dan interest mereka sama-sama tinggi terhadap produk Paragon, jadi dikelola erat: hubungan formal yang konsisten dan dokumen disiapkan lebih awal."},
- {q:"Konsumen dan komunitas umumnya punya interest tinggi tetapi power individual lebih rendah. Strategi utamanya?",o:["Keep Informed: dengarkan dan respons cepat serta empatik","Monitor: cukup dipantau setahun sekali","Keep Satisfied: kirim laporan keuangan","Abaikan sampai ada keluhan resmi"],a:0,e:"Mereka sangat peduli dan suaranya bisa membesar lewat media sosial, sehingga perlu terus diinformasikan dan didengar."},
- {q:"Pendekatan yang tepat untuk investor dan mitra finansial (Keep Satisfied) adalah...",o:["Melibatkan mereka di setiap rapat operasional","Laporan kinerja akurat dan tepat waktu tanpa membebani detail operasional","Hanya menghubungi saat ada krisis","Menyerahkan sepenuhnya ke tim media"],a:1,e:"Power tinggi, interest pada detail harian lebih rendah. Jaga kepuasan lewat informasi ringkas, akurat, dan tepat waktu."},
  {q:"Dalam kerangka K+R=H, apa yang sepenuhnya bisa kita kendalikan?",o:["Kejadian","Respons","Hasil","Sikap stakeholder"],a:1,e:"Kejadian sering di luar kendali dan hasil dipengaruhi banyak pihak. Yang bisa kita kelola adalah kualitas respons."},
- {q:"Manakah yang BUKAN prinsip komunikasi krisis dalam modul ini?",o:["Cepat","Jujur dan empatik","Satu suara","Menunggu semua fakta lengkap sebelum berkomunikasi apa pun"],a:3,e:"Diam terlalu lama memberi ruang spekulasi. Prinsipnya: cepat, jujur, empatik, satu suara, lalu perbarui secara berkala."},
- {q:"Stakeholder berpengaruh tinggi yang resisten sebaiknya didekati dengan cara...",o:["Menghindari mereka agar tidak memperkeruh","Mendengarkan kekhawatiran dan mencari kepentingan bersama","Langsung eskalasi ke atasan mereka","Memperlakukan sama dengan pendukung"],a:1,e:"Sikap resisten biasanya berakar dari kekhawatiran yang belum terjawab. Dengarkan dulu, lalu cari titik temu."}];
+ {q:"Menurut definisi core skill Parapreneur, yang dicari dalam praktik kerja saat ini adalah...",o:["Kemampuan mengelola orang lain lewat jabatan","Membangun relasi, memengaruhi tanpa otoritas, menyelaraskan kepentingan, menciptakan kolaborasi","Menyelesaikan semua pekerjaan sendiri agar cepat","Menghindari konflik dengan selalu mengiyakan"],a:1,e:"Fokusnya bukan mengatur orang lain, melainkan membangun dukungan lewat relasi, pengaruh, keselarasan kepentingan, dan kolaborasi."},
+ {q:"User internal dan cross function paling tepat dikelola dengan pendekatan...",o:["Monitor: cukup dipantau sesekali","Manage Closely: sepakati ekspektasi, ritme sinkronisasi, jalur eskalasi, dan pembagian peran","Keep Satisfied: kirim laporan bulanan saja","Hubungi hanya saat ada masalah"],a:1,e:"Mereka berpengaruh langsung ke eksekusi dan sangat berkepentingan, jadi perlu kesepakatan di awal dan ritme interaksi rutin."},
+ {q:"Apa beda posisi dan kepentingan?",o:["Keduanya sama saja","Posisi adalah alasan di balik permintaan, kepentingan adalah permintaannya","Posisi adalah apa yang diminta, kepentingan adalah kebutuhan atau alasan di baliknya","Kepentingan hanya dimiliki atasan"],a:2,e:"Negosiasi buntu kalau hanya membahas posisi. Menggali kepentingan membuka lebih banyak opsi yang bisa disepakati."},
+ {q:"Urutan alur kolaboratif saat menghadapi perbedaan kepentingan adalah...",o:["Tawarkan opsi, sepakati, dengarkan, validasi","Dengarkan, validasi, gali kepentingan, tawarkan opsi, sepakati","Validasi, sepakati, dengarkan, tawarkan opsi","Gali kepentingan, sepakati, lalu dengarkan bila perlu"],a:1,e:"Orang lebih terbuka pada opsi setelah merasa didengar dan divalidasi, dan setelah kepentingannya dipahami."},
+ {q:"Agar hasil creator atau agency sesuai harapan, apa yang perlu disepakati sejak awal?",o:["Cukup tenggat akhir","Brief tertulis yang jelas, checkpoint, dan kriteria persetujuan","Nominal pembayaran saja","Tidak perlu, cukup koreksi di akhir"],a:1,e:"Kita tidak memegang kendali penuh atas pihak eksternal, jadi kejelasan di awal adalah bentuk pengaruh tanpa otoritas."}];
 var zI=0,zA=[];
 function renderQuiz(){var el=$("#quiz");
   var prog='<div class="qz-prog">'+QZ.map(function(_,i){return '<i class="'+(zA[i]==null?(i===zI?"on":""):(zA[i]===QZ[i].a?"ok":"no"))+'"></i>'}).join("")+'</div>';
@@ -792,7 +878,7 @@ renderPh();
 
 var COLS=["s","k","st","m","kf","pic"],STOPT=["","Manage Closely","Keep Satisfied","Keep Informed","Monitor"];
 store.cp=store.cp&&store.cp.length?store.cp:[{s:"",k:"",st:"",m:"",kf:"",pic:""}];
-var PH_={s:"mis. Distributor Jatim",k:"Stok tepat waktu",m:"Jadwal promo & stok",kf:"WA group, mingguan",pic:"Nama"};
+var PH_={s:"mis. Buyer modern trade",k:"Target sell-out tercapai",m:"Rencana promo & dukungan stok",kf:"Meeting rutin, 2 mingguan",pic:"Nama"};
 function renderCp(){$("#cp").innerHTML=store.cp.map(function(r,ri){return '<tr>'+COLS.map(function(c){
   if(c==="st")return '<td><select data-r="'+ri+'" data-c="st">'+STOPT.map(function(o){return '<option'+(r.st===o?" selected":"")+' value="'+o+'">'+(o||"Pilih...")+'</option>'}).join("")+'</select></td>';
   return '<td><input data-r="'+ri+'" data-c="'+c+'" value="'+esc(r[c]||"")+'" placeholder="'+(ri===0?(PH_[c]||""):"")+'"></td>'}).join("")+'<td class="noprint"><button class="x-btn" data-delr="'+ri+'" aria-label="Hapus baris">×</button></td></tr>'}).join("")}
