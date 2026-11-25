@@ -127,56 +127,6 @@ main{padding:1.5rem 0 3rem}
 .info .ic svg{width:20px;height:20px}
 .note{border:1px dashed var(--orange);background:var(--orangeSoft);border-radius:14px;padding:.8rem 1rem;font-size:.9rem}
 
-/* Agenda */
-.ag-top{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:center}
-.ring{position:relative;width:96px;height:96px}
-.ring svg{transform:rotate(-90deg)}
-.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:1.25rem;font-weight:800}
-.ring circle{fill:none;stroke-width:10}
-.ring .bgc{stroke:var(--line)} .ring .fg{stroke:var(--orange);stroke-linecap:round;transition:stroke-dashoffset .6s}
-.ag-ctrl{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.5rem}
-.ag-ctrl label{font-size:.85rem;font-weight:700;color:var(--mute)}
-.ag-ctrl input[type=time]{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:.35rem .5rem}
-.tl{position:relative;padding-left:1.6rem}
-.tl::before{content:"";position:absolute;left:.55rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
-.ses{position:relative;margin-bottom:.75rem;scroll-margin-top:70px}
-.ses::before{content:"";position:absolute;left:-1.33rem;top:1.15rem;width:14px;height:14px;border-radius:50%;background:var(--card);border:3px solid var(--blue)}
-.ses.done::before{background:var(--green);border-color:var(--green)}
-.ses.brk::before{border-color:var(--line);width:10px;height:10px;left:-1.2rem;top:.85rem}
-.ses .hd{width:100%;display:flex;align-items:center;gap:.8rem;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;cursor:pointer;text-align:left;box-shadow:var(--shadow)}
-.ses.open .hd{border-bottom-left-radius:0;border-bottom-right-radius:0}
-.ses .t{font-size:.8rem;font-weight:800;color:var(--blue);min-width:92px;font-variant-numeric:tabular-nums}
-.ses .ti{flex:1;font-weight:800}
-.ses .ti small{display:block;font-weight:600;color:var(--mute);font-size:.78rem}
-.ses .chev{transition:transform .2s;color:var(--mute)}
-.ses.open .chev{transform:rotate(180deg)}
-.ses .bd{display:none;background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;padding:.4rem 1.1rem 1rem}
-.ses.open .bd{display:block}
-.ses .bd ul{padding-left:1.1rem;margin:.4rem 0 .8rem}
-.ses .bd li{margin:.25rem 0}
-.ses .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:.75rem}
-.ses.brk .hd{background:transparent;box-shadow:none;border-style:dashed;cursor:default;padding:.5rem 1rem}
-.ses.brk .ti{font-weight:700;color:var(--mute)}
-.ck{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.88rem;cursor:pointer}
-.ck input{width:18px;height:18px;accent-color:var(--green)}
-
-/* Rundown */
-.rs{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:0 0 1rem}
-.rsc{text-align:left;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:.85rem .9rem;cursor:pointer;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.rsc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}
-.rsc:hover{border-color:var(--blue)}
-.rsc .no{font-size:.72rem;font-weight:800;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
-.rsc .kw{display:block;font-size:1.3rem;font-weight:800;color:var(--blue);line-height:1.2;margin:.15rem 0 .2rem}
-.rsc p{font-size:.84rem;margin:0 0 .5rem;font-weight:600}
-.rsc.done::before{background:var(--green)}
-.rsc.done .kw{color:var(--green)}
-.rd{display:grid;grid-template-columns:118px 1fr;gap:.3rem .8rem;align-items:start;padding:.6rem 0;border-bottom:1px dashed var(--line)}
-.rd:last-of-type{border-bottom:0}
-.rd .tm b{display:block;font-size:.84rem;color:var(--blue);font-variant-numeric:tabular-nums}
-.rd .tm small{font-size:.72rem;color:var(--mute);font-weight:700}
-.rd .ac{font-size:.92rem}
-.objline{background:var(--blueSoft);border-radius:12px;padding:.7rem .9rem;margin:.6rem 0 .4rem;font-size:.92rem}
-.outp{background:var(--greenSoft);border-radius:12px;padding:.7rem .9rem;margin:.8rem 0;font-size:.92rem}
 /* Core skill */
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:.8rem}
 .pillars div{border-radius:14px;padding:.9rem;background:var(--bg2);border:1px solid var(--line)}
@@ -520,7 +470,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .bld{grid-template-columns:1fr}
   .ctabs{grid-template-columns:1fr}
   .ctab{flex-direction:row;align-items:center!important}
-  .rs,.pillars{grid-template-columns:repeat(2,1fr)}
+  .pillars{grid-template-columns:repeat(2,1fr)}
   .cs{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -532,10 +482,6 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .mx{grid-template-columns:1fr}
   .mxwrap{grid-template-columns:1fr;grid-template-rows:auto}
   .yl,.xl{display:none}
-  .ag-top{grid-template-columns:1fr;justify-items:start}
-  .ses .t{min-width:0}
-  .ses .hd{flex-wrap:wrap;gap:.3rem .8rem}
-  .rd{grid-template-columns:1fr}
   .obj2 > div{grid-template-columns:30px 1fr}.obj2 > div > a{grid-column:2}
 }
 @media print{
@@ -577,8 +523,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
       <div class="stat"><b>30·60·90</b><small>Rencana aksi</small></div>
     </div>
     <div class="cta">
-      <a class="btn pri" href="#agenda">Lihat rundown 4 sesi →</a>
-      <a class="btn ghost" href="#peta">Coba peta stakeholder</a>
+      <a class="btn pri" href="#peta">Coba peta stakeholder</a>
       <a class="btn ghost" href="#canvas">Buka canvas kerja</a>
     </div>
   </div>
@@ -587,12 +532,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <nav class="tabs" aria-label="Bagian modul">
   <div class="wrap" role="tablist" id="nav">
     <button role="tab" data-t="ringkasan"><span class="num">1</span>Ringkasan</button>
-    <button role="tab" data-t="agenda"><span class="num">2</span>Rundown 4 Sesi</button>
-    <button role="tab" data-t="peta"><span class="num">3</span>Peta Stakeholder</button>
-    <button role="tab" data-t="kasus"><span class="num">4</span>Studi Kasus</button>
-    <button role="tab" data-t="canvas"><span class="num">5</span>Canvas Kerja</button>
-    <button role="tab" data-t="kuis"><span class="num">6</span>Kuis</button>
-    <button role="tab" data-t="aksi"><span class="num">7</span>Rencana Aksi</button>
+    <button role="tab" data-t="peta"><span class="num">2</span>Peta Stakeholder</button>
+    <button role="tab" data-t="kasus"><span class="num">3</span>Studi Kasus</button>
+    <button role="tab" data-t="canvas"><span class="num">4</span>Canvas Kerja</button>
+    <button role="tab" data-t="kuis"><span class="num">5</span>Kuis</button>
+    <button role="tab" data-t="aksi"><span class="num">6</span>Rencana Aksi</button>
   </div>
 </nav>
 
@@ -658,11 +602,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
     <span class="kicker">Setelah kelas, peserta mampu</span>
     <h2>Objective kelas</h2>
     <div class="obj2">
-      <div><span class="nn">1</span><span>Memahami prinsip dasar stakeholder management dan pentingnya mengelola hubungan internal dan eksternal secara aktif.</span><a href="#agenda" class="pill">Sesi 1</a></div>
-      <div><span class="nn">2</span><span>Mengidentifikasi tipe, kebutuhan, dan kepentingan stakeholder, lalu menyesuaikan pendekatan komunikasi dan kolaborasi berdasarkan karakternya.</span><a href="#agenda" class="pill">Sesi 2</a></div>
-      <div><span class="nn">3</span><span>Menyelaraskan ekspektasi antara diri sendiri, user internal, dan pihak eksternal.</span><a href="#agenda" class="pill">Sesi 3</a></div>
-      <div><span class="nn">4</span><span>Membangun pola interaksi rutin yang efektif dengan stakeholder internal (user, cross function) dan eksternal (toko, account, buyer, creator, platform, agency, partner).</span><a href="#agenda" class="pill">Sesi 3</a></div>
-      <div><span class="nn">5</span><span>Mengelola perbedaan kepentingan, konflik, dan gap ekspektasi dengan pendekatan kolaboratif dan solutif.</span><a href="#agenda" class="pill">Sesi 4</a></div>
+      <div><span class="nn">1</span><span>Memahami prinsip dasar stakeholder management dan pentingnya mengelola hubungan internal dan eksternal secara aktif.</span></div>
+      <div><span class="nn">2</span><span>Mengidentifikasi tipe, kebutuhan, dan kepentingan stakeholder, lalu menyesuaikan pendekatan komunikasi dan kolaborasi berdasarkan karakternya.</span></div>
+      <div><span class="nn">3</span><span>Menyelaraskan ekspektasi antara diri sendiri, user internal, dan pihak eksternal.</span></div>
+      <div><span class="nn">4</span><span>Membangun pola interaksi rutin yang efektif dengan stakeholder internal (user, cross function) dan eksternal (toko, account, buyer, creator, platform, agency, partner).</span></div>
+      <div><span class="nn">5</span><span>Mengelola perbedaan kepentingan, konflik, dan gap ekspektasi dengan pendekatan kolaboratif dan solutif.</span></div>
     </div>
   </div>
 
@@ -675,32 +619,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   <div class="note"><b>Catatan untuk fasilitator.</b> Pemetaan dan studi kasus di modul ini bersifat ilustratif berdasarkan gambaran umum industri kosmetik. Sesuaikan dengan data internal dan struktur organisasi Paragon yang sebenarnya.</div>
 </section>
 
-<!-- 2 AGENDA -->
-<section class="tab" id="agenda" role="tabpanel">
-  <div class="card">
-    <div class="ag-top">
-      <div class="ring" aria-label="Progres sesi">
-        <svg width="96" height="96" viewBox="0 0 96 96"><circle class="bgc" cx="48" cy="48" r="40"/><circle class="fg" id="ringFg" cx="48" cy="48" r="40" stroke-dasharray="251.3" stroke-dashoffset="251.3"/></svg>
-        <b id="pct">0%</b>
-      </div>
-      <div>
-        <span class="kicker">Alur kelas</span>
-        <h2>Rundown 4 sesi</h2>
-        <p class="mute" style="margin:0" id="agSum">4 sesi × 120 menit. Centang sesi yang sudah selesai untuk melacak progres.</p>
-        <div class="ag-ctrl noprint">
-          <label for="startT">Jam mulai tiap sesi</label><input type="time" id="startT" value="08:30">
-          <button class="btn out sm" id="expAll">Buka semua</button>
-          <button class="btn out sm" id="colAll">Tutup semua</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="rs" id="rs"></div>
-  <div class="tl" id="tl"></div>
-  <p class="mute" style="font-size:.82rem;margin-top:.4rem">Ubah jam mulai di atas, jam tiap aktivitas ikut menyesuaikan.</p>
-</section>
-
-<!-- 3 PETA -->
+<!-- 2 PETA -->
 <section class="tab" id="peta" role="tabpanel">
   <div class="sec-head">
     <div><span class="kicker">Ilustratif</span><h2>Peta Power-Interest</h2><p>Ketuk stakeholder untuk melihat strategi pendekatannya. Penempatan bersifat ilustratif; peserta menyesuaikannya dengan konteks kerja masing-masing.</p></div>
@@ -754,10 +673,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   </div>
 </section>
 
-<!-- 4 KASUS -->
+<!-- 3 KASUS -->
 <section class="tab" id="kasus" role="tabpanel">
   <div class="sec-head">
-    <div><span class="kicker">Fiktif, ilustratif</span><h2>Lima studi kasus</h2><p>Dipakai untuk role-play di Sesi 4. Pilih kasus, diskusikan pertanyaan bersama kelompok, lalu buka respons ideal atau fokus pembelajaran sebagai pembanding.</p></div>
+    <div><span class="kicker">Fiktif, ilustratif</span><h2>Lima studi kasus</h2><p>Dipakai untuk role-play. Pilih kasus, diskusikan pertanyaan bersama kelompok, lalu buka respons ideal atau fokus pembelajaran sebagai pembanding.</p></div>
   </div>
   <div class="ctabs" role="tablist" id="ctabs"></div>
   <div class="card" id="cbody"></div>
@@ -774,7 +693,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   </div>
 </section>
 
-<!-- 5 CANVAS -->
+<!-- 4 CANVAS -->
 <section class="tab" id="canvas" role="tabpanel">
   <div class="sec-head">
     <div><span class="kicker">Lembar kerja peserta</span><h2>Canvas Kerja</h2><p>Enam canvas untuk dipakai sepanjang hari. Isi langsung di sini, salin sebagai teks, atau cetak, baik yang sudah terisi maupun lembar kosong untuk ditulis tangan. Isian tersimpan otomatis di browser ini.</p></div>
@@ -789,13 +708,13 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   <div class="card" id="cvBody"></div>
 </section>
 
-<!-- 6 KUIS -->
+<!-- 5 KUIS -->
 <section class="tab" id="kuis" role="tabpanel">
-  <div class="sec-head"><div><span class="kicker">Cek pemahaman</span><h2>Kuis singkat</h2><p>6 pertanyaan untuk mengunci konsep kunci. Cocok sebagai recap di awal sesi berikutnya atau penutup Sesi 4.</p></div></div>
+  <div class="sec-head"><div><span class="kicker">Cek pemahaman</span><h2>Kuis singkat</h2><p>6 pertanyaan untuk mengunci konsep kunci. Cocok sebagai recap atau penutup kelas.</p></div></div>
   <div class="card" id="quiz" style="max-width:760px"></div>
 </section>
 
-<!-- 7 AKSI -->
+<!-- 6 AKSI -->
 <section class="tab" id="aksi" role="tabpanel">
   <div class="sec-head">
     <div><span class="kicker">Bawa pulang</span><h2>Rencana Aksi 30-60-90 Hari</h2><p>Centang langkah yang sudah dikerjakan, isi rencana komunikasi, lalu cetak atau simpan sebagai PDF.</p></div>
@@ -859,14 +778,13 @@ function save(){try{window.localStorage.setItem(KEY,JSON.stringify(store))}catch
 function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on")},1800)}
 function copy(txt){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast("Tersalin ke clipboard")},function(){fallback()})}else fallback();
   function fallback(){var a=document.createElement("textarea");a.value=txt;document.body.appendChild(a);a.select();try{document.execCommand("copy");toast("Tersalin ke clipboard")}catch(e){toast("Gagal menyalin")}a.remove()}}
-var ICON={chev:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>'};
 
 /* Print */
 $("#btnPrint").onclick=$("#bPrint2").onclick=function(){document.body.classList.remove("pcv");window.print()};
 try{window.addEventListener("afterprint",function(){document.body.classList.remove("pcv")})}catch(e){}
 
 /* Tabs with hash */
-var TABS=["ringkasan","agenda","peta","kasus","canvas","kuis","aksi"];
+var TABS=["ringkasan","peta","kasus","canvas","kuis","aksi"];
 function show(id,scroll){if(TABS.indexOf(id)<0)id="ringkasan";
   $$("#nav button").forEach(function(b){var on=b.dataset.t===id;b.setAttribute("aria-selected",on);if(on){try{var w=b.parentNode;w.scrollLeft=b.offsetLeft-(w.clientWidth-b.offsetWidth)/2}catch(e){}}});
   $$(".tab").forEach(function(t){t.classList.toggle("on",t.id===id)});
@@ -900,43 +818,6 @@ function renderKRH(){
 $("#krhSeg").onclick=function(e){var b=e.target.closest("button");if(!b)return;kIdx=+b.dataset.i;kSel=null;renderKRH()};
 $("#krhOpts").onclick=function(e){var b=e.target.closest("button");if(!b)return;kSel=b.dataset.r;renderKRH()};
 renderKRH();
-
-/* Agenda */
-var S=[
- {kw:"Connect",t:"Fondasi Stakeholder Management",ob:"Objective 1",od:"Memahami prinsip dasar dan pentingnya mengelola hubungan internal dan eksternal secara aktif.",
-  r:[[0,15,"Pembukaan, perkenalan, dan harapan peserta"],[15,35,"K+R=H dan definisi core skill: membangun relasi, memengaruhi tanpa otoritas, menyelaraskan kepentingan, menciptakan kolaborasi"],[35,60,"Diskusi current state: interaksi internal belum smooth, beda ekspektasi dengan user, kompleksitas pihak eksternal"],[60,95,"Konsep Why-What-How stakeholder management; stakeholder internal vs eksternal"],[95,115,"Latihan: daftar semua stakeholder dalam pekerjaan saya"],[115,120,"Rangkuman dan jembatan ke sesi 2"]],
-  out:"Daftar awal stakeholder tiap peserta."},
- {kw:"Understand",t:"Tipe, Kebutuhan & Kepentingan",ob:"Objective 2",od:"Mengidentifikasi tipe, kebutuhan, dan kepentingan stakeholder, lalu menyesuaikan pendekatan komunikasi dan kolaborasi.",
-  r:[[0,10,"Recap dan check-in"],[10,35,"Pemetaan Power-Interest dan penandaan sikap (pendukung, netral, resisten). Lihat <a href=\"#peta\">Peta Stakeholder</a>"],[35,65,"Mengenali kepentingan: tuan toko, account, buyer, creator, platform, agency, new brands partner (apa yang mereka butuhkan dan khawatirkan)"],[65,95,"Menyesuaikan gaya komunikasi dan kolaborasi berdasarkan karakter stakeholder"],[95,115,"Praktik: peta stakeholder nyata dari pekerjaan peserta (pakai latihan <a href=\"#peta\">Buat peta stakeholder Anda</a>)"],[115,120,"Rangkuman"]],
-  out:"Peta stakeholder dan strategi pendekatan untuk 3 stakeholder prioritas."},
- {kw:"Align",t:"Ekspektasi & Pola Interaksi Rutin",ob:"Objective 3 & 4",od:"Menyelaraskan ekspektasi diri, user internal, dan pihak eksternal; membangun pola interaksi rutin yang efektif.",
-  r:[[0,10,"Recap dan check-in"],[10,40,"Expectation alignment: apa yang diharapkan, apa yang bisa diberikan, apa yang disepakati"],[40,70,"Pola interaksi internal (user dan cross function): ritme sinkronisasi, jalur eskalasi, pembagian peran"],[70,100,"Pola interaksi eksternal: kick-off, brief jelas, checkpoint, pelaporan, review"],[100,115,"Praktik: rancang pola interaksi untuk satu stakeholder nyata"],[115,120,"Rangkuman"]],
-  out:"Kesepakatan ekspektasi dan rencana komunikasi satu stakeholder."},
- {kw:"Resolve",t:"Konflik, Gap Ekspektasi & Komitmen",ob:"Objective 5",od:"Mengelola perbedaan kepentingan, konflik, dan gap ekspektasi dengan pendekatan kolaboratif dan solutif.",
-  r:[[0,10,"Recap dan check-in"],[10,35,"Memengaruhi tanpa otoritas; membedakan posisi dan kepentingan"],[35,55,"Alur kolaboratif: dengarkan, validasi, gali kepentingan, tawarkan opsi, sepakati"],[55,90,"Role-play <a href=\"#kasus\">studi kasus</a>"],[90,110,"<a href=\"#aksi\">Rencana aksi 30-60-90 hari</a>"],[110,120,"Komitmen, evaluasi, dan penutup"]],
-  out:"Rencana aksi 30-60-90 hari dan komitmen pribadi."}];
-store.ag=store.ag||{};store.agOpen=store.agOpen||{0:1};
-function hm(min){min=((min%1440)+1440)%1440;var h=Math.floor(min/60),m=min%60;return (h<10?"0":"")+h+"."+(m<10?"0":"")+m}
-function renderAg(){var st=($("#startT").value||"08:30").split(":"),base=(+st[0])*60+(+st[1]),html="";
-  $("#rs").innerHTML=S.map(function(s,i){var done=!!store.ag[i];return '<button class="rsc'+(done?" done":"")+'" data-go="'+i+'"><span class="no">Sesi '+(i+1)+(done?' · selesai':'')+'</span><span class="kw">'+s.kw+'</span><p>'+s.t+'</p><span class="pill">'+s.ob+'</span> <span class="pill gy">120 menit</span></button>'}).join("");
-  S.forEach(function(s,i){var done=!!store.ag[i],open=!!store.agOpen[i];
-    html+='<div class="ses'+(done?" done":"")+(open?" open":"")+'" data-i="'+i+'" id="ses'+i+'"><button class="hd" aria-expanded="'+open+'"><span class="t">'+hm(base)+' - '+hm(base+120)+'</span><span class="ti">Sesi '+(i+1)+' · '+s.kw+': '+s.t+'<small>120 menit · '+s.ob+(done?' · selesai':'')+'</small></span><span class="chev">'+ICON.chev+'</span></button><div class="bd">'+
-     '<div class="objline"><span class="pill">'+s.ob+'</span> '+s.od+'</div>'+
-     s.r.map(function(r){var d=r[1]-r[0];return '<div class="rd"><div class="tm"><b>'+hm(base+r[0])+' - '+hm(base+r[1])+'</b><small>menit '+r[0]+'-'+r[1]+' · '+d+'\'</small></div><div class="ac">'+r[2]+'</div></div>'}).join("")+
-     '<div class="outp"><b>Output:</b> '+s.out+'</div>'+
-     '<div class="row"><label class="ck"><input type="checkbox" data-ck="'+i+'"'+(done?" checked":"")+'> Tandai sesi ini selesai</label></div></div></div>'});
-  $("#tl").innerHTML=html;
-  var dn=S.filter(function(s,i){return store.ag[i]}).length,p=Math.round(dn/S.length*100);
-  $("#pct").textContent=p+"%";$("#ringFg").style.strokeDashoffset=251.3*(1-p/100);
-  $("#agSum").textContent="4 sesi × 120 menit (total 8 jam), tiap sesi "+hm(base)+" sampai "+hm(base+120)+". "+dn+" dari 4 sesi selesai.";}
-$("#rs").addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b)return;var i=b.dataset.go;store.agOpen[i]=1;save();renderAg();var el=$("#ses"+i);if(el)try{el.scrollIntoView({behavior:"smooth",block:"start"})}catch(x){}});
-$("#tl").addEventListener("click",function(e){var b=e.target.closest(".ses > .hd");if(!b)return;var s=b.parentNode,i=s.dataset.i;s.classList.toggle("open");var o=s.classList.contains("open");b.setAttribute("aria-expanded",o);if(o)store.agOpen[i]=1;else delete store.agOpen[i];save()});
-$("#tl").addEventListener("change",function(e){var c=e.target;if(c.dataset.ck==null)return;if(c.checked)store.ag[c.dataset.ck]=1;else delete store.ag[c.dataset.ck];save();renderAg();if(c.checked)toast("Sesi ditandai selesai")});
-$("#startT").value=store.start||"08:30";
-$("#startT").addEventListener("input",function(){store.start=this.value;save();renderAg()});
-$("#expAll").onclick=function(){S.forEach(function(s,i){store.agOpen[i]=1});save();renderAg()};
-$("#colAll").onclick=function(){store.agOpen={};save();renderAg()};
-renderAg();
 
 /* Matrix */
 var Q=[
