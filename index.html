@@ -338,6 +338,193 @@ td input:focus,td select:focus{outline:none;border-color:var(--blue);background:
 footer{border-top:1px solid var(--line);background:var(--card)}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:1.2rem;padding-bottom:1.6rem;font-size:.82rem;color:var(--mute)}
 
+/* Canvas kerja */
+.cv-id{display:grid;grid-template-columns:2fr 1.5fr .8fr 1.2fr;gap:.8rem;align-items:end;padding-top:.9rem;padding-bottom:.9rem}
+.cv-id .fld{margin:0}
+.cvtabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.55rem;margin:0 0 1rem}
+.cvt{position:relative;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:.7rem .75rem .75rem;cursor:pointer;display:flex;flex-direction:column;gap:.3rem;color:var(--ink)}
+.cvt:hover{border-color:var(--blue)}
+.cvt .lt{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:800;background:var(--graySoft);color:var(--gray);font-size:.85rem}
+.cvt b{font-size:.86rem;line-height:1.25}
+.cvt small{font-size:.7rem;color:var(--mute);font-weight:700;line-height:1.3}
+.cvt .pg{position:absolute;right:.6rem;top:.7rem;font-size:.68rem;font-weight:800;color:var(--mute);background:var(--graySoft);border-radius:999px;padding:.05rem .45rem}
+.cvt .pg.full{background:var(--greenSoft);color:var(--green)}
+.cvt[aria-selected="true"]{border-color:var(--blue);background:var(--blueSoft)}
+.cvt[aria-selected="true"] .lt{background:var(--blue);color:#fff}
+.cv-head{display:flex;justify-content:space-between;gap:.8rem 1rem;flex-wrap:wrap;align-items:flex-start;margin-bottom:.9rem}
+.cv-act{display:flex;gap:.35rem;flex-wrap:wrap}
+.cvcase{margin:.2rem 0 .6rem}
+.cvev{margin-bottom:.4rem}
+.cvev ul{margin:.45rem 0 .2rem;padding-left:1.1rem;font-size:.9rem}
+.cvev .btn{margin-top:.55rem}
+.lf{display:block;min-width:0}
+.lf .fl{display:block;font-size:.78rem;font-weight:800;color:var(--mute);margin-bottom:.28rem}
+.fl.gr{color:var(--green)!important}.fl.or{color:var(--orange2)!important}
+.cvmeta{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:.6rem 0 .3rem}
+.cvmeta.c3{grid-template-columns:minmax(0,1fr) 150px 160px}
+.blk{display:grid;grid-template-columns:38px minmax(0,1fr);gap:.85rem;padding:.95rem 0;border-top:1px dashed var(--line)}
+.blk .bn,.ek .bn{width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem}
+.bn.or{background:var(--orange2)!important}
+.blk h3{margin:.35rem 0 .1rem;font-size:1rem}
+.hint{font-size:.84rem;color:var(--mute);margin:0 0 .55rem}
+.rh,.rr{display:grid;gap:.4rem;align-items:center}
+.rh{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:0 .1rem .25rem}
+.rr{margin-bottom:.4rem;position:relative}
+.rc{display:block;min-width:0}
+.rc > span{display:none;font-size:.7rem;font-weight:800;color:var(--mute);margin-bottom:.15rem}
+.rc input[type=checkbox]{width:20px;height:20px;accent-color:var(--green);margin:.55rem auto;display:block}
+.sc2{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.sl{display:inline-block;font-size:.72rem;font-weight:800;padding:.15rem .6rem;border-radius:999px;background:var(--greenSoft);color:var(--green);margin-bottom:.35rem}
+.sl.no{background:var(--redSoft);color:var(--red)}
+.pwb{margin-top:.4rem;background:var(--bg2);border-radius:14px;padding:.9rem 1rem}
+.pwb h3{margin:0 0 .1rem;font-size:1rem}
+.say{background:linear-gradient(135deg,#0B2545,#13407A);color:#fff;border-radius:16px;padding:1rem 1.2rem 1.05rem;margin:1rem 0}
+.say .qm{display:block;font-size:3.2rem;line-height:.9;height:1.6rem;color:var(--orange);font-weight:800;font-family:Georgia,serif}
+.say p{font-size:1.02rem;line-height:1.6;margin:.25rem 0}
+.say ol{margin:.35rem 0;padding-left:1.4rem;font-size:1rem}
+.say li{margin:.2rem 0}
+.say u{text-decoration:none;color:#FFC266;font-weight:700}
+.say small{color:rgba(255,255,255,.65);font-size:.76rem}
+.say .ph0{color:rgba(255,255,255,.55);font-style:italic}
+.cap{background:var(--bg2);border-radius:12px;padding:.7rem .85rem;margin:.6rem 0 .9rem;font-size:.88rem}
+.capbar{height:10px;border-radius:999px;background:var(--line);overflow:hidden;margin-bottom:.45rem}
+.capbar i{display:block;height:100%;background:var(--blue);border-radius:999px;transition:width .3s}
+.capbar.over i{background:var(--orange2)}
+.qh,.qrow{display:grid;grid-template-columns:28px minmax(0,2fr) minmax(0,1.1fr) 112px minmax(0,.9fr) 72px minmax(0,1fr) 88px;gap:.4rem;align-items:center}
+.qh{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:0 .55rem .3rem calc(.55rem + 5px)}
+#tqList{display:grid;gap:.45rem}
+.qrow{position:relative;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;padding:.45rem .55rem}
+.qrow .qn{width:26px;height:26px;border-radius:8px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.78rem}
+.qrow.out{background:var(--bg2);border-left-color:#B8C4D4}
+.qrow.out .qn{background:#B8C4D4}
+.qrow.cut{margin-top:2.1rem}
+.qrow.cut::before{content:"";position:absolute;left:-5px;right:0;top:-1.05rem;border-top:2px dashed var(--orange)}
+.qrow.cut::after{content:"Batas kapasitas · antrian berikutnya ↓";position:absolute;right:0;top:-2.05rem;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange2)}
+.ql{display:block;min-width:0}
+.ql > span{display:none;font-size:.68rem;font-weight:800;color:var(--mute);margin-bottom:.1rem}
+.qrow .in{padding:.42rem .55rem;font-size:.88rem}
+.qa{display:flex;gap:.15rem;justify-content:flex-end}
+.mv{width:26px;height:30px;border:1px solid var(--line);background:var(--card);border-radius:8px;cursor:pointer;font-weight:800;color:var(--mute)}
+.mv:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}
+.mv:disabled{opacity:.35;cursor:default}
+.msgc{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem;align-items:start;margin-top:.5rem}
+.msg{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;white-space:pre-wrap;font-size:.93rem;line-height:1.65;overflow-wrap:anywhere}
+.msg .sg{border-bottom:2px solid var(--c);padding-bottom:1px}
+.lc{display:flex;gap:.55rem;align-items:flex-start;font-size:.86rem;border-radius:12px;padding:.6rem .8rem;margin-top:.6rem}
+.lc i{flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:.8rem;color:#fff}
+.lc.ok{background:var(--greenSoft)}.lc.ok i{background:var(--green)}
+.lc.warn{background:var(--orangeSoft)}.lc.warn i{background:var(--orange2)}
+.st{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.4rem}
+.st button{border:1px dashed #b9c6d6;background:var(--card);border-radius:999px;padding:.22rem .65rem;font-size:.76rem;font-weight:700;color:var(--mute);cursor:pointer}
+.st button:hover{border-color:var(--blue);color:var(--blue);border-style:solid}
+.lad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;align-items:end;margin:.4rem 0 .2rem}
+.ls{border-radius:12px;padding:.6rem .7rem;display:flex;flex-direction:column;gap:.15rem;color:#fff;font-size:.86rem;font-weight:700;line-height:1.3;cursor:pointer;position:relative}
+.ls b{font-size:1.4rem;line-height:1}
+.ls input{position:absolute;right:.6rem;top:.6rem;width:19px;height:19px;accent-color:var(--green)}
+.ls.s1{background:#2F74D0;min-height:84px}
+.ls.s2{background:#E0A848;min-height:104px;color:#1b1205}
+.ls.s3{background:var(--orange2);min-height:124px;cursor:default}
+.ls small{font-weight:600;opacity:.85;font-size:.74rem}
+.ek{display:grid;grid-template-columns:36px 180px minmax(0,1fr);gap:.7rem;align-items:start;padding:.6rem 0;border-top:1px dashed var(--line)}
+.ekl b{display:block;font-size:.95rem;margin-top:.3rem}
+.ekl small{display:block;color:var(--mute);font-size:.8rem}
+.wc{display:block;font-style:normal;font-size:.72rem;font-weight:700;color:var(--green);margin-top:.15rem}
+.wc.warn{color:var(--orange2)}
+.grid-ek{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:1rem;align-items:start;margin-top:1rem}
+.tant{background:linear-gradient(160deg,#4A2A22,#6B3A22);color:#fff;border-radius:16px;padding:1rem 1.1rem}
+.tant b{display:block;font-size:1.15rem;line-height:1.3;margin:.3rem 0 .6rem}
+.tant em{color:#FFC266;font-weight:700}
+.tant .kicker{color:#FFB43F}
+.km3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.kmc{border:1px solid var(--line);border-radius:16px;padding:.9rem;background:var(--card);display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.kmh{display:flex;justify-content:space-between;align-items:flex-start}
+.kmi{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff}
+.kmi svg{width:22px;height:22px}
+.kmn{font-size:2rem;font-weight:800;color:#C3CEDD;line-height:1}
+.kmc h3{margin:.1rem 0 0}
+.kmc .hint{margin:0}
+.ff{display:grid;gap:.45rem;margin-top:.2rem}
+.t8{display:grid;gap:.3rem}
+.t8 label{display:flex;gap:.5rem;align-items:center;border:1px solid var(--line);border-radius:10px;padding:.4rem .6rem;font-size:.84rem;font-weight:700;cursor:pointer}
+.t8 label:hover{border-color:var(--blue)}
+.t8 input{accent-color:var(--blue);width:16px;height:16px;flex:0 0 auto;margin:0}
+.t8 label:has(input:checked){border-color:var(--blue);background:var(--blueSoft);color:var(--blue)}
+.c4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}
+.commit .lf .fl{color:rgba(255,255,255,.8)}
+.commit input[type=date]{color-scheme:dark}
+.d14{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:3px;margin:.9rem 0 .45rem}
+.d14 span{height:38px;border-radius:7px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:.72rem;font-weight:800;color:rgba(255,255,255,.75)}
+.d14 span.m{color:#1b1205}
+.d14 span.s{background:#8EC5FF}.d14 span.c{background:#FFC266}.d14 span.p{background:#7FE0A3}.d14 span.e{background:#fff}
+.kml{display:flex;flex-wrap:wrap;gap:.3rem .9rem;font-size:.78rem;color:rgba(255,255,255,.88);font-weight:600}
+.kml i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:.3rem;vertical-align:-1px}
+.krh3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.krh3 > div{border-radius:14px;padding:.75rem;border:1px solid var(--line)}
+.krh3 .k{background:var(--graySoft)}.krh3 .r{background:var(--orangeSoft)}.krh3 .h{background:var(--blueSoft)}
+.krh3 b{display:block;font-size:.9rem;margin-bottom:.1rem}
+.krh3 small{display:block;color:var(--mute);font-size:.78rem;margin-bottom:.4rem}
+/* Lembar cetak canvas (hanya tampil saat dicetak) */
+#pa{display:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#0B1B33;font-size:10.5pt;line-height:1.45;padding:0 2mm}
+#pa .ph{border-bottom:3px solid #0C6EBF;padding-bottom:.4rem;margin:.4rem 0 .6rem}
+#pa .pk{font-size:7.5pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#D9531E}
+#pa h1{font-size:19pt;margin:.15rem 0 .1rem}
+#pa .ph p{margin:0;color:#52627c}
+#pa .pm{display:flex;gap:.6rem;margin:0 0 .55rem}
+#pa .pm > div{flex:1;border-bottom:1px solid #9fb0c6;padding:.1rem 0 .15rem;min-height:2.2em}
+#pa .pid > div:first-child{flex:2}
+#pa .pid > div:last-child{flex:1.7}
+#pa .pm span{display:block;font-size:7pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#52627c}
+#pa .pm b{font-size:10pt}
+#pa .pcase{background:#EAF1FA;border-radius:8px;padding:.45rem .7rem;margin-bottom:.55rem;font-size:9.5pt}
+#pa .pcase p{margin:.15rem 0 0}
+#pa .pb{border:1px solid #c9d5e4;border-radius:8px;padding:.45rem .6rem .5rem;margin-bottom:.5rem;break-inside:avoid}
+#pa .pb.or{border-color:#F29A0E;background:#FFF8EC}
+#pa .pbh{display:flex;align-items:center;gap:.45rem;font-weight:800;font-size:10.5pt;margin-bottom:.2rem}
+#pa .pn{width:1.6em;height:1.6em;border-radius:50%;background:#0C6EBF;color:#fff;display:inline-grid;place-items:center;font-size:8.5pt;flex:0 0 auto}
+#pa .pb.or .pn{background:#D9531E}
+#pa .psb{font-size:8.5pt;color:#52627c;margin:0 0 .2rem}
+#pa .pv{white-space:pre-wrap}
+#pa .pl{background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.9em - 1px),#b8c6d8 calc(1.9em - 1px),#b8c6d8 1.9em)}
+#pa .psub{margin-top:.35rem}
+#pa .psub span{display:block;font-size:7pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#52627c}
+#pa .p2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+#pa .p3{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+#pa table{min-width:0;font-size:9.5pt;border:1px solid #c9d5e4;border-collapse:collapse}
+#pa th{background:#EAF1FA;color:#52627c;font-size:7pt;padding:.3rem .4rem}
+#pa td{padding:.3rem .4rem;height:1.9em;border:1px solid #dbe3ee}
+#pa tr.pout td{color:#6b7a90;background:#F4F7FB}
+#pa tr.pcut td{border-top:2px dashed #F29A0E;color:#D9531E;font-size:7pt;font-weight:800;letter-spacing:.12em;text-align:right;padding:.12rem .4rem;height:auto}
+#pa .psay{border-left:4px solid #F29A0E;background:#FFF8EC;padding:.55rem .8rem;border-radius:6px;font-style:italic;margin:.5rem 0;line-height:1.55;break-inside:avoid}
+#pa .pnote{font-size:9pt;color:#52627c;margin:.3rem 0}
+#pa .pck{list-style:none;padding:0;margin:.2rem 0 0;font-size:9.5pt;line-height:1.75}
+#pa .plad{display:flex;gap:1.2rem;flex-wrap:wrap;font-weight:700;font-size:10pt;margin-bottom:.55rem}
+#pa .ph2{font-weight:800;font-size:11pt;margin:.7rem 0 .3rem}
+#pa .sig{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.2rem}
+#pa .sig div{border-top:1px solid #0B1B33;padding-top:.2rem;font-size:8.5pt;color:#52627c}
+#pa .pfoot{margin-top:.7rem;font-size:7pt;color:#52627c;text-align:right}
+@media (max-width:820px){
+  .cvtabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cv-id{grid-template-columns:1fr 1fr}
+  .km3,.grid-ek,.krh3{grid-template-columns:1fr}
+  .c4{grid-template-columns:1fr 1fr}
+  .ek{grid-template-columns:36px minmax(0,1fr)}.ek .in{grid-column:1/-1}
+  .qh{display:none}
+  .qrow{grid-template-columns:1fr 1fr;row-gap:.45rem;padding:.6rem .65rem}
+  .qrow .qn{grid-column:1;grid-row:1}.qrow .qa{grid-column:2;grid-row:1}
+  .ql > span{display:block}.ql.w{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .cvtabs{grid-template-columns:1fr 1fr}
+  .cvmeta,.cvmeta.c3,.sc2,.c4{grid-template-columns:1fr}
+  .rh{display:none}
+  .rr{grid-template-columns:1fr!important;background:var(--bg2);border-radius:12px;padding:.6rem 2.2rem .6rem .6rem}
+  .rr .x-btn{position:absolute;right:.3rem;top:.3rem}
+  .rc > span{display:block}.rc input[type=checkbox]{margin:.2rem 0}
+  .blk{grid-template-columns:30px minmax(0,1fr);gap:.6rem}.blk .bn{width:30px;height:30px;font-size:.85rem}
+  .ls{font-size:.76rem;padding:.5rem}.ls b{font-size:1.15rem}
+  .msgc{grid-template-columns:1fr}
+  .d14 span{height:30px;font-size:.62rem;border-radius:5px}
+}
 @media (max-width:820px){
   .grid3,.kpi,.deb{grid-template-columns:1fr}
   .bld{grid-template-columns:1fr}
@@ -366,6 +553,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .tab{display:none!important}.tab.on{display:block!important}
   body{background:#fff}.card,.phase{box-shadow:none;break-inside:avoid}
   .hero{background:#0C6EBF!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.pcv main,body.pcv .hero,body.pcv nav.tabs,body.pcv footer{display:none!important}
+  body.pcv #pa{display:block!important}
+  body.pcv .top{border-bottom:0}
 }
 </style>
 </head>
@@ -399,6 +589,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
     <div class="cta">
       <a class="btn pri" href="#agenda">Lihat rundown 4 sesi →</a>
       <a class="btn ghost" href="#peta">Coba peta stakeholder</a>
+      <a class="btn ghost" href="#canvas">Buka canvas kerja</a>
     </div>
   </div>
 </section>
@@ -409,8 +600,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
     <button role="tab" data-t="agenda"><span class="num">2</span>Rundown 4 Sesi</button>
     <button role="tab" data-t="peta"><span class="num">3</span>Peta Stakeholder</button>
     <button role="tab" data-t="kasus"><span class="num">4</span>Studi Kasus</button>
-    <button role="tab" data-t="kuis"><span class="num">5</span>Kuis</button>
-    <button role="tab" data-t="aksi"><span class="num">6</span>Rencana Aksi</button>
+    <button role="tab" data-t="canvas"><span class="num">5</span>Canvas Kerja</button>
+    <button role="tab" data-t="kuis"><span class="num">6</span>Kuis</button>
+    <button role="tab" data-t="aksi"><span class="num">7</span>Rencana Aksi</button>
   </div>
 </nav>
 
@@ -592,13 +784,28 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   </div>
 </section>
 
-<!-- 5 KUIS -->
+<!-- 5 CANVAS -->
+<section class="tab" id="canvas" role="tabpanel">
+  <div class="sec-head">
+    <div><span class="kicker">Lembar kerja peserta</span><h2>Canvas Kerja</h2><p>Enam canvas untuk dipakai sepanjang hari. Isi langsung di sini, salin sebagai teks, atau cetak, baik yang sudah terisi maupun lembar kosong untuk ditulis tangan. Isian tersimpan otomatis di browser ini.</p></div>
+  </div>
+  <div class="card cv-id">
+    <div class="fld"><label for="cvN">Nama</label><input class="in" id="cvN" data-id="n" maxlength="60" placeholder="Nama peserta"></div>
+    <div class="fld"><label for="cvF">Fungsi</label><input class="in" id="cvF" data-id="f" list="cvFungsi" maxlength="40" placeholder="mis. Finance"><datalist id="cvFungsi"><option value="Commercial"><option value="ETDE"><option value="Finance"><option value="HRCA"><option value="Logistics"><option value="Marketing"><option value="NSEI"><option value="PID"><option value="R&amp;D"><option value="SCM"></datalist></div>
+    <div class="fld"><label for="cvG">Kelompok</label><select class="in" id="cvG" data-id="g"><option value="">-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+    <div class="fld"><label for="cvT">Tanggal</label><input class="in" type="date" id="cvT" data-id="t"></div>
+  </div>
+  <div class="cvtabs" role="tablist" id="cvTabs" aria-label="Pilih canvas"></div>
+  <div class="card" id="cvBody"></div>
+</section>
+
+<!-- 6 KUIS -->
 <section class="tab" id="kuis" role="tabpanel">
   <div class="sec-head"><div><span class="kicker">Cek pemahaman</span><h2>Kuis singkat</h2><p>6 pertanyaan untuk mengunci konsep kunci. Cocok sebagai recap di awal sesi berikutnya atau penutup Sesi 4.</p></div></div>
   <div class="card" id="quiz" style="max-width:760px"></div>
 </section>
 
-<!-- 6 AKSI -->
+<!-- 7 AKSI -->
 <section class="tab" id="aksi" role="tabpanel">
   <div class="sec-head">
     <div><span class="kicker">Bawa pulang</span><h2>Rencana Aksi 30-60-90 Hari</h2><p>Centang langkah yang sudah dikerjakan, isi rencana komunikasi, lalu cetak atau simpan sebagai PDF.</p></div>
@@ -654,6 +861,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   <button id="tmX" aria-label="Tutup timer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
 </div>
 <div id="toast" role="status"></div>
+<div id="pa" aria-hidden="true"></div>
 
 <script>
 (function(){
@@ -669,14 +877,16 @@ function copy(txt){if(navigator.clipboard&&navigator.clipboard.writeText){naviga
 var ICON={play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',pause:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>',chev:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',clock:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'};
 
 /* Print */
-$("#btnPrint").onclick=$("#bPrint2").onclick=function(){window.print()};
+$("#btnPrint").onclick=$("#bPrint2").onclick=function(){document.body.classList.remove("pcv");window.print()};
+try{window.addEventListener("afterprint",function(){document.body.classList.remove("pcv")})}catch(e){}
 
 /* Tabs with hash */
-var TABS=["ringkasan","agenda","peta","kasus","kuis","aksi"];
+var TABS=["ringkasan","agenda","peta","kasus","canvas","kuis","aksi"];
 function show(id,scroll){if(TABS.indexOf(id)<0)id="ringkasan";
   $$("#nav button").forEach(function(b){var on=b.dataset.t===id;b.setAttribute("aria-selected",on);if(on){try{var w=b.parentNode;w.scrollLeft=b.offsetLeft-(w.clientWidth-b.offsetWidth)/2}catch(e){}}});
   $$(".tab").forEach(function(t){t.classList.toggle("on",t.id===id)});
-  if(scroll){try{var n=$("nav.tabs");if(window.scrollY>n.offsetTop)window.scrollTo({top:n.offsetTop,behavior:"smooth"})}catch(e){}}}
+  if(scroll){try{var n=$("nav.tabs");if(window.scrollY>n.offsetTop)window.scrollTo({top:n.offsetTop,behavior:"smooth"})}catch(e){}}
+  if(id==="canvas")setTimeout(growAll,30)}
 function setHash(id){try{if(location.hash!=="#"+id)history.replaceState(null,"","#"+id)}catch(e){}}
 function curHash(){try{return location.hash.slice(1)}catch(e){return ""}}
 $("#nav").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;show(b.dataset.t,true);setHash(b.dataset.t)});
@@ -899,6 +1109,328 @@ function renderC(){var v=["c1","c2","c3"].map(function(id){return $("#"+id).valu
 renderC();
 $("#bCopyC").onclick=function(){copy($("#cSent").textContent)};
 $("#bReset").onclick=function(){if(confirmInline(this,"Klik lagi untuk reset")){store.ph={};store.cp=[{}];store.cm={};save();renderPh();renderCp();["c1","c2","c3"].forEach(function(id){$("#"+id).value=""});renderC();toast("Isian rencana aksi direset")}};
+
+/* ===== Canvas kerja ===== */
+var PERAN=["Memutuskan","Mengerjakan","Dimintai masukan","Diinformasikan"],DAMPAK=["Tinggi","Sedang","Rendah"];
+var TOOLS=["Kartu Takut & Kejar","One-Page Alignment","Skrip Say-Back","Transparent Queue","Expectation Contract","Pesan Eskalasi 5 Kalimat","Template DESA","First 2 Weeks Map & Decision Log"];
+var SVGA=' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+var ICO={user:'<svg'+SVGA+'><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>',chat:'<svg'+SVGA+'><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',clip:'<svg'+SVGA+'><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>'};
+var CVK={
+ k1:{n:"Kasus 1 · Agency dan Area Abu-abu",f:"Commercial",s:"Sebelum restrukturisasi, tim affiliate harus menyelaraskan ekspektasi brand dengan kemampuan tim. Kerja sama dengan banyak agency tidak semuanya jelas. Ada area abu-abu yang membuat kerja tersendat.",q:["Apa yang seharusnya sudah disepakati sebelum kerja dimulai?","Bagaimana membuat posisi kita “kuat” saat isu muncul?"],a:"Expectation contract sederhana: deliverable, kriteria selesai, jalur eskalasi, siapa memutuskan apa. Kuncinya: menyamakan halaman sebelum tantangan terjadi."},
+ k2:{n:"Kasus 2 · Banyak Stakeholder, Satu Tujuan",f:"R&D",s:"Diskusi melibatkan lebih dari 5 stakeholder. Persepsi dan tujuan masing-masing berbeda.",q:["Bagaimana rapat berikutnya dirancang agar keluar dengan satu tujuan?"],a:"Pre-wiring 1:1 dengan stakeholder kunci, one-page alignment sebagai bahan rapat, say-back sebelum menutup, keputusan yang belum disepakati dicatat terbuka."},
+ k3:{n:"Kasus 3 · “Saya Handle Semua Brand”",f:"Commercial",s:"Permintaan dari semua brand datang bersamaan dan banyak. Tidak semuanya bisa dipenuhi.",q:["Bagaimana menolak sebagian tanpa merusak hubungan?"],a:"Transparent queue: tampilkan semua permintaan dalam satu daftar, kapasitas terlihat, minta brand bersama-sama memutuskan urutan (atau eskalasi ke atasan bersama bila konflik)."},
+ k4:{n:"Kasus 4 · Lima Proyek Paralel Tanpa PIC",f:"ETDE, Logistics, SCM",s:"Lima proyek berjalan paralel tanpa PIC yang jelas. Hiring dibekukan, sehingga hanya tersedia intern yang perlu didorong naik kapabilitasnya.",q:["Proyek mana yang diselamatkan lebih dulu?","Siapa yang jadi PIC?","Bagaimana mengelola ekspektasi stakeholder yang proyeknya tertunda?"],a:"Satu halaman portofolio: proyek, dampak, PIC, status. Prioritas diputuskan bersama sponsor. Ekspektasi proyek yang tertunda dikomunikasikan lebih awal, bukan menunggu ditanya."},
+ k5:{n:"Kasus 5 · Perbaikan di Proses Tim Lain",f:"Finance AR",s:"Tim AR berada di proses berikutnya dan perlu perbaikan di proses tim lain, tanpa wewenang untuk meminta perubahan. Solusinya: eskalasi ke atasan yang punya scope atas proses tersebut. Hasilnya arahan yang jelas dan disepakati semua tim.",q:["Apa yang sudah baik dari langkah ini?","Apa yang bisa dilakukan sebelum eskalasi agar hubungan tetap hangat?"],a:"Apresiasi: memilih penengah dengan scope tepat. Tambahan: bicara langsung dulu, bawa data dampak ke proses berikutnya, bahasa shared goal. Eskalasi sebagai undangan menyelesaikan bersama, bukan laporan."},
+ k6:{n:"Kasus 6 · Beda POV dalam Perbaikan Proses",f:"Finance, HRCA",s:"Banyak sudut pandang berbeda saat perbaikan proses. Persepsi sulit disamakan, akhirnya dieskalasi.",q:["Bagaimana agar eskalasi tidak jadi satu-satunya jalan?"],a:"Mulai dengan tujuan bersama dan ukuran sukses bersama, pisahkan fakta, kepentingan, dan usulan, baru eskalasi bila keputusan memang di luar kewenangan semua pihak."},
+ own:{n:"Kasus nyata saya",f:"",s:"Pakai situasi nyata dari pekerjaanmu. Tulis secara anonim, tanpa menyebut nama orang atau brand.",q:[],a:""}};
+
+function today(){var d=new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+function addD(iso,n){if(!iso)return "";var p=String(iso).split("-"),d=new Date(+p[0],+p[1]-1,+p[2]+n);if(isNaN(d))return "";return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+function dDiff(a,b){var p=String(a).split("-"),q=String(b).split("-");return Math.round((new Date(+q[0],+q[1]-1,+q[2])-new Date(+p[0],+p[1]-1,+p[2]))/864e5)}
+function fmtD(iso,short){if(!iso)return "";var p=String(iso).split("-");if(p.length<3)return String(iso);var d=new Date(+p[0],+p[1]-1,+p[2]);if(isNaN(d))return String(iso);try{return d.toLocaleDateString("id-ID",short?{weekday:"short",day:"numeric",month:"short"}:{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){return String(iso)}}
+function filled(v){return v!=null&&v!==false&&String(v).trim()!==""}
+function tv(v){return filled(v)?String(v).trim():"-"}
+function trim(v){return String(v).trim()}
+function lower1(s){s=String(s||"").trim().replace(/[.]+$/,"");return /^[A-Z][a-z]/.test(s)?s.charAt(0).toLowerCase()+s.slice(1):s}
+function gv(o,p){return p.split(".").reduce(function(a,k){return a==null?undefined:a[k]},o)}
+function sv(o,p,v){var ks=p.split("."),x=o;for(var i=0;i<ks.length-1;i++){if(x[ks[i]]==null)x[ks[i]]=/^\d+$/.test(ks[i+1])?[]:{};x=x[ks[i]]}x[ks[ks.length-1]]=v}
+function rowsOf(a,ks){return (a||[]).filter(function(r){return r&&ks.some(function(k){return filled(r[k])})})}
+function anyRow(a,k){return rowsOf(a,[k]).length>0}
+function isEmpty(o){if(o==null)return true;if(typeof o!=="object")return !filled(o);for(var k in o){if(k!=="start"&&Object.prototype.hasOwnProperty.call(o,k)&&!isEmpty(o[k]))return false}return true}
+function lns(t){return String(t||"").split(/\n+/).map(function(s){return s.trim().replace(/^(\d+[.)]|[-•*])\s*/,"")}).filter(Boolean)}
+function sentN(t){t=String(t||"").trim();return t?t.split(/[.!?]+(?:\s+|$)/).filter(function(s){return s.trim()}).length:0}
+function fmtN(n){return String(Math.round(n*10)/10).replace(".",",")}
+
+/* Form helpers */
+function fi(d,p,ph,ex){var v=gv(d,p);return '<input class="in" data-f="'+p+'" value="'+esc(v==null?"":v)+'" placeholder="'+esc(ph||"")+'"'+(ex||"")+'>'}
+function ft(d,p,ph,rows){var v=gv(d,p);return '<textarea class="in" rows="'+(rows||2)+'" data-f="'+p+'" placeholder="'+esc(ph||"")+'">'+esc(v==null?"":v)+'</textarea>'}
+function fs(d,p,opts,ph){var v=gv(d,p)||"";return '<select class="in" data-f="'+p+'"><option value="">'+esc(ph||"Pilih...")+'</option>'+opts.map(function(o){return '<option'+(o===v?" selected":"")+'>'+esc(o)+'</option>'}).join("")+'</select>'}
+function lab(l,c,cls){return '<label class="lf"><span class="fl'+(cls?" "+cls:"")+'">'+l+'</span>'+c+'</label>'}
+function blk(n,t,h,body,cls){return '<div class="blk"><span class="bn'+(cls?" "+cls:"")+'">'+n+'</span><div><h3>'+t+'</h3>'+(h?'<p class="hint">'+h+'</p>':'')+body+'</div></div>'}
+function rowsEd(d,key,cols,add){var a=gv(d,key),arr=a&&a.length?a:[{}],tpl=cols.map(function(c){return c.w||"minmax(0,1fr)"}).join(" ")+" 30px";
+  return '<div class="rh" style="grid-template-columns:'+tpl+'">'+cols.map(function(c){return '<span>'+c.l+'</span>'}).join("")+'<span></span></div>'+
+   arr.map(function(r,i){return '<div class="rr" style="grid-template-columns:'+tpl+'">'+cols.map(function(c){var p=key+"."+i+"."+c.k,ctl;
+     if(c.ck)ctl='<input type="checkbox" data-f="'+p+'"'+(gv(d,p)?" checked":"")+' aria-label="'+esc(c.l)+'">';
+     else if(c.o)ctl=fs(d,p,c.o,"Pilih...");else ctl=fi(d,p,i===0?c.ph:"",' aria-label="'+esc(c.l)+'"');
+     return '<label class="rc"><span>'+c.l+'</span>'+ctl+'</label>'}).join("")+'<button class="x-btn noprint" data-rm="'+key+'.'+i+'" aria-label="Hapus baris">×</button></div>'}).join("")+
+   '<button class="btn out sm noprint" data-add="'+key+'">+ '+add+'</button>'}
+
+/* Print helpers */
+function pv(v,n){return filled(v)?'<div class="pv">'+esc(trim(v))+'</div>':'<div class="pl" style="height:'+((n||2)*1.9)+'em"></div>'}
+function pB(n,t,v,lines,cls,sub){return '<div class="pb'+(cls?" "+cls:"")+'"><div class="pbh">'+(n!==""?'<span class="pn">'+n+'</span>':'')+t+'</div>'+(sub?'<div class="psb">'+sub+'</div>':'')+pv(v,lines)+'</div>'}
+function pS(l,v,n){return '<div class="psub"><span>'+l+'</span>'+pv(v,n||1)+'</div>'}
+function pM(pairs,cls){return '<div class="pm'+(cls?" "+cls:"")+'">'+pairs.map(function(p){return '<div><span>'+p[0]+'</span><b>'+esc(filled(p[1])?trim(p[1]):"")+'</b></div>'}).join("")+'</div>'}
+function pT(n,t,cols,rows,min,cls){rows=rowsOf(rows,cols.map(function(c){return c.k}));
+  var h='<div class="pb'+(cls?" "+cls:"")+'"><div class="pbh">'+(n!==""?'<span class="pn">'+n+'</span>':'')+t+'</div><table><thead><tr>'+cols.map(function(c){return '<th'+(c.w?' style="width:'+c.w+'"':'')+'>'+c.l+'</th>'}).join("")+'</tr></thead><tbody>'+
+   rows.map(function(r){return '<tr>'+cols.map(function(c){var v=r[c.k];return '<td>'+esc(c.f?c.f(v):(filled(v)?v:""))+'</td>'}).join("")+'</tr>'}).join("");
+  for(var i=rows.length;i<min;i++)h+='<tr>'+cols.map(function(){return '<td></td>'}).join("")+'</tr>';
+  return h+'</tbody></table></div>'}
+function ckf(v){return v?"✓":""}
+
+/* Cek nada: kata yang terdengar menyalahkan */
+var BL=[["kamu","kita"],["kalian","kita"],["gara-gara","karena"],["tidak pernah",""],["nggak pernah",""],["gak pernah",""],["lagi-lagi",""]];
+function lang(t){t=" "+String(t||"").toLowerCase()+" ";var hits=[];BL.forEach(function(b){var m=t.match(new RegExp("(^|[^a-z])"+b[0].replace(/-/g,"\\-")+"(?=[^a-z]|$)","g"));if(m)hits.push([b[0],m.length,b[1]])});return {hits:hits,kita:(t.match(/(^|[^a-z])kita(?=[^a-z]|$)/g)||[]).length}}
+function langHTML(t){if(!filled(t))return "";var r=lang(t);
+  if(!r.hits.length)return '<div class="lc ok"><i>✓</i><span><b>Nada kolaboratif.</b> '+(r.kita?'Kata “kita” muncul '+r.kita+'×. ':'')+'Tidak ada kata yang terdengar menyalahkan.</span></div>';
+  return '<div class="lc warn"><i>!</i><span><b>Cek nada.</b> '+r.hits.map(function(h){return '“'+h[0]+'”'+(h[1]>1?' ('+h[1]+'×)':'')+(h[2]?' → coba “'+h[2]+'”':'')}).join(", ")+'. Ganti “kamu” dengan “kita”, dan ganti penilaian dengan fakta.</span></div>'}
+function segHTML(parts,cols){return parts.map(function(t,i){return filled(t)?'<span class="sg" style="--c:'+cols[i]+'">'+esc(trim(t))+'</span>':""}).filter(Boolean).join(" ")}
+
+/* Say-back */
+function sbItems(d){var it=[];lns(d.sepakat).forEach(function(s){it.push("Kita sepakat: "+s.replace(/[.]+$/,"")+".")});
+  rowsOf(d.aksi,["s","a","k"]).forEach(function(r){it.push((filled(r.s)?trim(r.s):"...")+" akan "+(filled(r.a)?lower1(r.a):"...")+(filled(r.k)?", paling lambat "+trim(r.k):"")+".")});
+  if(filled(d.open))it.push("Yang masih terbuka: "+lower1(d.open)+".");if(filled(d.next))it.push("Langkah berikutnya: "+lower1(d.next)+".");return it}
+function sbText(d){var it=sbItems(d);return "“Supaya kita sama-sama yakin, saya ulangi ya:\n"+(it.length?it.map(function(s,i){return (i+1)+". "+s}).join("\n"):"...")+"\nAda yang perlu dikoreksi?”"}
+function sbFollow(d){var it=sbItems(d);return "Terima kasih untuk "+(filled(d.rapat)?lower1(d.rapat):"rapat")+" hari ini. Supaya kita pegang catatan yang sama, berikut ringkasan kesepakatan kita:\n"+(it.length?it.map(function(s,i){return (i+1)+". "+s}).join("\n"):"-")+"\nMohon dikoreksi bila ada yang kurang tepat. Terima kasih."}
+
+/* Transparent queue */
+function tqCalc(d){var kap=parseFloat(String(d.kap||"").replace(",",".")),has=kap>0,cum=0,used=0,cut=-1;
+  var st=(d.items||[]).map(function(r,i){var b=parseFloat(String(r&&r.b||"").replace(",","."))||0;cum+=b;var inn=!has||(cut<0&&cum<=kap);if(!inn&&cut<0)cut=i;if(inn)used+=b;return inn});
+  return {kap:kap,has:has,total:cum,used:used,st:st,cut:cut}}
+function tqMsg(d,r,i,inNames){return (filled(r.p)?"Halo "+trim(r.p)+", t":"T")+"erima kasih untuk permintaan “"+trim(r.r)+"”. Semuanya penting, dan dengan kapasitas "+(filled(d.per)?lower1(d.per):"saat ini")+" kami sedang mengerjakan "+(inNames.length?inNames.slice(0,3).map(function(n){return "“"+n+"”"}).join(", ")+(inNames.length>3?" dan "+(inNames.length-3)+" lainnya":""):"permintaan yang sudah antre lebih dulu")+". Permintaan ini ada di urutan #"+(i+1)+" dan bisa kami mulai setelahnya"+(filled(r.dl)?" (tenggat yang diminta: "+trim(r.dl)+")":"")+". Kalau ini lebih berdampak bagi bisnis, mana yang mau kita tukar urutannya?"}
+var tqMsgs=[];
+function tqDerive(d){var c=tqCalc(d),sat=d.sat||"hari kerja",items=d.items||[];
+  $$("#tqList .qrow").forEach(function(el,i){el.classList.toggle("out",c.st[i]===false);el.classList.toggle("cut",i===c.cut)});
+  var cap=$("#tqCap");if(!cap)return;
+  if(!c.has)cap.innerHTML='<span class="mute">Isi <b>kapasitas tim</b> dan <b>beban</b> tiap permintaan. Garis batas kapasitas muncul otomatis.</span>';
+  else{var nIn=items.filter(function(r,i){return c.st[i]&&r&&filled(r.r)}).length,over=c.total-c.kap;
+    cap.innerHTML='<div class="capbar'+(over>0?" over":"")+'"><i style="width:'+Math.min(100,c.total/c.kap*100)+'%"></i></div><b>'+fmtN(c.used)+' dari '+fmtN(c.kap)+' '+esc(sat)+'</b> terpakai oleh '+nIn+' permintaan dalam kapasitas. '+(over>0?'<span style="color:var(--orange2);font-weight:700">Total permintaan melebihi kapasitas '+fmtN(over)+' '+esc(sat)+'.</span>':'Masih ada ruang '+fmtN(c.kap-c.total)+' '+esc(sat)+'.')}
+  var inNames=items.filter(function(r,i){return c.st[i]&&r&&filled(r.r)}).map(function(r){return trim(r.r)});
+  tqMsgs=[];items.forEach(function(r,i){if(c.st[i]===false&&r&&filled(r.r))tqMsgs.push(tqMsg(d,r,i,inNames))});
+  $("#tqMsg").innerHTML=tqMsgs.length?'<h3 style="margin-top:1.1rem">Pesan “iya, dengan urutan ini”</h3><p class="hint">Untuk permintaan di bawah batas kapasitas. Kabari lebih awal, jangan tunggu ditanya.</p>'+tqMsgs.map(function(m,k){return '<div class="msgc"><div class="msg">'+esc(m)+'</div><button class="btn out sm noprint" data-act="cpm" data-i="'+k+'">Salin</button></div>'}).join(""):""}
+
+/* DESA & eskalasi */
+var DESA=[
+ {k:"D",f:"d",n:"Deskripsikan",c:"#0C6EBF",h:"Ceritakan situasinya apa adanya: fakta, data, kejadian. Tanpa menilai dan tanpa menyalahkan.",st:["Saya perhatikan ","Data menunjukkan ","Saat ini "],ph:"Fakta apa yang terjadi? mis. Saat ini ada lima proyek berjalan bersamaan, sementara..."},
+ {k:"E",f:"e",n:"Ekspresikan",c:"#D9531E",h:"Sampaikan dampak dan kekhawatiranmu dengan bahasa “saya” atau “kita”, bukan “kamu”.",st:["Saya khawatir ","Dampaknya bagi kita ","Saya ingin "],ph:"Apa dampaknya, dan apa yang kamu rasakan? mis. Saya khawatir..."},
+ {k:"S",f:"s",n:"Spesifikan",c:"#15803d",h:"Minta satu hal yang konkret: apa, siapa, kapan. Satu permintaan yang jelas lebih kuat daripada tiga yang samar.",st:["Usul saya, ","Bisakah kita sepakati ","Paling lambat "],ph:"Apa yang kamu minta, dari siapa, kapan? mis. Usul saya, mulai..."},
+ {k:"A",f:"a",n:"Apresiasi",c:"#B45309",h:"Tutup dengan menghargai kontribusi, niat baik, atau kesediaan mereka, agar hubungan tetap hangat.",st:["Terima kasih sudah ","Saya menghargai "],ph:"Apa yang kamu hargai dari mereka? mis. Terima kasih sudah..."}];
+var DESA_TO={k4:"mis. Pemilik proyek yang tertunda, atau sponsor proyek",k5:"mis. Lead tim di proses sebelum AR (sebelum eskalasi)",own:"mis. Nama dan peran stakeholder"};
+var ESK=[
+ {f:"kx",n:"Konteks",q:"Apa situasinya?",ph:"mis. Dalam 3 bulan terakhir, sekitar 30% invoice masuk ke AR tanpa dokumen pendukung."},
+ {f:"dp",n:"Dampak",q:"Apa akibatnya bagi tujuan bersama?",ph:"mis. Penagihan tertunda rata-rata 7 hari dan arus kas kita ikut tertahan."},
+ {f:"cb",n:"Yang sudah dicoba",q:"Langkah apa yang sudah ditempuh?",ph:"mis. Kami sudah bicara langsung dengan tim terkait dan membawa data 3 bulan."},
+ {f:"bt",n:"Yang dibutuhkan",q:"Keputusan atau bantuan apa yang diminta?",ph:"mis. Mohon arahan menetapkan checklist dokumen sebagai standar mulai bulan depan."},
+ {f:"tj",n:"Tujuan bersama",q:"Apa yang ingin kita capai bersama?",ph:"mis. Supaya kita bisa menagih tepat waktu dan kedua tim tidak sibuk mengurus koreksi."}];
+var ESK_TO={k5:"mis. Atasan yang membawahi proses billing dan AR",k6:"mis. Pimpinan yang membawahi Finance dan HRCA",own:"mis. Atasan yang membawahi kedua sisi"};
+var SGC=["#0C6EBF","#D9531E","#15803d","#B45309","#225BA8"];
+function desaMsg(d){return (filled(d.to)?trim(d.to)+",\n\n":"")+DESA.map(function(x){return d[x.f]}).filter(filled).map(trim).join(" ")}
+function eskMsg(d){return (filled(d.subj)?"Subjek: "+trim(d.subj)+"\n\n":"")+"Yth. "+(filled(d.to)?trim(d.to):"Bapak/Ibu")+",\n\n"+ESK.map(function(x){return d[x.f]}).filter(filled).map(trim).join(" ")+"\n\nTerima kasih."}
+
+/* Komitmen */
+function kmSent(d,h){var s=d.start||today(),u=function(v){var ok=filled(v),t=ok?trim(v):"____";return h?"<u>"+esc(t)+"</u>":t};
+  return "“Dalam 14 hari ke depan, sampai "+u(fmtD(addD(s,13),1))+", saya akan mendekati "+u(d.sh)+" untuk "+u(lower1(d.cp))+", dengan memakai "+u(d.tool)+". Accountability partner saya: "+u(d.pn)+(filled(d.pf)?" ("+(h?esc(trim(d.pf)):trim(d.pf))+")":"")+", kami check-in "+u(fmtD(d.pc||addD(s,6),1))+".”"}
+
+var CVD=[
+{id:"opa",n:"One-Page Alignment",s:"Sesi 3 · Kasus 1 & 2",lead:"Satu halaman, lima hal. Semua pihak membaca halaman yang sama sebelum bekerja.",tm:[40,"Studi kasus: One-Page Alignment"],cases:["k1","k2","own"],
+ prog:function(d){return [filled(d.tujuan),filled(d.sukses),anyRow(d.roles,"n"),filled(d.inS)||filled(d.outS),anyRow(d.open,"d")]},
+ render:function(d){return '<div class="cvmeta">'+lab("Proyek / inisiatif",fi(d,"proj","mis. Kerja sama affiliate dengan agency"))+lab("Versi / terakhir diperbarui",fi(d,"ver","mis. v2, diperbarui setelah rapat Selasa"))+'</div>'+
+  blk(1,"Tujuan","Apa yang ingin dicapai bersama? Satu kalimat yang bisa diterima semua pihak.",ft(d,"tujuan","mis. Program affiliate berjalan sesuai ekspektasi brand, dengan pembagian kerja tim dan agency yang jelas"))+
+  blk(2,"Ukuran sukses","Bagaimana kita tahu ini berhasil? Pakai angka, tanggal, atau kriteria selesai, supaya kata “selesai”, “cepat”, dan “sukses” punya arti yang sama.",ft(d,"sukses","mis. Semua agency punya brief tertulis sebelum kick-off; revisi maksimal 2 putaran; laporan masuk tiap Senin",3))+
+  blk(3,"Peran","Siapa memutuskan, siapa mengerjakan, siapa dimintai masukan, siapa cukup diinformasikan.",rowsEd(d,"roles",[{k:"n",l:"Pihak",ph:"mis. Brand team"},{k:"p",l:"Peran",o:PERAN,w:"192px"},{k:"t",l:"Tanggung jawab",ph:"mis. Menyetujui brief dan hasil akhir",w:"minmax(0,1.6fr)"}],"Tambah pihak"))+
+  blk(4,"Batas scope","Tuliskan yang termasuk dan yang tidak. Area abu-abu paling sering muncul di sini.",'<div class="sc2"><div><span class="sl">Termasuk</span>'+ft(d,"inS","mis. Rekrutmen creator, produksi konten sesuai brief, laporan mingguan",3)+'</div><div><span class="sl no">Tidak termasuk</span>'+ft(d,"outS","mis. Media berbayar, perubahan konsep di luar brief tanpa persetujuan",3)+'</div></div>')+
+  blk(5,"Keputusan yang belum disepakati","Catat terbuka. Lebih baik terlihat sekarang daripada jadi kejutan di rapat.",rowsEd(d,"open",[{k:"d",l:"Keputusan",ph:"mis. Siapa menyetujui konten bila brand dan agency berbeda pendapat?",w:"minmax(0,1.8fr)"},{k:"w",l:"Siapa memutuskan",ph:"mis. Brand Manager"},{k:"k",l:"Paling lambat",ph:"mis. Jumat",w:"minmax(0,.7fr)"}],"Tambah keputusan"),"or")+
+  '<div class="pwb"><h3>Pre-wiring</h3><p class="hint">Temui key stakeholder satu per satu sebelum rapat besar, dengan membawa halaman ini. Rapat menjadi tempat konfirmasi, bukan tempat kejutan.</p>'+rowsEd(d,"pw",[{k:"ok",l:"Sudah",ck:1,w:"52px"},{k:"n",l:"Stakeholder",ph:"mis. Brand Manager"},{k:"m",l:"Masukan atau keberatan",ph:"mis. Minta laporan masuk tiap Senin pagi",w:"minmax(0,1.6fr)"}],"Tambah stakeholder")+'</div>'},
+ txt:function(d){var o=[];if(filled(d.proj))o.push("Proyek: "+trim(d.proj));if(filled(d.ver))o.push("Versi: "+trim(d.ver));
+  o.push("","1. TUJUAN",tv(d.tujuan),"","2. UKURAN SUKSES",tv(d.sukses),"","3. PERAN");
+  var r=rowsOf(d.roles,["n","p","t"]);r.forEach(function(x){o.push("- "+tv(x.n)+(filled(x.p)?" ("+x.p+")":"")+(filled(x.t)?": "+trim(x.t):""))});if(!r.length)o.push("-");
+  o.push("","4. BATAS SCOPE","Termasuk: "+tv(d.inS),"Tidak termasuk: "+tv(d.outS),"","5. KEPUTUSAN YANG BELUM DISEPAKATI");
+  r=rowsOf(d.open,["d","w","k"]);r.forEach(function(x){o.push("- "+tv(x.d)+(filled(x.w)?" | Diputuskan: "+trim(x.w):"")+(filled(x.k)?" | Paling lambat: "+trim(x.k):""))});if(!r.length)o.push("-");
+  r=rowsOf(d.pw,["n"]);if(r.length){o.push("","PRE-WIRING");r.forEach(function(x){o.push((x.ok?"[x] ":"[ ] ")+trim(x.n)+(filled(x.m)?" - "+trim(x.m):""))})}
+  return o.join("\n")},
+ pr:function(d){return pM([["Proyek / inisiatif",d.proj],["Versi",d.ver]])+pB(1,"Tujuan",d.tujuan,2)+pB(2,"Ukuran sukses",d.sukses,3)+
+  pT(3,"Peran",[{k:"n",l:"Pihak",w:"27%"},{k:"p",l:"Peran",w:"20%"},{k:"t",l:"Tanggung jawab"}],d.roles,4)+
+  '<div class="p2">'+pB(4,"Termasuk dalam scope",d.inS,3)+pB("","Tidak termasuk",d.outS,3)+'</div>'+
+  pT(5,"Keputusan yang belum disepakati",[{k:"d",l:"Keputusan"},{k:"w",l:"Siapa memutuskan",w:"24%"},{k:"k",l:"Paling lambat",w:"16%"}],d.open,3,"or")+
+  pT("","Pre-wiring 1:1 sebelum rapat",[{k:"ok",l:"✓",w:"7%",f:ckf},{k:"n",l:"Stakeholder",w:"30%"},{k:"m",l:"Masukan atau keberatan"}],d.pw,3)}},
+
+{id:"sb",n:"Skrip Say-Back",s:"Sesi 3 · Konsep 3 & roleplay",lead:"Di akhir rapat, ulangi kesepakatan dengan kata-katamu sendiri, lalu beri ruang untuk koreksi.",tm:[20,"Roleplay: say-back di akhir rapat"],cases:[],
+ prog:function(d){return [filled(d.rapat),filled(d.sepakat),anyRow(d.aksi,"a"),filled(d.next)]},
+ render:function(d){return '<div class="cvmeta">'+lab("Rapat / percakapan",fi(d,"rapat","mis. Rapat konsep produk baru"))+lab("Bersama",fi(d,"peserta","mis. R&D, Marketing, Regulatory, SCM"))+'</div>'+
+  blk(1,"Yang kita sepakati","Satu kesepakatan per baris. Tulis sebagai keputusan, bukan topik.",ft(d,"sepakat","mis. Konsep B jadi dasar uji stabilitas",3))+
+  blk(2,"Siapa melakukan apa, kapan","Setiap kesepakatan butuh pemilik dan tenggat.",rowsEd(d,"aksi",[{k:"s",l:"Siapa",ph:"mis. R&D"},{k:"a",l:"Melakukan apa",ph:"mis. Kirim spesifikasi awal konsep B",w:"minmax(0,2fr)"},{k:"k",l:"Kapan",ph:"mis. Rabu",w:"minmax(0,.8fr)"}],"Tambah aksi"))+
+  blk(3,"Yang masih terbuka","Keputusan yang belum disepakati tetap disebut, supaya tidak dianggap sudah beres.",ft(d,"open","mis. Klaim tambahan menunggu hasil uji awal",2))+
+  blk(4,"Langkah berikutnya","Kapan dan lewat apa kita bertemu atau update lagi.",fi(d,"next","mis. Update tertulis Jumat, rapat lanjutan Selasa depan"))+
+  '<div class="say" id="sbOut"></div>'+
+  blk("?","Setelah say-back: apa yang dikoreksi?","Untuk pengamat roleplay. Koreksi kecil di sini mencegah salah paham besar nanti.",ft(d,"koreksi","mis. Tenggat SCM ternyata Senin, bukan Jumat",2),"or")+
+  '<div class="noprint" style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.2rem"><button class="btn blue sm" data-act="sbs">Salin skrip say-back</button><button class="btn out sm" data-act="sbf">Salin pesan tindak lanjut tertulis</button></div>'},
+ derive:function(d){var it=sbItems(d);$("#sbOut").innerHTML='<span class="qm">“</span><p>Supaya kita sama-sama yakin, saya ulangi ya:</p>'+(it.length?'<ol>'+it.map(function(s){return '<li><u>'+esc(s)+'</u></li>'}).join("")+'</ol>':'<p class="ph0">Isi kesepakatan di atas, skrip akan tersusun otomatis.</p>')+'<p><b>Ada yang perlu dikoreksi?</b></p><small>Ulangi dengan kata-katamu sendiri, lalu beri ruang untuk koreksi.</small>'},
+ txt:function(d){return (filled(d.rapat)?"Rapat: "+trim(d.rapat)+"\n":"")+(filled(d.peserta)?"Bersama: "+trim(d.peserta)+"\n":"")+"\nSKRIP SAY-BACK\n"+sbText(d)+"\n\nPESAN TINDAK LANJUT TERTULIS\n"+sbFollow(d)+(filled(d.koreksi)?"\n\nKoreksi setelah say-back: "+trim(d.koreksi):"")},
+ pr:function(d,blank){return pM([["Rapat / percakapan",d.rapat],["Bersama",d.peserta]])+pB(1,"Yang kita sepakati",d.sepakat,3)+
+  pT(2,"Siapa melakukan apa, kapan",[{k:"s",l:"Siapa",w:"24%"},{k:"a",l:"Melakukan apa"},{k:"k",l:"Kapan",w:"18%"}],d.aksi,4)+pB(3,"Yang masih terbuka",d.open,2)+pB(4,"Langkah berikutnya",d.next,1)+
+  '<div class="psay">'+(blank?'“Supaya kita sama-sama yakin, saya ulangi ya: … Ada yang perlu dikoreksi?”':esc(sbText(d)).replace(/\n/g,"<br>"))+'</div>'+pB("?","Setelah say-back: apa yang dikoreksi?",d.koreksi,2,"or")}},
+
+{id:"tq",n:"Transparent Queue",s:"Sesi 4 · Kasus 3 & 4",lead:"Jangan bilang “tidak”. Bilang “iya, dengan urutan ini”. Semua permintaan terlihat, kapasitas terlihat, prioritas diputuskan bersama.",tm:[35,"Studi kasus: Transparent Queue"],cases:["k3","k4","own"],
+ prog:function(d){var it=rowsOf(d.items,["r"]);return [filled(d.kap),it.length>=2,it.length>0&&it.every(function(r){return filled(r.d)}),it.length>0&&it.every(function(r){return filled(r.b)})]},
+ render:function(d){var items=d.items&&d.items.length?d.items:[{}],NUM=' type="number" min="0" step="0.5" inputmode="decimal"';
+  return '<div class="cvmeta c3">'+lab("Periode",fi(d,"per","mis. Minggu ini"))+lab("Kapasitas tim",fi(d,"kap","mis. 10",NUM))+lab("Satuan",fs(d,"sat",["hari kerja","hari orang","jam","slot"],"hari kerja"))+'</div>'+
+  '<div class="cap" id="tqCap"></div>'+
+  '<div class="qh"><span>#</span><span>Permintaan / proyek</span><span>Peminta</span><span>Dampak bisnis</span><span>Tenggat</span><span>Beban</span><span>PIC</span><span></span></div>'+
+  '<div id="tqList">'+items.map(function(r,i){var p="items."+i+".",ql=function(l,c,w){return '<label class="ql'+(w?" w":"")+'"><span>'+l+'</span>'+c+'</label>'};
+   return '<div class="qrow"><span class="qn">'+(i+1)+'</span>'+ql("Permintaan / proyek",fi(d,p+"r",i===0?"mis. Campaign payday":"",' aria-label="Permintaan"'),1)+ql("Peminta",fi(d,p+"p",i===0?"mis. Brand A":"",' aria-label="Peminta"'))+ql("Dampak bisnis",fs(d,p+"d",DAMPAK,"Dampak..."))+ql("Tenggat",fi(d,p+"dl",i===0?"mis. Jumat":"",' aria-label="Tenggat"'))+ql("Beban",fi(d,p+"b",i===0?"2":"",NUM+' aria-label="Beban"'))+ql("PIC",fi(d,p+"pic",i===0?"mis. Rina":"",' aria-label="PIC"'),1)+
+    '<span class="qa noprint"><button class="mv" data-mv="'+i+'.-1" aria-label="Naikkan urutan"'+(i===0?" disabled":"")+'>↑</button><button class="mv" data-mv="'+i+'.1" aria-label="Turunkan urutan"'+(i===items.length-1?" disabled":"")+'>↓</button><button class="x-btn" data-rm="items.'+i+'" aria-label="Hapus permintaan">×</button></span></div>'}).join("")+'</div>'+
+  '<div class="noprint" style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.7rem"><button class="btn blue sm" data-add="items">+ Permintaan</button><button class="btn out sm" data-act="sort">Urutkan menurut dampak</button></div>'+
+  '<p class="hint" style="margin-top:.55rem">Usulan urutan boleh dari kita, tapi <b>urutan akhir diputuskan bersama</b> peminta atau atasan bersama. Geser dengan ↑ ↓.</p>'+
+  '<div class="say"><span class="qm">“</span><p>Semuanya penting. Dengan kapasitas ini, ini urutan yang bisa kita kerjakan. <u>Mana yang paling berdampak bagi bisnis?</u></p><small>Skrip pembuka simulasi, boleh dimodifikasi.</small></div>'+
+  '<div id="tqMsg"></div>'},
+ derive:tqDerive,
+ txt:function(d){var it=rowsOf(d.items,["r","p","b"]),c=tqCalc({kap:d.kap,items:it}),sat=d.sat||"hari kerja",o=["Periode: "+tv(d.per),"Kapasitas: "+(filled(d.kap)?trim(d.kap)+" "+sat:"-"),""];
+  it.forEach(function(r,i){if(i===c.cut)o.push("------- BATAS KAPASITAS · antrian berikutnya -------");o.push((i+1)+". "+tv(r.r)+" | Peminta: "+tv(r.p)+" | Dampak: "+tv(r.d)+" | Tenggat: "+tv(r.dl)+" | Beban: "+tv(r.b)+" | PIC: "+tv(r.pic))});
+  if(!it.length)o.push("(belum ada permintaan)");
+  o.push("","Skrip: “Semuanya penting. Dengan kapasitas ini, ini urutan yang bisa kita kerjakan. Mana yang paling berdampak bagi bisnis?”");return o.join("\n")},
+ pr:function(d,blank){var it=rowsOf(d.items,["r","p","d","dl","b","pic"]),c=tqCalc({kap:d.kap,items:it}),rows="";
+  it.forEach(function(r,i){if(i===c.cut)rows+='<tr class="pcut"><td colspan="7">Batas kapasitas · antrian berikutnya</td></tr>';rows+='<tr'+(c.st[i]===false?' class="pout"':'')+'><td>'+(i+1)+'</td>'+["r","p","d","dl","b","pic"].map(function(k){return '<td>'+esc(filled(r[k])?r[k]:"")+'</td>'}).join("")+'</tr>'});
+  for(var i=it.length;i<Math.max(8,it.length+2);i++)rows+='<tr><td>'+(i+1)+'</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
+  return pM([["Periode",d.per],["Kapasitas tim",filled(d.kap)?trim(d.kap)+" "+(d.sat||"hari kerja"):""]])+
+   '<div class="pb"><div class="pbh">Antrian permintaan</div><table><thead><tr><th style="width:5%">#</th><th>Permintaan / proyek</th><th style="width:15%">Peminta</th><th style="width:11%">Dampak</th><th style="width:13%">Tenggat</th><th style="width:8%">Beban</th><th style="width:15%">PIC</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+   (blank?'<p class="pnote">Tarik garis putus-putus di bawah permintaan terakhir yang masih muat dalam kapasitas. Yang di bawah garis adalah antrian berikutnya.</p>':'')+'</div>'+
+   '<div class="psay">“Semuanya penting. Dengan kapasitas ini, ini urutan yang bisa kita kerjakan. Mana yang paling berdampak bagi bisnis?”</div>'}},
+
+{id:"desa",n:"Template DESA",s:"Kasus 4 & 5 · Komunikasi",lead:"Empat langkah menyampaikan hal sulit tanpa merusak hubungan: Deskripsikan, Ekspresikan, Spesifikan, Apresiasi.",tm:[15,"Menyusun pesan DESA"],cases:["k4","k5","own"],
+ prog:function(d){return [filled(d.to),filled(d.d),filled(d.e),filled(d.s),filled(d.a)]},
+ render:function(d,st){return '<div class="cvmeta">'+lab("Kepada siapa",fi(d,"to",DESA_TO[st.case]))+lab("Kanal",fs(d,"ch",["Bicara langsung","Rapat 1:1","Telepon","Chat","Email"],"Pilih kanal"))+'</div>'+
+  DESA.map(function(x){return '<div class="blk"><span class="bn" style="background:'+x.c+'">'+x.k+'</span><div><h3>'+x.n+'</h3><p class="hint">'+x.h+'</p>'+ft(d,x.f,x.ph,3)+'<div class="st noprint">'+x.st.map(function(s){return '<button data-ins="'+x.f+'" data-tx="'+esc(s)+'">+ '+esc(trim(s))+'</button>'}).join("")+'</div></div></div>'}).join("")+
+  '<h3 style="margin-top:.6rem">Pratinjau pesan</h3><div class="msg" id="dsOut"></div><div id="dsLc"></div>'+
+  '<div class="noprint" style="margin-top:.7rem"><button class="btn blue sm" data-act="msg">Salin pesan</button></div>'},
+ derive:function(d){var b=segHTML(DESA.map(function(x){return d[x.f]}),DESA.map(function(x){return x.c}));$("#dsOut").innerHTML=b?(filled(d.to)?esc(trim(d.to))+",\n\n":"")+b:'<span class="mute">Pesan tersusun otomatis dari empat isian di atas.</span>';$("#dsLc").innerHTML=langHTML(DESA.map(function(x){return d[x.f]}).join(" "))},
+ msg:desaMsg,
+ txt:function(d){return "Kepada: "+tv(d.to)+"\nKanal: "+tv(d.ch)+"\n\n"+DESA.map(function(x){return x.k+" · "+x.n.toUpperCase()+"\n"+tv(d[x.f])}).join("\n\n")+"\n\nPESAN UTUH\n"+desaMsg(d)},
+ pr:function(d,blank){return pM([["Kepada",d.to],["Kanal",d.ch]])+DESA.map(function(x){return '<div class="pb"><div class="pbh"><span class="pn" style="background:'+x.c+'">'+x.k+'</span>'+x.n+'</div><div class="psb">'+x.h+'</div>'+pv(d[x.f],3)+'</div>'}).join("")+(blank?"":pB("","Pesan utuh",desaMsg(d),4))}},
+
+{id:"esk",n:"Pesan Eskalasi 5 Kalimat",s:"Sesi 5 · Kasus 5 & 6",lead:"Eskalasi bukan melapor. Eskalasi adalah mencari penengah dengan scope yang tepat, dengan bahasa tujuan bersama di tiap langkah.",tm:[15,"Roleplay: pesan eskalasi 5 kalimat"],cases:["k5","k6","own"],
+ prog:function(d){return ESK.map(function(x){return filled(d[x.f])})},
+ render:function(d,st){return '<div class="lad">'+
+   '<label class="ls s1"><input type="checkbox" data-f="c1"'+(d.c1?" checked":"")+' aria-label="Sudah bicara langsung"><b>1</b><span>Bicara langsung</span></label>'+
+   '<label class="ls s2"><input type="checkbox" data-f="c2"'+(d.c2?" checked":"")+' aria-label="Sudah membawa data dampak"><b>2</b><span>Bawa data dampak</span></label>'+
+   '<div class="ls s3"><b>3</b><span>Naik ke pihak yang membawahi kedua sisi</span><small>Pesan di bawah ini</small></div></div><div id="ekWarn"></div>'+
+   '<div class="cvmeta">'+lab("Kepada (penengah dengan scope yang tepat)",fi(d,"to",ESK_TO[st.case]))+lab("Subjek",fi(d,"subj","mis. Mohon arahan: checklist dokumen sebelum invoice"))+'</div>'+
+   ESK.map(function(x,i){return '<div class="ek"><span class="bn'+(i===4?" or":"")+'">'+(i+1)+'</span><div class="ekl"><b>'+x.n+'</b><small>'+x.q+'</small><em class="wc" data-wc="'+x.f+'"></em></div>'+ft(d,x.f,x.ph,2)+'</div>'}).join("")+
+   '<div class="grid-ek"><div><h3>Pratinjau pesan</h3><div class="msg" id="ekOut"></div><div id="ekLc"></div><div class="noprint" style="margin-top:.7rem"><button class="btn blue sm" data-act="msg">Salin pesan</button></div></div><div class="tant"><span class="kicker">Tantangan</span><b>Tulis pesannya tanpa terdengar menyalahkan.</b><em>Ganti “kamu” dengan “kita”.</em></div></div>'},
+ derive:function(d){$("#ekWarn").innerHTML=(d.c1&&d.c2)?'<div class="lc ok"><i>✓</i><span>Langkah 1 dan 2 sudah ditempuh. Sebutkan di kalimat 3, <b>Yang sudah dicoba</b>.</span></div>':'<div class="lc warn"><i>!</i><span><b>Eskalasi bukan melapor.</b> Sebelum naik, sudahkah bicara langsung dan membawa data dampak? Dua langkah ini menjaga hubungan tetap hangat.</span></div>';
+  ESK.forEach(function(x){var el=$('#cvBody [data-wc="'+x.f+'"]');if(!el)return;var n=sentN(d[x.f]);el.textContent=n===0?"":n===1?"1 kalimat ✓":n+" kalimat · ringkas jadi satu";el.className="wc"+(n>1?" warn":"")});
+  var b=segHTML(ESK.map(function(x){return d[x.f]}),SGC);
+  $("#ekOut").innerHTML=b?(filled(d.subj)?"<b>Subjek: "+esc(trim(d.subj))+"</b>\n\n":"")+"Yth. "+esc(filled(d.to)?trim(d.to):"Bapak/Ibu")+",\n\n"+b+"\n\nTerima kasih.":'<span class="mute">Pesan tersusun otomatis dari lima kalimat di atas.</span>';
+  $("#ekLc").innerHTML=langHTML(ESK.map(function(x){return d[x.f]}).join(" "))},
+ msg:eskMsg,
+ txt:function(d){return "Sebelum eskalasi: "+(d.c1?"[x]":"[ ]")+" Bicara langsung  "+(d.c2?"[x]":"[ ]")+" Bawa data dampak\n\n"+ESK.map(function(x,i){return (i+1)+". "+x.n.toUpperCase()+": "+tv(d[x.f])}).join("\n")+"\n\nPESAN UTUH\n"+eskMsg(d)},
+ pr:function(d){return '<div class="plad"><span>'+(d.c1?"☑":"☐")+' 1 · Bicara langsung</span><span>'+(d.c2?"☑":"☐")+' 2 · Bawa data dampak</span><span>➜ 3 · Naik ke pihak yang membawahi kedua sisi</span></div>'+pM([["Kepada",d.to],["Subjek",d.subj]])+
+  ESK.map(function(x,i){return pB(i+1,x.n,d[x.f],2,i===4?"or":"",x.q)}).join("")+'<p class="pnote"><b>Tantangan:</b> tulis pesannya tanpa terdengar menyalahkan. Ganti “kamu” dengan “kita”.</p>'}},
+
+{id:"km",n:"Lembar Komitmen 14 Hari",s:"Closing · Individu + pairing",lead:"Satu stakeholder, satu percakapan, satu tools yang akan saya pakai dalam 14 hari ke depan.",tm:[25,"Closing: komitmen 14 hari"],cases:[],
+ prog:function(d){return [filled(d.sh),filled(d.cp),filled(d.tool),filled(d.pn)]},
+ render:function(d){if(!d.start){d.start=today();save()}var shs=(store.sh||[]).map(function(s){return s.n});
+  return '<div class="km3">'+
+   '<div class="kmc"><div class="kmh"><span class="kmi" style="background:var(--blue)">'+ICO.user+'</span><span class="kmn">1</span></div><h3>Satu stakeholder</h3><p class="hint">Siapa yang akan kamu dekati lebih dulu?</p>'+fi(d,"sh","mis. Lead tim di proses sebelum saya",' list="kmSh" aria-label="Satu stakeholder"')+'<datalist id="kmSh">'+shs.map(function(n){return '<option value="'+esc(n)+'">'}).join("")+'</datalist>'+
+    '<div class="ff">'+lab("Fight · apa yang ia kejar?",ft(d,"fg","mis. Invoice terkirim tepat waktu",2),"gr")+lab("Flight · apa yang ia hindari?",ft(d,"fl","mis. Disalahkan atas keterlambatan",2),"or")+'</div></div>'+
+   '<div class="kmc"><div class="kmh"><span class="kmi" style="background:var(--orange2)">'+ICO.chat+'</span><span class="kmn">1</span></div><h3>Satu percakapan</h3><p class="hint">Apa yang akan kamu bicarakan atau sepakati?</p>'+ft(d,"cp","mis. Menyepakati checklist dokumen sebelum invoice dikirim, lalu menutup dengan say-back",4)+lab("Rencana tanggal percakapan",fi(d,"cpt","",' type="date"'))+'</div>'+
+   '<div class="kmc"><div class="kmh"><span class="kmi" style="background:var(--green)">'+ICO.clip+'</span><span class="kmn">1</span></div><h3>Satu tools</h3><p class="hint">Tools mana yang akan kamu pakai?</p><div class="t8" role="radiogroup" aria-label="Satu tools">'+TOOLS.map(function(t){return '<label><input type="radio" name="kmTool" data-f="tool" value="'+esc(t)+'"'+(d.tool===t?" checked":"")+'><span>'+esc(t)+'</span></label>'}).join("")+'</div></div></div>'+
+   '<div class="card commit" style="margin:1rem 0 .4rem"><span class="kicker" style="color:#FFC266">14 hari ke depan</span><h2 style="margin-bottom:.2rem">Komitmen &amp; accountability partner</h2>'+
+    '<div class="c4" style="margin-top:.7rem">'+lab("Mulai",fi(d,"start","",' type="date"'))+lab("Accountability partner",fi(d,"pn","Nama teman, sebaiknya fungsi lain"))+lab("Fungsi partner",fi(d,"pf","mis. Marketing",' list="cvFungsi"'))+lab("Jadwal check-in",fi(d,"pc","",' type="date"'))+'</div>'+
+    '<div class="d14" id="kmD14" aria-hidden="true"></div><div class="kml" id="kmLeg"></div>'+
+    '<div class="sentence" id="kmSent"></div><p style="margin:.2rem 0 0;font-size:.85rem;color:rgba(255,255,255,.82)">Berpasangan, saling membacakan komitmen, lalu saling menjaga sebagai accountability partner.</p></div>'+
+   blk("14","Refleksi hari ke-14 · K + R = H","Isi nanti, saat check-in terakhir dengan partner.",'<div class="krh3"><div class="k"><b>K · Kejadian</b><small>Apa yang terjadi saat percakapan?</small>'+ft(d,"rk","",3)+'</div><div class="r"><b>R · Respons</b><small>Apa yang saya lakukan, tools apa yang saya pakai?</small>'+ft(d,"rr","",3)+'</div><div class="h"><b>H · Hasil</b><small>Apa hasilnya, dan apa langkah berikutnya?</small>'+ft(d,"rh","",3)+'</div></div>',"or")},
+ derive:function(d){var s=d.start||today(),e=addD(s,13),pc=d.pc||addD(s,6),mk={1:"s",14:"e"},ip=dDiff(s,pc)+1,ic=d.cpt?dDiff(s,d.cpt)+1:0,cells="";
+  if(ip>=1&&ip<=14)mk[ip]="p";if(ic>=1&&ic<=14)mk[ic]="c";
+  for(var i=1;i<=14;i++)cells+='<span class="'+(mk[i]?"m "+mk[i]:"")+'" title="Hari '+i+' · '+esc(fmtD(addD(s,i-1),1))+'">'+i+'</span>';
+  $("#kmD14").innerHTML=cells;
+  $("#kmLeg").innerHTML='<span><i style="background:#8EC5FF"></i>Mulai · '+esc(fmtD(s,1))+'</span>'+(d.cpt?'<span><i style="background:#FFC266"></i>Percakapan · '+esc(fmtD(d.cpt,1))+(ic<1||ic>14?' (di luar 14 hari)':'')+'</span>':'')+'<span><i style="background:#7FE0A3"></i>Check-in partner · '+esc(fmtD(pc,1))+'</span><span><i style="background:#fff"></i>Refleksi · '+esc(fmtD(e,1))+'</span>';
+  $("#kmSent").innerHTML=kmSent(d,true)},
+ txt:function(d){var s=d.start||today();return ["Periode: "+fmtD(s)+" s.d. "+fmtD(addD(s,13)),"","1 STAKEHOLDER: "+tv(d.sh),"   Fight (yang ia kejar): "+tv(d.fg),"   Flight (yang ia hindari): "+tv(d.fl),"1 PERCAKAPAN: "+tv(d.cp)+(filled(d.cpt)?" (rencana "+fmtD(d.cpt)+")":""),"1 TOOLS: "+tv(d.tool),"","Accountability partner: "+tv(d.pn)+(filled(d.pf)?" ("+trim(d.pf)+")":"")+", check-in "+fmtD(d.pc||addD(s,6)),"",kmSent(d,false),"","REFLEKSI HARI KE-14","K (Kejadian): "+tv(d.rk),"R (Respons): "+tv(d.rr),"H (Hasil): "+tv(d.rh)].join("\n")},
+ pr:function(d,blank){var s=blank?"":(d.start||today());
+  return '<div class="p3">'+
+   '<div class="pb"><div class="pbh"><span class="pn">1</span>Satu stakeholder</div><div class="psb">Siapa yang akan kamu dekati lebih dulu?</div>'+pv(d.sh,1)+pS("Fight · apa yang ia kejar",d.fg,2)+pS("Flight · apa yang ia hindari",d.fl,2)+'</div>'+
+   '<div class="pb"><div class="pbh"><span class="pn">1</span>Satu percakapan</div><div class="psb">Apa yang akan kamu bicarakan atau sepakati?</div>'+pv(d.cp,5)+pS("Rencana tanggal",filled(d.cpt)?fmtD(d.cpt):"",1)+'</div>'+
+   '<div class="pb"><div class="pbh"><span class="pn">1</span>Satu tools</div><div class="psb">Tools mana yang akan kamu pakai?</div><ul class="pck">'+TOOLS.map(function(t){return '<li>'+(d.tool===t?"☑":"☐")+' '+esc(t)+'</li>'}).join("")+'</ul></div></div>'+
+   pM([["Mulai",s?fmtD(s):""],["Check-in partner (± hari 7)",s?fmtD(d.pc||addD(s,6)):""],["Refleksi (hari 14)",s?fmtD(addD(s,13)):""]])+
+   pM([["Accountability partner",d.pn],["Fungsi partner",d.pf]])+
+   '<div class="psay">'+(blank?'“Dalam 14 hari ke depan, saya akan mendekati ______________ untuk ____________________________________, dengan memakai ________________. Accountability partner saya: ______________.”':esc(kmSent(d,false)))+'</div>'+
+   '<div class="ph2">Refleksi hari ke-14 · K + R = H</div><div class="p3">'+pB("K","Kejadian",d.rk,3,"","Apa yang terjadi saat percakapan?")+pB("R","Respons",d.rr,3,"","Apa yang saya lakukan?")+pB("H","Hasil",d.rh,3,"","Apa hasilnya, langkah berikutnya?")+'</div>'+
+   '<div class="sig"><div>Tanda tangan saya</div><div>Tanda tangan accountability partner</div></div>'}}];
+
+/* Contoh isian (ilustratif, anonim) */
+var EX={
+ opa:{
+  k1:{proj:"Kerja sama affiliate dengan agency (pasca restrukturisasi)",ver:"v1, disusun sebelum kick-off",tujuan:"Program affiliate berjalan sesuai ekspektasi brand, dengan pembagian kerja tim affiliate dan agency yang jelas sejak awal.",sukses:"Semua agency punya brief dan deliverable tertulis sebelum kerja dimulai; revisi maksimal 2 putaran; laporan performa masuk tiap Senin; tidak ada pekerjaan tanpa pemilik lebih dari 3 hari kerja.",
+   roles:[{n:"Brand team",p:"Memutuskan",t:"Menetapkan target, menyetujui brief dan hasil akhir"},{n:"Tim affiliate",p:"Mengerjakan",t:"Menyusun brief, mengelola agency, memantau performa"},{n:"Agency",p:"Mengerjakan",t:"Eksekusi creator dan konten sesuai brief, lapor mingguan"},{n:"Finance",p:"Dimintai masukan",t:"Validasi biaya dan termin pembayaran"}],
+   inS:"Rekrutmen creator, produksi konten sesuai brief, laporan performa mingguan, maksimal 2 putaran revisi.",outS:"Pembelian media berbayar, perubahan konsep di luar brief tanpa persetujuan brand, pekerjaan tambahan tanpa addendum.",
+   open:[{d:"Siapa menyetujui konten bila brand dan agency berbeda pendapat?",w:"Brand Manager",k:"Jumat ini"},{d:"Jalur eskalasi bila agency terlambat lebih dari 2 hari",w:"Head of Affiliate",k:"Sebelum kick-off"}],
+   pw:[{ok:true,n:"Brand Manager",m:"Minta laporan masuk tiap Senin pagi"},{ok:false,n:"Lead agency",m:""},{ok:false,n:"Finance partner",m:""}]},
+  k2:{proj:"Pengembangan produk baru lintas fungsi",ver:"v2, diperbarui setelah pre-wiring",tujuan:"Menyepakati satu konsep produk yang siap masuk tahap uji stabilitas.",sukses:"Satu konsep terpilih dan disetujui semua fungsi kunci di rapat berikutnya; spesifikasi awal terkunci; jadwal uji disepakati tertulis.",
+   roles:[{n:"Sponsor proyek",p:"Memutuskan",t:"Memilih konsep akhir bila belum ada titik temu"},{n:"R&D",p:"Mengerjakan",t:"Formulasi dan rencana uji"},{n:"Marketing",p:"Dimintai masukan",t:"Kebutuhan konsumen dan positioning"},{n:"Regulatory",p:"Dimintai masukan",t:"Kelayakan klaim dan registrasi"},{n:"SCM",p:"Dimintai masukan",t:"Ketersediaan bahan dan lead time"},{n:"Finance",p:"Diinformasikan",t:"Estimasi biaya"}],
+   inS:"Konsep produk, klaim utama, target harga pokok, spesifikasi bahan awal.",outS:"Desain kemasan final, rencana peluncuran, anggaran promosi.",
+   open:[{d:"Klaim utama mana yang dipakai bila hasil uji awal belum lengkap?",w:"Sponsor proyek",k:"Rapat berikutnya"},{d:"Batas atas target harga pokok",w:"Finance dan Marketing",k:"H-2 rapat"}],
+   pw:[{ok:true,n:"Marketing lead",m:"Setuju konsep B asal klaim utama tetap kuat"},{ok:true,n:"Regulatory",m:"Klaim tambahan butuh data uji"},{ok:false,n:"SCM planner",m:""},{ok:false,n:"Sponsor proyek",m:""}]}},
+ sb:{x:{rapat:"Rapat konsep produk baru",peserta:"R&D, Marketing, Regulatory, SCM, Finance, sponsor proyek",sepakat:"Konsep B jadi dasar uji stabilitas\nTarget harga pokok mengikuti batas yang diberikan Finance",aksi:[{s:"R&D",a:"Kirim spesifikasi awal konsep B",k:"Rabu"},{s:"Regulatory",a:"Cek kelayakan klaim utama",k:"Jumat"},{s:"SCM",a:"Konfirmasi ketersediaan bahan",k:"Jumat"}],open:"Klaim tambahan menunggu hasil uji awal",next:"Update tertulis Jumat, rapat lanjutan Selasa depan",koreksi:"SCM butuh sampai Senin untuk konfirmasi bahan, bukan Jumat."}},
+ tq:{
+  k3:{per:"Minggu ini",kap:"10",sat:"hari kerja",items:[{r:"Campaign payday",p:"Brand A",d:"Tinggi",dl:"Jumat",b:"4",pic:"Affiliate 1"},{r:"Onboarding 20 affiliate baru",p:"Brand C",d:"Tinggi",dl:"Akhir bulan",b:"3",pic:"Affiliate 2"},{r:"Laporan performa bulanan",p:"Brand B",d:"Sedang",dl:"Senin",b:"1",pic:"Analis"},{r:"Live session tambahan",p:"Brand A",d:"Sedang",dl:"Minggu depan",b:"2",pic:"Affiliate 1"},{r:"Revisi materi konten",p:"Brand D",d:"Rendah",dl:"Rabu",b:"2",pic:""},{r:"Riset kompetitor",p:"Brand E",d:"Rendah",dl:"Fleksibel",b:"3",pic:""}]},
+  k4:{per:"2 minggu ke depan",kap:"20",sat:"hari orang",items:[{r:"Proyek A: perbaikan alur penerimaan barang",p:"Logistics",d:"Tinggi",dl:"Akhir bulan",b:"8",pic:"Staf senior + intern 1"},{r:"Proyek B: dashboard stok harian",p:"SCM",d:"Tinggi",dl:"2 minggu",b:"6",pic:"Intern 2 (didampingi mingguan)"},{r:"Proyek C: standardisasi dokumen vendor",p:"ETDE",d:"Sedang",dl:"Bulan depan",b:"5",pic:"Intern 1"},{r:"Proyek D: pilot otomasi laporan",p:"ETDE",d:"Sedang",dl:"Kuartal ini",b:"8",pic:""},{r:"Proyek E: pembaruan SOP lama",p:"Logistics",d:"Rendah",dl:"Fleksibel",b:"6",pic:""}]}},
+ desa:{
+  k4:{to:"Bapak/Ibu pemilik Proyek D",ch:"Rapat 1:1",d:"Saat ini ada lima proyek yang berjalan bersamaan di tim kami, hiring sedang dibekukan, dan tenaga yang tersedia adalah satu staf senior dan dua intern. Bersama sponsor, kami sudah memetakan dampak tiap proyek dalam satu halaman portofolio, dan Proyek D ada di urutan keempat.",e:"Saya ingin Bapak/Ibu mendengarnya langsung dari saya sekarang, bukan tahu belakangan. Saya khawatir kalau kelima proyek dipaksa jalan bersamaan, tidak ada satu pun yang selesai dengan baik, termasuk proyek Bapak/Ibu.",s:"Usul saya, Proyek D mulai dikerjakan awal bulan depan dengan Intern 1 sebagai PIC harian dan saya sebagai pendamping, dan sampai saat itu saya kirim update status portofolio setiap Jumat. Kalau ada bagian Proyek D yang tidak bisa menunggu, bisakah kita bawa bersama ke sponsor minggu ini?",a:"Terima kasih atas keterbukaannya. Masukan Bapak/Ibu soal urgensi tadi sangat membantu kami menyusun urutan yang adil untuk semua proyek."},
+  k5:{to:"Mbak/Mas lead tim di proses sebelum AR",ch:"Bicara langsung",d:"Dalam tiga bulan terakhir, sekitar 30% invoice yang sampai ke AR belum dilengkapi dokumen pendukung, sehingga penagihan ke pelanggan tertunda rata-rata tujuh hari.",e:"Saya khawatir piutang yang menua ini berdampak ke arus kas kita, dan kedua tim jadi sama-sama sibuk mengurus koreksi bolak-balik.",s:"Bisakah kita duduk 30 menit minggu ini untuk menyepakati checklist dokumen sebelum invoice dikirim? Kalau ternyata perlu perubahan alur di luar wewenang kita berdua, kita ajukan bersama ke atasan yang membawahi kedua proses.",a:"Terima kasih sudah selalu cepat membantu setiap kali kami minta data tambahan. Kerja sama itu yang membuat saya yakin hal ini bisa kita rapikan bersama."}},
+ esk:{
+  k5:{c1:true,c2:true,to:"Bapak/Ibu atasan yang membawahi proses billing dan AR",subj:"Mohon arahan: checklist dokumen sebelum invoice dikirim",kx:"Dalam tiga bulan terakhir, sekitar 30% invoice yang masuk ke AR belum dilengkapi dokumen pendukung dari proses sebelumnya.",dp:"Akibatnya penagihan tertunda rata-rata tujuh hari dan piutang lewat jatuh tempo naik, yang ikut menahan arus kas kita.",cb:"Kami sudah bicara langsung dengan lead tim terkait dan membawa data tiga bulan, dan kami sepakat checklist dibutuhkan, tetapi perubahan alurnya di luar wewenang kedua tim.",bt:"Kami mohon arahan Bapak/Ibu untuk menetapkan checklist dokumen sebagai standar sebelum invoice dikirim, mulai bulan depan.",tj:"Dengan begitu kita bisa menagih tepat waktu dan kedua tim tidak lagi sibuk mengurus koreksi."},
+  k6:{c1:true,c2:true,to:"Bapak/Ibu pimpinan yang membawahi Finance dan HRCA",subj:"Mohon keputusan: titik verifikasi klaim karyawan",kx:"Finance dan HRCA sedang memperbaiki proses klaim karyawan, dan setelah tiga kali diskusi kita belum sepakat di titik mana dokumen diverifikasi.",dp:"Selama belum ada keputusan, klaim tetap butuh sekitar 14 hari dan keluhan karyawan terus masuk ke kedua tim.",cb:"Kami sudah menyepakati tujuan dan ukuran sukses bersama, lalu memisahkan fakta, kepentingan, dan usulan tiap tim dalam satu halaman terlampir.",bt:"Kami butuh keputusan Bapak/Ibu untuk memilih satu dari dua opsi terlampir paling lambat Jumat ini.",tj:"Tujuan kita sama: klaim karyawan selesai maksimal lima hari kerja dengan kontrol yang tetap terjaga."}},
+ km:{x:function(){var t=today();return {sh:"Lead tim di proses sebelum saya",fg:"Pekerjaan timnya mengalir tanpa revisi bolak-balik",fl:"Disalahkan atas keterlambatan yang bukan dari timnya",cp:"Menyepakati checklist dokumen sebelum pekerjaan diserahkan ke tim saya, lalu menutup obrolan dengan say-back.",cpt:addD(t,3),tool:"Skrip Say-Back",start:t,pn:"Rekan dari fungsi lain",pf:"Marketing",pc:addD(t,6)}}}};
+
+/* State & render */
+store.cv=store.cv||{};store.cv.id=store.cv.id||{};
+CVD.forEach(function(c){var s=store.cv[c.id]=store.cv[c.id]||{};s.d=s.d||{};if(!s.case||(c.cases.length?c.cases.indexOf(s.case)<0:s.case!=="x"))s.case=c.cases[0]||"x"});
+var cvI=Math.max(0,CVD.map(function(c){return c.id}).indexOf(store.cv.sel||"opa"));
+var cvb=$("#cvBody");
+function cst(){return store.cv[CVD[cvI].id]}
+function cur(){var s=cst();if(!s.d[s.case])s.d[s.case]={};return s.d[s.case]}
+function progOf(x){var s=store.cv[x.id],a=x.prog(s.d[s.case]||{});return [a.filter(Boolean).length,a.length]}
+function grow(t){if(!t.offsetParent)return;t.style.height="auto";t.style.height=(t.scrollHeight+2)+"px"}
+function growAll(){$$("#cvBody textarea").forEach(grow)}
+function updProg(){var p=progOf(CVD[cvI]),el=$("#cvt"+cvI+" .pg");if(el){el.textContent=p[0]+"/"+p[1];el.classList.toggle("full",p[0]===p[1])}}
+function caseStrip(c,st,d){if(!c.cases.length)return "";var k=CVK[st.case];
+  return '<div class="seg cvcase" role="group" aria-label="Pilih kasus">'+c.cases.map(function(id){return '<button aria-pressed="'+(id===st.case)+'" data-case="'+id+'">'+(id==="own"?"Kasus nyata saya":CVK[id].n.split(" · ")[0])+'</button>'}).join("")+'</div>'+
+  (st.case==="own"?'<div class="ev cvev"><span class="pill gy">Situasi</span><p class="hint" style="margin:.45rem 0">'+k.s+'</p>'+ft(d,"sit","Ceritakan situasinya dalam 2-3 kalimat.",2)+'</div>':
+   '<div class="ev cvev"><div style="display:flex;gap:.4rem;flex-wrap:wrap;align-items:center"><span class="pill gy">Situasi</span><span class="pill">'+esc(k.f)+'</span></div><h3 style="margin:.45rem 0 .15rem">'+k.n.split(" · ")[1]+'</h3><p style="margin:0">'+k.s+'</p><ul>'+k.q.map(function(q){return '<li>'+q+'</li>'}).join("")+'</ul><button class="btn out sm noprint" data-act="arah">Tampilkan arah jawaban (fasilitator)</button><div class="reveal" id="cvArah"><b>Arah jawaban</b><p style="margin:.3rem 0 0">'+k.a+'</p></div></div>')}
+function renderCv(){var c=CVD[cvI],st=cst(),d=cur(),ex=EX[c.id]&&EX[c.id][st.case];
+  $("#cvTabs").innerHTML=CVD.map(function(x,i){var p=progOf(x);return '<button class="cvt" role="tab" id="cvt'+i+'" aria-selected="'+(i===cvI)+'" data-cv="'+i+'"><span class="lt">'+(i+1)+'</span><b>'+x.n+'</b><small>'+x.s+'</small><span class="pg'+(p[0]===p[1]?" full":"")+'">'+p[0]+'/'+p[1]+'</span></button>'}).join("");
+  cvb.innerHTML='<div class="cv-head"><div><span class="kicker">'+c.s+'</span><h2>'+c.n+'</h2><p class="mute" style="margin:0;max-width:640px">'+c.lead+'</p></div><div class="cv-act noprint">'+
+   '<button class="btn out sm" data-timer="'+c.tm[0]+'" data-label="'+esc(c.tm[1])+'">'+ICON.clock+' '+c.tm[0]+'\'</button>'+
+   (ex?'<button class="btn out sm" data-act="ex">Isi contoh</button>':'')+
+   '<button class="btn out sm" data-act="cp">Salin teks</button><button class="btn out sm" data-act="pr">Cetak</button><button class="btn out sm" data-act="prb">Cetak lembar kosong</button><button class="btn out sm" data-act="clr">Kosongkan</button></div></div>'+
+   caseStrip(c,st,d)+c.render(d,st);
+  if(c.derive)c.derive(d,st);growAll()}
+function fullText(c,st,d){var id=store.cv.id||{},h=[c.n.toUpperCase(),[id.n,id.f,filled(id.g)?"Kelompok "+id.g:"",id.t?fmtD(id.t):""].filter(filled).join(" · ")];
+  if(c.cases.length){var k=CVK[st.case];h.push(k.n+(st.case==="own"&&filled(d.sit)?": "+trim(d.sit):""))}
+  return h.filter(filled).join("\n")+"\n\n"+c.txt(d)}
+function printCv(blank){var c=CVD[cvI],st=cst(),d=blank?{}:cur(),id=blank?{}:(store.cv.id||{}),h;
+  h='<div class="ph"><div class="pk">Connect &amp; Align · Paragon x HCR.ID · '+esc(c.s)+'</div><h1>'+esc(c.n)+'</h1><p>'+esc(c.lead)+'</p></div>'+
+   pM([["Nama",id.n],["Fungsi",id.f],["Kelompok",id.g],["Tanggal",id.t?fmtD(id.t):""]],"pid");
+  if(c.cases.length){var k=CVK[st.case];h+='<div class="pcase">'+(st.case==="own"?'<b>Kasus nyata saya</b>'+pv(d.sit,2):'<b>'+esc(k.n)+' · '+esc(k.f)+'</b><p>'+esc(k.s)+'</p><p><i>'+k.q.map(esc).join(" ")+'</i></p>')+'</div>'}
+  h+=c.pr(d,blank)+'<div class="pfoot">Connect &amp; Align: The Art of Getting on the Same Page · Paragon x HCR.ID</div>';
+  $("#pa").innerHTML=h;document.body.classList.add("pcv");setTimeout(function(){window.print()},80)}
+function focusRow(key,i){var els=$$('#cvBody [data-f^="'+key+'.'+i+'."]').filter(function(x){return x.type!=="checkbox"});if(els[0])els[0].focus()}
+
+function onField(e){var t=e.target,p=t.dataset&&t.dataset.f;if(!p)return;if(t.type==="radio"&&!t.checked)return;
+  sv(cur(),p,t.type==="checkbox"?t.checked:t.value);save();if(t.tagName==="TEXTAREA")grow(t);
+  var c=CVD[cvI];if(c.derive)c.derive(cur(),cst());updProg()}
+cvb.addEventListener("input",onField);cvb.addEventListener("change",onField);
+cvb.addEventListener("click",function(e){var b=e.target.closest("button");if(!b||b.disabled)return;var c=CVD[cvI],st=cst(),d=cur(),ds=b.dataset,a,i;
+  if(ds.case){st.case=ds.case;save();renderCv();return}
+  if(ds.add){a=gv(d,ds.add);if(!Array.isArray(a)){a=[];sv(d,ds.add,a)}if(!a.length)a.push({});a.push({});save();renderCv();focusRow(ds.add,a.length-1);return}
+  if(ds.rm){var ks=ds.rm.split(".");i=+ks.pop();a=gv(d,ks.join("."));if(Array.isArray(a)&&i<a.length){a.splice(i,1);save();renderCv()}return}
+  if(ds.mv){var m=ds.mv.split(".");i=+m[0];var j=i+(+m[1]);a=d.items||[];if(j<0||j>=a.length||i>=a.length)return;var tmp=a[i];a[i]=a[j];a[j]=tmp;save();renderCv();var mb=$('#cvBody [data-mv="'+j+'.'+m[1]+'"]');if(mb&&!mb.disabled)mb.focus();return}
+  if(ds.ins){var ta=$('#cvBody textarea[data-f="'+ds.ins+'"]');if(ta){var v=ta.value;ta.value=v+(v&&!/\s$/.test(v)?" ":"")+ds.tx;sv(d,ds.ins,ta.value);save();grow(ta);ta.focus();try{ta.setSelectionRange(ta.value.length,ta.value.length)}catch(x){}if(c.derive)c.derive(d,st);updProg()}return}
+  switch(ds.act){
+   case "ex":var ex=EX[c.id]&&EX[c.id][st.case];if(!ex)return;if(isEmpty(d)||confirmInline(b,"Timpa isian? Klik lagi")){st.d[st.case]=typeof ex==="function"?ex():JSON.parse(JSON.stringify(ex));save();renderCv();toast("Contoh dimuat, sesuaikan dengan situasimu")}break;
+   case "clr":if(isEmpty(d)){toast("Canvas ini masih kosong");break}if(confirmInline(b,"Klik lagi untuk kosongkan")){st.d[st.case]={};save();renderCv();toast("Canvas dikosongkan")}break;
+   case "cp":copy(fullText(c,st,d));break;
+   case "msg":copy(c.msg(d));break;
+   case "pr":printCv(false);break;
+   case "prb":printCv(true);break;
+   case "arah":var r=$("#cvArah"),on=r.classList.toggle("on");b.textContent=(on?"Sembunyikan":"Tampilkan")+" arah jawaban (fasilitator)";break;
+   case "sort":a=d.items||[];var R={Tinggi:0,Sedang:1,Rendah:2},rk=function(x){return x&&R[x.d]!=null?R[x.d]:3};a.forEach(function(x,k){if(x)x._i=k});a.sort(function(x,y){return rk(x)-rk(y)||(x?x._i:0)-(y?y._i:0)});a.forEach(function(x){if(x)delete x._i});save();renderCv();toast("Diurutkan menurut dampak. Sepakati urutan akhirnya bersama.");break;
+   case "sbs":copy(sbText(d));break;
+   case "sbf":copy(sbFollow(d));break;
+   case "cpm":copy(tqMsgs[+ds.i]||"");break}});
+$("#cvTabs").addEventListener("click",function(e){var b=e.target.closest("[data-cv]");if(!b)return;cvI=+b.dataset.cv;store.cv.sel=CVD[cvI].id;save();renderCv()});
+if(!store.cv.id.t){store.cv.id.t=today();save()}
+$$("[data-id]").forEach(function(el){var k=el.dataset.id;el.value=store.cv.id[k]||"";var h=function(){store.cv.id[k]=el.value;save()};el.addEventListener("input",h);el.addEventListener("change",h)});
+renderCv();
 })();
 </script>
 </body>
