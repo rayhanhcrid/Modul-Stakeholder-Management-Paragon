@@ -1194,7 +1194,7 @@ function kmSent(d,h){var s=d.start||today(),u=function(v){var ok=filled(v),t=ok?
   return "“Dalam 14 hari ke depan, sampai "+u(fmtD(addD(s,13),1))+", saya akan mendekati "+u(d.sh)+" untuk "+u(lower1(d.cp))+", dengan memakai "+u(d.tool)+". Accountability partner saya: "+u(d.pn)+(filled(d.pf)?" ("+(h?esc(trim(d.pf)):trim(d.pf))+")":"")+", kami check-in "+u(fmtD(d.pc||addD(s,6),1))+".”"}
 
 var CVD=[
-{id:"opa",n:"One-Page Alignment",s:"Sesi 3 · Kasus 1 & 2",lead:"Satu halaman, lima hal. Semua pihak membaca halaman yang sama sebelum bekerja.",cases:["k1","k2","own"],
+{id:"opa",n:"One-Page Alignment",s:"Kasus 1 & 2",lead:"Satu halaman, lima hal. Semua pihak membaca halaman yang sama sebelum bekerja.",cases:["k1","k2","own"],
  prog:function(d){return [filled(d.tujuan),filled(d.sukses),anyRow(d.roles,"n"),filled(d.inS)||filled(d.outS),anyRow(d.open,"d")]},
  render:function(d){return '<div class="cvmeta">'+lab("Proyek / inisiatif",fi(d,"proj","Nama proyek atau inisiatif"))+lab("Versi / terakhir diperbarui",fi(d,"ver","mis. v2, diperbarui setelah rapat Selasa"))+'</div>'+
   blk(1,"Tujuan","Apa yang ingin dicapai bersama? Satu kalimat yang bisa diterima semua pihak.",ft(d,"tujuan","Tulis tujuan bersama dalam satu kalimat"))+
@@ -1216,7 +1216,7 @@ var CVD=[
   pT(5,"Keputusan yang belum disepakati",[{k:"d",l:"Keputusan"},{k:"w",l:"Siapa memutuskan",w:"24%"},{k:"k",l:"Paling lambat",w:"16%"}],d.open,3,"or")+
   pT("","Pre-wiring 1:1 sebelum rapat",[{k:"ok",l:"✓",w:"7%",f:ckf},{k:"n",l:"Stakeholder",w:"30%"},{k:"m",l:"Masukan atau keberatan"}],d.pw,3)}},
 
-{id:"sb",n:"Skrip Say-Back",s:"Sesi 3 · Konsep 3 & roleplay",lead:"Di akhir rapat, ulangi kesepakatan dengan kata-katamu sendiri, lalu beri ruang untuk koreksi.",cases:[],
+{id:"sb",n:"Skrip Say-Back",s:"Roleplay",lead:"Di akhir rapat, ulangi kesepakatan dengan kata-katamu sendiri, lalu beri ruang untuk koreksi.",cases:[],
  prog:function(d){return [filled(d.rapat),filled(d.sepakat),anyRow(d.aksi,"a"),filled(d.next)]},
  render:function(d){return '<div class="cvmeta">'+lab("Rapat / percakapan",fi(d,"rapat","Nama rapat atau topik"))+lab("Bersama",fi(d,"peserta","Siapa saja yang hadir"))+'</div>'+
   blk(1,"Yang kita sepakati","Satu kesepakatan per baris. Tulis sebagai keputusan, bukan topik.",ft(d,"sepakat","Satu kesepakatan per baris",3))+
@@ -1232,7 +1232,7 @@ var CVD=[
   pT(2,"Siapa melakukan apa, kapan",[{k:"s",l:"Siapa",w:"24%"},{k:"a",l:"Melakukan apa"},{k:"k",l:"Kapan",w:"18%"}],d.aksi,4)+pB(3,"Yang masih terbuka",d.open,2)+pB(4,"Langkah berikutnya",d.next,1)+
   '<div class="psay">'+(blank?'“Supaya kita sama-sama yakin, saya ulangi ya: … Ada yang perlu dikoreksi?”':esc(sbText(d)).replace(/\n/g,"<br>"))+'</div>'+pB("?","Setelah say-back: apa yang dikoreksi?",d.koreksi,2,"or")}},
 
-{id:"tq",n:"Transparent Queue",s:"Sesi 4 · Kasus 3 & 4",lead:"Jangan bilang “tidak”. Bilang “iya, dengan urutan ini”. Semua permintaan terlihat, kapasitas terlihat, prioritas diputuskan bersama.",cases:["k3","k4","own"],
+{id:"tq",n:"Transparent Queue",s:"Kasus 3 & 4",lead:"Jangan bilang “tidak”. Bilang “iya, dengan urutan ini”. Semua permintaan terlihat, kapasitas terlihat, prioritas diputuskan bersama.",cases:["k3","k4","own"],
  prog:function(d){var it=rowsOf(d.items,["r"]);return [filled(d.kap),it.length>=2,it.length>0&&it.every(function(r){return filled(r.d)}),it.length>0&&it.every(function(r){return filled(r.b)})]},
  render:function(d){var items=d.items&&d.items.length?d.items:[{}],NUM=' type="number" min="0" step="0.5" inputmode="decimal"';
   return '<div class="cvmeta c3">'+lab("Periode",fi(d,"per","mis. Minggu ini"))+lab("Kapasitas tim",fi(d,"kap","mis. 10",NUM))+lab("Satuan",fs(d,"sat",["hari kerja","hari orang","jam","slot"],"hari kerja"))+'</div>'+
@@ -1258,7 +1258,7 @@ var CVD=[
    (blank?'<p class="pnote">Tarik garis putus-putus di bawah permintaan terakhir yang masih muat dalam kapasitas. Yang di bawah garis adalah antrian berikutnya.</p>':'')+'</div>'+
    '<div class="psay">“Semuanya penting. Dengan kapasitas ini, ini urutan yang bisa kita kerjakan. Mana yang paling berdampak bagi bisnis?”</div>'}},
 
-{id:"desa",n:"Template DESA",s:"Kasus 4 & 5 · Komunikasi",lead:"Empat langkah menyampaikan hal sulit tanpa merusak hubungan: Deskripsikan, Ekspresikan, Spesifikan, Apresiasi.",cases:["k4","k5","own"],
+{id:"desa",n:"Template DESA",s:"Kasus 4 & 5",lead:"Empat langkah menyampaikan hal sulit tanpa merusak hubungan: Deskripsikan, Ekspresikan, Spesifikan, Apresiasi.",cases:["k4","k5","own"],
  prog:function(d){return [filled(d.to),filled(d.d),filled(d.e),filled(d.s),filled(d.a)]},
  render:function(d,st){return '<div class="cvmeta">'+lab("Kepada siapa",fi(d,"to","Nama dan peran orang yang kamu ajak bicara"))+lab("Kanal",fs(d,"ch",["Bicara langsung","Rapat 1:1","Telepon","Chat","Email"],"Pilih kanal"))+'</div>'+
   DESA.map(function(x){return '<div class="blk"><span class="bn" style="background:'+x.c+'">'+x.k+'</span><div><h3>'+x.n+'</h3><p class="hint">'+x.h+'</p>'+ft(d,x.f,x.ph,3)+'<div class="st noprint">'+x.st.map(function(s){return '<button data-ins="'+x.f+'" data-tx="'+esc(s)+'">+ '+esc(trim(s))+'</button>'}).join("")+'</div></div></div>'}).join("")+
@@ -1269,7 +1269,7 @@ var CVD=[
  txt:function(d){return "Kepada: "+tv(d.to)+"\nKanal: "+tv(d.ch)+"\n\n"+DESA.map(function(x){return x.k+" · "+x.n.toUpperCase()+"\n"+tv(d[x.f])}).join("\n\n")+"\n\nPESAN UTUH\n"+desaMsg(d)},
  pr:function(d,blank){return pM([["Kepada",d.to],["Kanal",d.ch]])+DESA.map(function(x){return '<div class="pb"><div class="pbh"><span class="pn" style="background:'+x.c+'">'+x.k+'</span>'+x.n+'</div><div class="psb">'+x.h+'</div>'+pv(d[x.f],3)+'</div>'}).join("")+(blank?"":pB("","Pesan utuh",desaMsg(d),4))}},
 
-{id:"esk",n:"Pesan Eskalasi 5 Kalimat",s:"Sesi 5 · Kasus 5 & 6",lead:"Eskalasi bukan melapor. Eskalasi adalah mencari penengah dengan scope yang tepat, dengan bahasa tujuan bersama di tiap langkah.",cases:["k5","k6","own"],
+{id:"esk",n:"Pesan Eskalasi 5 Kalimat",s:"Kasus 5 & 6",lead:"Eskalasi bukan melapor. Eskalasi adalah mencari penengah dengan scope yang tepat, dengan bahasa tujuan bersama di tiap langkah.",cases:["k5","k6","own"],
  prog:function(d){return ESK.map(function(x){return filled(d[x.f])})},
  render:function(d,st){return '<div class="lad">'+
    '<label class="ls s1"><input type="checkbox" data-f="c1"'+(d.c1?" checked":"")+' aria-label="Sudah bicara langsung"><b>1</b><span>Bicara langsung</span></label>'+
@@ -1288,7 +1288,7 @@ var CVD=[
  pr:function(d){return '<div class="plad"><span>'+(d.c1?"☑":"☐")+' 1 · Bicara langsung</span><span>'+(d.c2?"☑":"☐")+' 2 · Bawa data dampak</span><span>➜ 3 · Naik ke pihak yang membawahi kedua sisi</span></div>'+pM([["Kepada",d.to],["Subjek",d.subj]])+
   ESK.map(function(x,i){return pB(i+1,x.n,d[x.f],2,i===4?"or":"",x.q)}).join("")+'<p class="pnote"><b>Tantangan:</b> tulis pesannya tanpa terdengar menyalahkan. Ganti “kamu” dengan “kita”.</p>'}},
 
-{id:"km",n:"Lembar Komitmen 14 Hari",s:"Closing · Individu + pairing",lead:"Satu stakeholder, satu percakapan, satu tools yang akan saya pakai dalam 14 hari ke depan.",cases:[],
+{id:"km",n:"Lembar Komitmen 14 Hari",s:"Individu + pairing",lead:"Satu stakeholder, satu percakapan, satu tools yang akan saya pakai dalam 14 hari ke depan.",cases:[],
  prog:function(d){return [filled(d.sh),filled(d.cp),filled(d.tool),filled(d.pn)]},
  render:function(d){if(!d.start){d.start=today();save()}var shs=(store.sh||[]).map(function(s){return s.n});
   return '<div class="km3">'+
