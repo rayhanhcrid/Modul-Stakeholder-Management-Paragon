@@ -201,32 +201,17 @@ input[type=range]{width:100%;accent-color:var(--blue)}
 .empty{color:var(--mute);font-size:.9rem;text-align:center;padding:1rem;border:1px dashed var(--line);border-radius:12px}
 
 /* Cases */
-.kpick{padding-top:.5rem;padding-bottom:.5rem}
-.kgrp{display:grid;grid-template-columns:250px minmax(0,1fr);gap:.55rem 1rem;align-items:start;padding:.8rem 0;border-top:1px dashed var(--line)}
-.kgrp:first-child{border-top:0}
-.kgl{border-left:4px solid var(--c);padding:.1rem 0 .1rem .65rem}
-.kgl b{display:block;font-size:.9rem;line-height:1.3}
-.kgl small{display:block;color:var(--mute);font-size:.76rem;font-weight:600;line-height:1.35;margin-top:.15rem}
-.kch{display:flex;flex-wrap:wrap;gap:.45rem}
-.kc{display:inline-flex;align-items:center;gap:.55rem;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:.42rem .8rem .42rem .42rem;font-weight:700;font-size:.86rem;cursor:pointer;text-align:left;color:var(--ink);line-height:1.25;max-width:100%}
-.kc .kn{flex:0 0 28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--graySoft);color:var(--gray);font-size:.8rem;font-weight:800}
-.kc:hover{border-color:var(--c)}
-.kc[aria-selected="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 9%,var(--card))}
-.kc[aria-selected="true"] .kn{background:var(--c);color:#fff}
-.kc .kd{color:var(--green);font-weight:800}
-#cbody{scroll-margin-top:70px}
-.khd{margin-bottom:.8rem}
-.khd h2{margin:.15rem 0 .4rem}
-.ev2{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.kout{margin-top:1.1rem;border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:.9rem 1rem}
-.kout h3{margin:.15rem 0 .25rem}
-.kact{background:var(--bg2);border-radius:12px;padding:.65rem .85rem;font-size:.9rem;margin-top:.8rem}
-.kbtns{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.65rem}
-.ksh,.kstep{display:grid;grid-template-columns:32px minmax(0,2fr) minmax(0,1fr) minmax(0,.8fr);gap:.5rem;align-items:start}
-.ksh{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:.7rem 0 .3rem}
-.kstep{margin-bottom:.5rem}
-.kstep .kn{width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem;margin-top:.3rem}
-.kstep textarea.in{min-height:0}
+.ctabs{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-bottom:1rem}
+.ctab{flex-direction:column;align-items:flex-start!important}
+.ctab .lt{width:38px;height:38px;flex:0 0 auto!important}
+.ctab{text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:.8rem .9rem;cursor:pointer;display:flex;gap:.7rem;align-items:center}
+.ctab .lt{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;font-weight:800;background:var(--graySoft);color:var(--gray);font-size:1.05rem}
+.ctab b{font-size:.9rem;line-height:1.3}
+.ctab[aria-selected="true"]{border-color:var(--blue);background:var(--blueSoft)}
+.ctab[aria-selected="true"] .lt{background:var(--blue);color:#fff}
+.deb{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.deb div h4{font-size:.85rem;margin:0 0 .2rem}
+.deb div p{font-size:.8rem;color:var(--mute);margin:0 0 .4rem}
 .ev{background:var(--bg2);border-radius:14px;padding:.9rem 1rem;border-left:5px solid var(--gray)}
 .qs{list-style:none;padding:0;margin:.5rem 0}
 .qs li{display:flex;gap:.6rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--line)}
@@ -476,18 +461,15 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
   .d14 span{height:30px;font-size:.62rem;border-radius:5px}
 }
 @media (max-width:820px){
-  .grid3,.kpi{grid-template-columns:1fr}
-  .kgrp,.ev2{grid-template-columns:1fr}
+  .grid3,.kpi,.deb{grid-template-columns:1fr}
+  .ctabs{grid-template-columns:1fr}
+  .ctab{flex-direction:row;align-items:center!important}
   .bld{grid-template-columns:1fr}
   .pillars{grid-template-columns:repeat(2,1fr)}
   .cs{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   body{font-size:15px}
-  .ksh{display:none}
-  .kstep{grid-template-columns:30px minmax(0,1fr);background:var(--bg2);border-radius:12px;padding:.55rem}
-  .kstep > :not(.kn){grid-column:2}
-  .kc{font-size:.82rem}
   .grid2,.sim{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
   .logos img{height:24px}.logos .lg.pg img{height:17px}.logos .x{display:none}
@@ -689,10 +671,21 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <!-- 3 KASUS -->
 <section class="tab" id="kasus" role="tabpanel">
   <div class="sec-head">
-    <div><span class="kicker">Dari cerita peserta</span><h2>Studi kasus</h2><p>Sepuluh kasus dari cerita peserta di pre-assignment, ditulis anonim. Pilih kasus, diskusikan pertanyaannya bersama kelompok, lalu tuangkan hasilnya sebagai output kelompok.</p></div>
+    <div><span class="kicker">Dari cerita peserta</span><h2>Sepuluh studi kasus</h2><p>Diambil dari cerita peserta dan ditulis anonim. Pilih kasus, lalu diskusikan pertanyaannya bersama kelompok.</p></div>
   </div>
-  <div class="card kpick" id="kpick"></div>
+  <div class="ctabs" role="tablist" id="ctabs"></div>
   <div class="card" id="cbody"></div>
+
+  <div class="card">
+    <span class="kicker">Debrief</span>
+    <h2>Format debrief K+R=H</h2>
+    <p class="mute">Catat hasil diskusi kelompok untuk kasus yang sedang dipilih. Catatan tersimpan per kasus.</p>
+    <div class="deb" style="margin-top:.6rem">
+      <div><h4 style="color:var(--gray)">Kejadian</h4><p>Fakta apa yang terjadi?</p><textarea class="in" data-d="k" placeholder="Tulis fakta utama..."></textarea></div>
+      <div><h4 style="color:var(--orange2)">Respons</h4><p>Apa respons terbaik kita pada tiap stakeholder?</p><textarea class="in" data-d="r" placeholder="Siapa, apa, kapan..."></textarea></div>
+      <div><h4 style="color:var(--blue)">Hasil yang diharapkan</h4><p>Hubungan dan kepercayaan seperti apa yang ingin dijaga?</p><textarea class="in" data-d="h" placeholder="Kondisi ideal setelahnya..."></textarea></div>
+    </div>
+  </div>
 </section>
 
 <!-- 4 CANVAS -->
@@ -791,7 +784,7 @@ function show(id,scroll){if(TABS.indexOf(id)<0)id="ringkasan";
   $$("#nav button").forEach(function(b){var on=b.dataset.t===id;b.setAttribute("aria-selected",on);if(on){try{var w=b.parentNode;w.scrollLeft=b.offsetLeft-(w.clientWidth-b.offsetWidth)/2}catch(e){}}});
   $$(".tab").forEach(function(t){t.classList.toggle("on",t.id===id)});
   if(scroll){try{var n=$("nav.tabs");if(window.scrollY>n.offsetTop)window.scrollTo({top:n.offsetTop,behavior:"smooth"})}catch(e){}}
-  if(id==="canvas"||id==="kasus")setTimeout(growAll,30)}
+  if(id==="canvas")setTimeout(growAll,30)}
 function setHash(id){try{if(location.hash!=="#"+id)history.replaceState(null,"","#"+id)}catch(e){}}
 function curHash(){try{return location.hash.slice(1)}catch(e){return ""}}
 $("#nav").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;show(b.dataset.t,true);setHash(b.dataset.t)});
@@ -878,53 +871,30 @@ function confirmInline(btn,msg){if(btn.dataset.arm){delete btn.dataset.arm;btn.t
 upPrev();
 
 /* Cases */
-var KT={
- al:{n:"Pre-Wiring & One-Page Alignment",c:"var(--blue)",d:"Rapat menjadi tempat konfirmasi, bukan tempat kejutan.",act:"<b>Roleplay say-back:</b> satu kelompok mensimulasikan rapat singkat memakai salah satu kasus ini, lalu menutupnya dengan say-back. Kelompok lain mengamati dan mencatat: apa yang dikoreksi setelah say-back?"},
- kp:{n:"Banyak Permintaan, Satu Kapasitas",c:"var(--orange2)",d:"Jangan bilang “tidak”. Bilang “iya, dengan urutan ini”.",act:"<b>Simulasi:</b> satu peserta berperan sebagai brand yang meminta semuanya sekarang, satu lagi memandu transparent queue."},
- es:{n:"Memengaruhi & Eskalasi Tanpa Wewenang",c:"var(--green)",d:"Eskalasi bukan melapor. Eskalasi adalah mencari penengah dengan scope yang tepat.",act:"<b>Roleplay:</b> tulis pesan eskalasi 5 kalimat tanpa terdengar menyalahkan. Ganti “kamu” dengan “kita”."},
- kl:{n:"Klinik Kasus Sulit",c:"#0B3E73",d:"Pilih satu kasus tersulit, atau kasus nyata dari anggota kelompok.",act:"<b>Presentasi:</b> dua kelompok mempresentasikan rencana aksinya dan mendapat umpan balik langsung."}};
-var CVN={opa:"One-Page Alignment",sb:"Skrip Say-Back",tq:"Transparent Queue",desa:"Template DESA",esk:"Pesan Eskalasi 5 Kalimat"};
 var C=[
- {id:"k1",no:1,t:"al",n:"Agency dan Area Abu-abu",f:"Commercial",s:"Sebelum restrukturisasi, tim affiliate harus menyelaraskan ekspektasi brand dengan kemampuan tim. Kerja sama dengan banyak agency tidak semuanya jelas. Ada area abu-abu yang membuat kerja tersendat.",q:["Apa yang seharusnya sudah disepakati sebelum kerja dimulai?","Bagaimana membuat posisi kita “kuat” saat isu muncul?"],o:"One-Page Alignment",cv:[["opa","k1"],["sb"]]},
- {id:"k2",no:2,t:"al",n:"Banyak Stakeholder, Satu Tujuan",f:"R&D",s:"Diskusi melibatkan lebih dari 5 stakeholder. Persepsi dan tujuan masing-masing berbeda.",q:["Bagaimana rapat berikutnya dirancang agar keluar dengan satu tujuan?"],o:"One-Page Alignment",cv:[["opa","k2"],["sb"]]},
- {id:"k3",no:3,t:"kp",n:"“Saya Handle Semua Brand”",f:"Commercial",s:"Permintaan dari semua brand datang bersamaan dan banyak. Tidak semuanya bisa dipenuhi.",q:["Bagaimana menolak sebagian tanpa merusak hubungan?"],o:"Daftar prioritas + skrip percakapan",cv:[["tq","k3"]]},
- {id:"k4",no:4,t:"kp",n:"Lima Proyek Paralel Tanpa PIC",f:"ETDE, Logistics, SCM",s:"Lima proyek berjalan paralel tanpa PIC yang jelas. Hiring dibekukan, sehingga hanya tersedia intern yang perlu didorong naik kapabilitasnya.",q:["Proyek mana yang diselamatkan lebih dulu?","Siapa yang jadi PIC?","Bagaimana mengelola ekspektasi stakeholder yang proyeknya tertunda?"],o:"Daftar prioritas + skrip percakapan",cv:[["tq","k4"],["desa","k4"]]},
- {id:"k5",no:5,t:"es",n:"Perbaikan di Proses Tim Lain",f:"Finance AR",s:"Tim AR berada di proses berikutnya dan perlu perbaikan di proses tim lain, tanpa wewenang untuk meminta perubahan. Solusinya: eskalasi ke atasan yang punya scope atas proses tersebut. Hasilnya arahan yang jelas dan disepakati semua tim.",q:["Apa yang sudah baik dari langkah ini?","Apa yang bisa dilakukan sebelum eskalasi agar hubungan tetap hangat?"],o:"Pesan eskalasi 5 kalimat",cv:[["esk","k5"],["desa","k5"]]},
- {id:"k6",no:6,t:"es",n:"Beda POV dalam Perbaikan Proses",f:"Finance, HRCA",s:"Banyak sudut pandang berbeda saat perbaikan proses. Persepsi sulit disamakan, akhirnya dieskalasi.",q:["Bagaimana agar eskalasi tidak jadi satu-satunya jalan?"],o:"Pesan eskalasi 5 kalimat",cv:[["esk","k6"]]},
- {id:"k7",no:7,t:"kl",n:"Proyek Dihold, Hidup Lagi Tanpa Kejelasan",f:"Marketing",s:"Proyek dihidupkan kembali tanpa timeline dan scope. Tim sudah memegang pekerjaan lain, deadline bentrok, tim kewalahan, dan pimpinan belum bisa memutuskan dengan jelas.",q:["Apa yang harus dilakukan di 48 jam pertama?"],o:"Rencana aksi 3 langkah"},
- {id:"k8",no:8,t:"kl",n:"Stakeholder Berubah Arah di Depan Atasan",f:"NSEI",s:"Stakeholder sepakat saat rapat, lalu berubah arah ketika berhadapan dengan superior.",q:["Mengapa mereka berubah?","Bagaimana menjaga kesatuan gerak?"],o:"Rencana aksi 3 langkah"},
- {id:"k9",no:9,t:"kl",n:"Proyek Regulasi Lintas Departemen",f:"PID",s:"Proyek korporat baru terkait regulasi. Deadline dekat, tim dan cara kerja belum ada. Perlu buy-in lintas departemen untuk menentukan PIC dan menyetujui biaya besar, sementara flow berubah sambil jalan.",q:["Siapa yang harus di-buy-in lebih dulu, dan dengan argumen apa?"],o:"Rencana aksi 3 langkah"},
- {id:"k10",no:10,t:"kl",n:"Ekspektasi Tinggi dan New Joiner",f:"SCM, ETDE",sub:"Dua situasi, satu pertanyaan",ab:[["A","SCM","Stakeholder berpengaruh","Stakeholder berpengaruh besar punya ekspektasi terlalu tinggi, sehingga sulit di-buy-in dan sulit membangun trust."],["B","ETDE","New joiner di proyek berjalan","Karyawan baru masuk proyek berjalan dan langsung diharapkan mengelola stakeholder tanpa konteks penuh."]],q:["Apa langkah pertamamu, dan percakapan apa yang kamu mulai?"],o:"Rencana aksi 3 langkah"},
- {id:"own",no:"+",t:"kl",n:"Kasus nyata kelompok",f:"",q:[],o:"Rencana aksi 3 langkah"}];
-store.kc=C.some(function(c){return c.id===store.kc})?store.kc:"k1";store.kq=store.kq||{};store.kp=store.kp||{};
-function kById(id){for(var i=0;i<C.length;i++)if(C[i].id===id)return C[i];return C[0]}
-function kDone(c){return c.q.length>0&&c.q.every(function(_,i){return store.kq[c.id+"-"+i]})}
-function renderPick(){$("#kpick").innerHTML=["al","kp","es","kl"].map(function(t){var T=KT[t];return '<div class="kgrp" style="--c:'+T.c+'"><div class="kgl"><b>'+T.n+'</b><small>'+T.d+'</small></div><div class="kch" role="tablist" aria-label="'+T.n+'">'+C.filter(function(c){return c.t===t}).map(function(c){return '<button class="kc" role="tab" aria-selected="'+(c.id===store.kc)+'" data-k="'+c.id+'"><span class="kn">'+c.no+'</span><span>'+c.n+'</span>'+(kDone(c)?'<span class="kd" title="Semua pertanyaan sudah dibahas">✓</span>':'')+'</button>'}).join("")+'</div></div>'}).join("")}
-function renderCase(){var c=kById(store.kc),T=KT[c.t],p=store.kp[c.id]||{},kp=function(f){return 'data-kp="'+c.id+'.'+f+'"'},sit,out;
-  if(c.id==="own")sit='<div class="ev"><span class="pill gy">Situasi</span><p class="hint" style="margin:.45rem 0">Pakai kasus nyata dari anggota kelompok. Tulis secara anonim, tanpa menyebut nama orang atau brand.</p><textarea class="in" rows="3" '+kp("sit")+' placeholder="Ceritakan situasinya dalam 2-3 kalimat" aria-label="Situasi">'+esc(p.sit||"")+'</textarea><input class="in" style="margin-top:.5rem" '+kp("qq")+' value="'+esc(p.qq||"")+'" placeholder="Pertanyaan yang ingin dijawab kelompok" aria-label="Pertanyaan kelompok"></div>';
-  else if(c.ab)sit='<div class="ev2">'+c.ab.map(function(x){return '<div class="ev"><div style="display:flex;gap:.4rem;align-items:center;flex-wrap:wrap"><span class="pill gy">Situasi '+x[0]+'</span><span class="pill">'+x[1]+'</span></div><h3 style="margin:.45rem 0 .15rem">'+x[2]+'</h3><p style="margin:0">'+x[3]+'</p></div>'}).join("")+'</div>';
-  else sit='<div class="ev"><span class="pill gy">Situasi</span><p style="margin:.4rem 0 0">'+c.s+'</p></div>';
-  out='<div class="kout"><span class="kicker" style="color:var(--c)">Output kelompok</span><h3>'+c.o+'</h3>';
-  if(c.cv)out+='<p class="hint" style="margin:0">Isi langsung di canvas. Kasus ini otomatis terpilih di sana.</p><div class="kbtns">'+c.cv.map(function(x,i){return '<button class="btn '+(i?"out":"blue")+' sm" data-ocv="'+x[0]+'" data-kc="'+(x[1]||"")+'">'+CVN[x[0]]+' →</button>'}).join("")+'</div>';
-  else out+='<p class="hint" style="margin:0">Tulis tiga langkah konkret: apa yang dilakukan, dengan siapa, dan kapan.</p><div class="ksh"><span></span><span>Langkah</span><span>Dengan siapa</span><span>Kapan</span></div>'+
-   [0,1,2].map(function(i){var s=(p.s||[])[i]||{};return '<div class="kstep"><span class="kn">'+(i+1)+'</span><textarea class="in" rows="2" '+kp("s."+i+".a")+' placeholder="Apa yang dilakukan?" aria-label="Langkah '+(i+1)+'">'+esc(s.a||"")+'</textarea><input class="in" '+kp("s."+i+".w")+' value="'+esc(s.w||"")+'" placeholder="Dengan siapa?" aria-label="Langkah '+(i+1)+': dengan siapa"><input class="in" '+kp("s."+i+".k")+' value="'+esc(s.k||"")+'" placeholder="Kapan?" aria-label="Langkah '+(i+1)+': kapan"></div>'}).join("")+
-   '<label class="lf" style="margin-top:.5rem"><span class="fl">Umpan balik yang diterima</span><textarea class="in" rows="2" '+kp("fb")+' placeholder="Catat masukan yang diterima saat presentasi">'+esc(p.fb||"")+'</textarea></label><div class="kbtns noprint"><button class="btn blue sm" data-act="kcopy">Salin rencana</button></div>';
-  out+='<div class="kact">'+T.act+'</div></div>';
-  var cb=$("#cbody");cb.style.setProperty("--c",T.c);
-  cb.innerHTML='<div class="khd"><span class="kicker" style="color:var(--c)">'+T.n+'</span><h2>'+(c.id==="own"?"":"Kasus "+c.no+" · ")+c.n+'</h2>'+(c.f?'<span class="pill">'+c.f+'</span> ':'')+(c.sub?'<span class="pill gy">'+c.sub+'</span>':'')+'</div>'+sit+
-   (c.q.length?'<h3 style="margin-top:1rem">Pertanyaan diskusi</h3><ul class="qs">'+c.q.map(function(q,qi){var k=c.id+"-"+qi,ok=!!store.kq[k];return '<li class="'+(ok?"ok":"")+'"><input type="checkbox" data-cq="'+k+'"'+(ok?" checked":"")+' aria-label="Sudah dibahas"><span>'+q+'</span></li>'}).join("")+'</ul>':'')+out;
-  $$("#cbody textarea").forEach(grow)}
-function kText(c){var p=store.kp[c.id]||{},o=[(c.id==="own"?"":"KASUS "+c.no+" · ")+c.n.toUpperCase()];
-  if(c.id==="own"){if(filled(p.sit))o.push("Situasi: "+trim(p.sit));if(filled(p.qq))o.push("Pertanyaan: "+trim(p.qq))}
-  else if(c.ab)c.ab.forEach(function(x){o.push("Situasi "+x[0]+" ("+x[1]+"): "+x[3])});else o.push("Situasi: "+c.s);
-  c.q.forEach(function(q){o.push("- "+q)});
-  o.push("","RENCANA AKSI 3 LANGKAH");[0,1,2].forEach(function(i){var s=(p.s||[])[i]||{};o.push((i+1)+". "+tv(s.a)+(filled(s.w)?" | Dengan: "+trim(s.w):"")+(filled(s.k)?" | Kapan: "+trim(s.k):""))});
-  if(filled(p.fb))o.push("","Umpan balik: "+trim(p.fb));return o.join("\n")}
-$("#kpick").addEventListener("click",function(e){var b=e.target.closest("[data-k]");if(!b)return;store.kc=b.dataset.k;save();renderPick();renderCase();if(window.innerWidth<820)try{$("#cbody").scrollIntoView({behavior:"smooth",block:"start"})}catch(x){}});
-$("#cbody").addEventListener("change",function(e){var k=e.target.dataset.cq;if(!k)return;if(e.target.checked)store.kq[k]=1;else delete store.kq[k];e.target.parentNode.classList.toggle("ok",e.target.checked);save();renderPick()});
-$("#cbody").addEventListener("input",function(e){var p=e.target.dataset.kp;if(!p)return;sv(store.kp,p,e.target.value);save();if(e.target.tagName==="TEXTAREA")grow(e.target)});
-$("#cbody").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;if(b.dataset.ocv){openCanvas(b.dataset.ocv,b.dataset.kc);return}if(b.dataset.act==="kcopy")copy(kText(kById(store.kc)))});
-renderPick();renderCase();
+ {no:1,n:"Agency dan Area Abu-abu",f:"Commercial",k:"Sebelum restrukturisasi, tim affiliate harus menyelaraskan ekspektasi brand dengan kemampuan tim. Kerja sama dengan banyak agency tidak semuanya jelas. Ada area abu-abu yang membuat kerja tersendat.",q:["Apa yang seharusnya sudah disepakati sebelum kerja dimulai?","Bagaimana membuat posisi kita “kuat” saat isu muncul?"]},
+ {no:2,n:"Banyak Stakeholder, Satu Tujuan",f:"R&D",k:"Diskusi melibatkan lebih dari 5 stakeholder. Persepsi dan tujuan masing-masing berbeda.",q:["Bagaimana rapat berikutnya dirancang agar keluar dengan satu tujuan?"]},
+ {no:3,n:"“Saya Handle Semua Brand”",f:"Commercial",k:"Permintaan dari semua brand datang bersamaan dan banyak. Tidak semuanya bisa dipenuhi.",q:["Bagaimana menolak sebagian tanpa merusak hubungan?"]},
+ {no:4,n:"Lima Proyek Paralel Tanpa PIC",f:"ETDE, Logistics, SCM",k:"Lima proyek berjalan paralel tanpa PIC yang jelas. Hiring dibekukan, sehingga hanya tersedia intern yang perlu didorong naik kapabilitasnya.",q:["Proyek mana yang diselamatkan lebih dulu?","Siapa yang jadi PIC?","Bagaimana mengelola ekspektasi stakeholder yang proyeknya tertunda?"]},
+ {no:5,n:"Perbaikan di Proses Tim Lain",f:"Finance AR",k:"Tim AR berada di proses berikutnya dan perlu perbaikan di proses tim lain, tanpa wewenang untuk meminta perubahan. Solusinya: eskalasi ke atasan yang punya scope atas proses tersebut. Hasilnya arahan yang jelas dan disepakati semua tim.",q:["Apa yang sudah baik dari langkah ini?","Apa yang bisa dilakukan sebelum eskalasi agar hubungan tetap hangat?"]},
+ {no:6,n:"Beda POV dalam Perbaikan Proses",f:"Finance, HRCA",k:"Banyak sudut pandang berbeda saat perbaikan proses. Persepsi sulit disamakan, akhirnya dieskalasi.",q:["Bagaimana agar eskalasi tidak jadi satu-satunya jalan?"]},
+ {no:7,n:"Proyek Dihold, Hidup Lagi Tanpa Kejelasan",f:"Marketing",k:"Proyek dihidupkan kembali tanpa timeline dan scope. Tim sudah memegang pekerjaan lain, deadline bentrok, tim kewalahan, dan pimpinan belum bisa memutuskan dengan jelas.",q:["Apa yang harus dilakukan di 48 jam pertama?"]},
+ {no:8,n:"Stakeholder Berubah Arah di Depan Atasan",f:"NSEI",k:"Stakeholder sepakat saat rapat, lalu berubah arah ketika berhadapan dengan superior.",q:["Mengapa mereka berubah?","Bagaimana menjaga kesatuan gerak?"]},
+ {no:9,n:"Proyek Regulasi Lintas Departemen",f:"PID",k:"Proyek korporat baru terkait regulasi. Deadline dekat, tim dan cara kerja belum ada. Perlu buy-in lintas departemen untuk menentukan PIC dan menyetujui biaya besar, sementara flow berubah sambil jalan.",q:["Siapa yang harus di-buy-in lebih dulu, dan dengan argumen apa?"]},
+ {no:10,n:"Ekspektasi Tinggi dan New Joiner",f:"SCM, ETDE",k:"<b>Situasi A (SCM):</b> Stakeholder berpengaruh besar punya ekspektasi terlalu tinggi, sehingga sulit di-buy-in dan sulit membangun trust.<br><b>Situasi B (ETDE):</b> Karyawan baru masuk proyek berjalan dan langsung diharapkan mengelola stakeholder tanpa konteks penuh.",q:["Apa langkah pertamamu, dan percakapan apa yang kamu mulai?"]}];
+var cI=0;store.kq=store.kq||{};store.kdeb=store.kdeb||{};
+function renderCases(){
+  $("#ctabs").innerHTML=C.map(function(c,i){return '<button class="ctab" role="tab" aria-selected="'+(i===cI)+'" data-i="'+i+'"><span class="lt">'+c.no+'</span><b>'+c.n+'</b></button>'}).join("");
+  var c=C[cI];
+  $("#cbody").innerHTML='<div style="display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.7rem"><h2 style="margin:0">Kasus '+c.no+': '+c.n+' <span class="mute" style="font-size:.95rem;font-weight:600">('+c.f+')</span></h2></div>'+
+   '<div class="ev"><span class="pill gy">Kejadian</span><p style="margin:.4rem 0 0">'+c.k+'</p></div>'+
+   '<h3 style="margin-top:1rem">Pertanyaan diskusi</h3><ul class="qs">'+c.q.map(function(q,qi){var k="k"+c.no+"-"+qi,ok=!!store.kq[k];return '<li class="'+(ok?"ok":"")+'"><input type="checkbox" data-cq="'+k+'"'+(ok?" checked":"")+' aria-label="Sudah dibahas"><span>'+q+'</span></li>'}).join("")+'</ul>';
+  $$("[data-d]").forEach(function(t){t.value=(store.kdeb[c.no]||{})[t.dataset.d]||""});}
+$("#ctabs").onclick=function(e){var b=e.target.closest(".ctab");if(!b)return;cI=+b.dataset.i;renderCases()};
+$("#cbody").addEventListener("change",function(e){var k=e.target.dataset.cq;if(!k)return;if(e.target.checked)store.kq[k]=1;else delete store.kq[k];e.target.parentNode.classList.toggle("ok",e.target.checked);save()});
+$$("[data-d]").forEach(function(t){t.addEventListener("input",function(){var n=C[cI].no;store.kdeb[n]=store.kdeb[n]||{};store.kdeb[n][t.dataset.d]=t.value;save()})});
+renderCases();
+
 /* Quiz */
 var QZ=[
  {q:"Dalam kerangka K+R=H, apa yang sepenuhnya bisa kita kendalikan?",o:["Kejadian","Respons","Hasil","Sikap stakeholder"],a:1,e:"Kejadian sering di luar kendali dan hasil dipengaruhi banyak pihak. Yang bisa kita kelola adalah kualitas respons."},
@@ -1226,8 +1196,7 @@ function cst(){return store.cv[CVD[cvI].id]}
 function cur(){var s=cst();if(!s.d[s.case])s.d[s.case]={};return s.d[s.case]}
 function progOf(x){var s=store.cv[x.id],a=x.prog(s.d[s.case]||{});return [a.filter(Boolean).length,a.length]}
 function grow(t){if(!t.offsetParent)return;t.style.height="auto";t.style.height=(t.scrollHeight+2)+"px"}
-function growAll(){$$("#cvBody textarea, #cbody textarea").forEach(grow)}
-function openCanvas(id,kc){var i=CVD.map(function(c){return c.id}).indexOf(id);if(i<0)return;cvI=i;store.cv.sel=id;if(kc&&CVD[i].cases.indexOf(kc)>=0)store.cv[id].case=kc;save();renderCv();show("canvas",true);setHash("canvas")}
+function growAll(){$$("#cvBody textarea").forEach(grow)}
 function updProg(){var p=progOf(CVD[cvI]),el=$("#cvt"+cvI+" .pg");if(el){el.textContent=p[0]+"/"+p[1];el.classList.toggle("full",p[0]===p[1])}}
 function caseStrip(c,st,d){if(!c.cases.length)return "";var k=CVK[st.case];
   return '<div class="seg cvcase" role="group" aria-label="Pilih kasus">'+c.cases.map(function(id){return '<button aria-pressed="'+(id===st.case)+'" data-case="'+id+'">'+(id==="own"?"Kasus nyata saya":CVK[id].n.split(" · ")[0])+'</button>'}).join("")+'</div>'+
